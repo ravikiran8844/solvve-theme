@@ -1,0 +1,146 @@
+<div class="container-fluid">
+  <h3 class="title text-center">{{ section.settings.title }}</h3>
+  <div class="testi-srt-rt-box">
+    <ul class="testi-star">
+        <li><span>4.5</span></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li> 
+        <li class="rev-count">1374 reviews</li>
+      </ul>
+  </div>
+ <div class="glide" id="testi-slider">
+    <div class="glide__track" data-glide-el="track">
+      <div class="glide__slides">
+        {%- for block in section.blocks -%}
+    <div class="glide__slide">
+      <div class="testi-box">
+      <div class="testi-box-top">
+        <div class="testi-profil">
+          <img src="{{ block.settings.testi_img|img_url }}">
+        </div>
+        <div class="testi-title">
+          <h5>“{{ block.settings.testi_title }}”</h5>
+      </div>
+    </div>
+    <div class="testi-content more">
+        {{ block.settings.testi_content }}
+    </div>
+        <div class="testi-name">- {{ block.settings.testi_name }}</div>
+  </div>  
+    </div>
+    {%- endfor -%}
+      </div>
+    </div>
+  </div>
+  <script>
+    new Glide('#testi-slider', {
+	type: 'carousel',
+	perView: 3,
+    autoplay:5000,
+	breakpoints: {
+		860: {
+			perView: 2
+		},
+      560: {
+			perView: 1
+		},
+	}
+}).mount();
+
+
+          $(document).ready(function() {
+    // Configure/customize these variables.
+    var showChar = 120;  // How many characters are shown by default
+    var ellipsestext = "...";
+    var moretext = "Show more";
+    var lesstext = "Show less";
+    
+
+    $('.more').each(function() {
+        var content = $(this).html();
+ 
+        if(content.length > showChar) {
+ 
+            var c = content.substr(0, showChar);
+            var h = content.substr(showChar, content.length - showChar);
+ 
+            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+ 
+            $(this).html(html);
+        }
+ 
+    });
+ 
+    $(".morelink").click(function(){
+        if($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).html(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).html(lesstext);
+        }
+        $(this).parent().prev().toggle();
+        $(this).prev().toggle();
+        return false;
+    });
+});
+  </script>
+</div>
+<style>
+    .morecontent span {
+    display: none;
+}
+.morelink {
+    display: inline-block;
+}
+.testi-name {
+    text-align: right;
+    color: #f4789d;
+}
+</style>
+
+{% schema %}
+  {
+    "name": "Testimonial",
+    "class":"home_section_three",
+    "settings": [
+      {
+        "type":"text",
+        "id":"title",
+        "label":"Title"
+      }
+    ],
+    "blocks": [
+      {
+        "name":"Review",
+        "type":"image",
+        "settings":[
+          {
+            "type":"image_picker",
+            "id":"testi_img",
+            "label":"User Image"
+          },
+          {
+            "type":"text",
+            "id":"testi_title",
+            "label":"Testimonial Title"
+          },
+          {
+            "type":"text",
+            "id":"testi_content",
+            "label":"Testimonial Content"
+          },
+          {
+          "type":"text",
+          "id":"testi_name",
+          "label":"User Name"
+          }
+        ]
+      }
+    ]
+    
+  }
+{% endschema %}

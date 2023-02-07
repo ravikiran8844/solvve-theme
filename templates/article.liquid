@@ -1,0 +1,275 @@
+<link href="{{'blog.css'|asset_url}}" rel="stylesheet" type="text/css" media="all" /> 
+<div class="blgg container" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="row">
+  <div class="col-sm-12 col-md-12 col-lg-8">
+  {% assign number_of_comments = article.comments_count %}
+  {% if comment and comment.created_at %}
+  {% assign number_of_comments = article.comments_count %}
+  {% endif %}
+  <div class="blog-cont">
+  <div itemprop="author"><meta itemprop="url" content="{{shop.url}}{{article.url}}" /><meta itemprop="name" content="{{ article.author | camelcase }}" /></div>
+  <h1 class="text-center article_title" itemprop="headline">{{ article.title }}</h1>
+  <p class="text-center art_author" itemprop="dateCreated pubdate datePublished"> <time datetime="{{ article.created_at | date: "%B %d, %Y" }}">by Solvve - {{ article.created_at | date: "%B %d, %Y" }}</time></p>
+  <div><img itemprop="image" class="blog-inner-img" src="{{ article.image.src | img_url: '1299x410' }}"></div>  
+  <div itemprop="articleBody" class="art_content">{{ article.content}}</div>
+     <hr>
+  <div class="small--text-center medium--text-center"><ul class="no-bullets inline-list blog_sharer"><li><a href="https://www.facebook.com/sharer.php?u={{shop.url}}{{article.url}}" class="btn face_sh" >
+ <span> <svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="35px" height="35px">    <path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"/></svg></span> <span>Share</span>
+  </a></li>
+   <li>
+    <a href="https://twitter.com/share?url={{shop.url}}{{article.url}}" class="btn twt_sh">
+<span><svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="35px" height="35px">    <path d="M25,2C12.317,2,2,12.317,2,25s10.317,23,23,23s23-10.317,23-23S37.683,2,25,2z M36.237,20.524 c0.01,0.236,0.016,0.476,0.016,0.717C36.253,28.559,30.68,37,20.491,37c-3.128,0-6.041-0.917-8.491-2.489 c0.433,0.052,0.872,0.077,1.321,0.077c2.596,0,4.985-0.884,6.879-2.37c-2.424-0.044-4.468-1.649-5.175-3.847 c0.339,0.065,0.686,0.1,1.044,0.1c0.505,0,0.995-0.067,1.458-0.195c-2.532-0.511-4.441-2.747-4.441-5.432c0-0.024,0-0.047,0-0.07 c0.747,0.415,1.6,0.665,2.509,0.694c-1.488-0.995-2.464-2.689-2.464-4.611c0-1.015,0.272-1.966,0.749-2.786 c2.733,3.351,6.815,5.556,11.418,5.788c-0.095-0.406-0.145-0.828-0.145-1.262c0-3.059,2.48-5.539,5.54-5.539 c1.593,0,3.032,0.672,4.042,1.749c1.261-0.248,2.448-0.709,3.518-1.343c-0.413,1.292-1.292,2.378-2.437,3.064 c1.122-0.136,2.188-0.432,3.183-0.873C38.257,18.766,37.318,19.743,36.237,20.524z"/></svg></span>  <span>Tweet </span> </a>
+</li>
+  <li>
+    <a href="https://pinterest.com/pin/create/button/?url={{shop.url}}{{article.url}}" class="btn twt_sh">
+<span><svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="35px" height="35px"><path d="M25,2C12.3178711,2,2,12.3178711,2,25c0,9.8841553,6.2675781,18.3302612,15.036377,21.5769653	c-0.2525635-2.2515869-0.2129517-5.9390259,0.2037964-7.7243652c0.3902588-1.677002,2.5212402-10.6871338,2.5212402-10.6871338	s-0.6433105-1.2883301-0.6433105-3.1911011c0-2.9901733,1.7324219-5.2211914,3.8898315-5.2211914	c1.8349609,0,2.7197876,1.3776245,2.7197876,3.0281982c0,1.8457031-1.1734619,4.6026611-1.78125,7.1578369	c-0.506897,2.1409302,1.0733643,3.8865356,3.1836548,3.8865356c3.821228,0,6.7584839-4.0296021,6.7584839-9.8453369	c0-5.147583-3.697998-8.7471924-8.9795532-8.7471924c-6.1167603,0-9.7072754,4.588562-9.7072754,9.3309937	c0,1.8473511,0.7111816,3.8286743,1.6000977,4.9069824c0.175293,0.2133179,0.2009277,0.3994141,0.1488647,0.6160278	c-0.1629028,0.678894-0.5250854,2.1392822-0.5970459,2.4385986c-0.0934448,0.3944702-0.3117676,0.4763184-0.7186279,0.2869263	c-2.685791-1.2503052-4.364502-5.1756592-4.364502-8.3295898c0-6.7815552,4.9268188-13.0108032,14.206543-13.0108032	c7.4588623,0,13.2547607,5.3138428,13.2547607,12.4179077c0,7.4100342-4.6729126,13.3729858-11.1568604,13.3729858	c-2.178894,0-4.2263794-1.132019-4.9267578-2.4691772c0,0-1.0783081,4.1048584-1.3404541,5.1112061	c-0.4524536,1.7404175-2.3892822,5.3460083-3.3615723,6.9837036C20.1704712,47.6074829,22.5397949,48,25,48	c12.6826172,0,23-10.3173828,23-23C48,12.3178711,37.6826172,2,25,2z"/></svg></span>  <span>Pin it </span> </a>
+</li>
+  <li>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{shop.url}}{{article.url}}" class="btn twt_sh">
+      <span><svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="35px" height="35px">    <path d="M15,3C8.373,3,3,8.373,3,15c0,6.627,5.373,12,12,12s12-5.373,12-12C27,8.373,21.627,3,15,3z M10.496,8.403 c0.842,0,1.403,0.561,1.403,1.309c0,0.748-0.561,1.309-1.496,1.309C9.561,11.022,9,10.46,9,9.712C9,8.964,9.561,8.403,10.496,8.403z M12,20H9v-8h3V20z M22,20h-2.824v-4.372c0-1.209-0.753-1.488-1.035-1.488s-1.224,0.186-1.224,1.488c0,0.186,0,4.372,0,4.372H14v-8 h2.918v1.116C17.294,12.465,18.047,12,19.459,12C20.871,12,22,13.116,22,15.628V20z"/></svg></span><span>Share</span>
+    </a>
+  </li>
+</ul></div>
+  </div>
+ 
+  <div class="text-center"><a class="btn blocg_act" href="{{blog.url}}">Back to the Blogs</a></div>
+  {% if blog.comments_enabled? %}
+  <div class="row">
+  <div class="col-12">
+  <h3 class="cmnt-cnt">{{ number_of_comments }} Comments</h3>
+  {% paginate article.comments by 5 %}
+  {% for comment in article.comments %}
+  <div class="com-sec">
+    <div class="cmnt-auth-av">
+      <img src="{{ 'default.png'|asset_url }}">
+    </div>
+    <div class="com-box">
+    <h5 class="com-auth">{{ comment.author }} </h5>
+    <div>{{ comment.content }}</div>
+    </div>
+  </div>
+  {% endfor %}
+  </div>
+  </div>
+  {% if paginate.pages > 1 %}
+  {{ paginate | default_pagination }}
+  {% endif %}
+  {% endpaginate %}
+  <div class="blg-cmnt">
+        <div class="blog-cmnt">
+
+  <div class="row">
+    <h3 class="text-center">LEAVE A COMMENT</h3>
+    {% form 'new_comment', article %}
+    {{ form.errors | default_errors }}
+    <div class="col-sm-12">
+    <label for="CommentAuthor">Name</label>
+    <input type="text" name="comment[author]" id="CommentAuthor"  value="{{ form.author }}" autocapitalize="words">
+    </div>
+    <div class="col-sm-12">
+    <label for="CommentEmail">Email</label>
+    <input type="email" name="comment[email]" id="CommentEmail"  value="{{ form.email }}" autocorrect="off" autocapitalize="off">
+    </div>
+    <div class="col-12">
+    <label for="CommentBody">Message</label>
+    <textarea name="comment[body]" id="CommentBody" >{{ form.body }}</textarea>
+    </div>
+    <div class="col-12">
+    <input type="submit" value="Submit Your Comment" class="rev-btn">
+    </div>
+    {% endform %}
+  </div>
+  {% endif %}
+</div>
+</div>
+</div>
+   <div class="col-sm-12 col-md-12 col-lg-4">
+     <div class="pos-stky">
+    <div class="blog-sid-bar">
+{% comment %} 
+Edit the 2 values right below: what's your blog handle and how many articles do you want to show?
+{% endcomment %}
+
+{% assign your_blog_handle_here = 'blog' %}
+{% assign how_many_articles_to_show = 5 %}
+
+<!-- START OF LATEST BLOG POSTS -->
+<div class="widget">
+<div class="widget-header">
+  <h3>Latest Blogs </h3>
+</div>
+<div class="latest-blog-posts-wrapper">
+  <ul class="latest-blog-posts-list">
+  {% for article in blogs[your_blog_handle_here].articles limit: how_many_articles_to_show %}
+    <li><img src="{{ article.image.src | img_url: '700x' }}">
+    <div>{{ article.title | link_to: article.url }}<p>{{ article.created_at | date: "%B %d, %Y" }}</p></div> 
+    </li>
+  {% endfor %}
+  </ul>
+</div>
+</div>
+</div>
+    <!--  <div class="blog-sid-bar tag">
+        <h3>Tags</h3>
+    <ul>
+       {%- for tag in blog.tags -%}
+       <li><a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a></li> 
+      {%- endfor -%}
+    </ul>
+  </div>-->
+      <div class="blog-sid-bar social">
+        <h3>Follow Us</h3>
+    <ul>
+       <li><a href="https://www.facebook.com/trysolvve/" target=”_blank”><svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px">    <path d="M15,3C8.373,3,3,8.373,3,15c0,6.016,4.432,10.984,10.206,11.852V18.18h-2.969v-3.154h2.969v-2.099c0-3.475,1.693-5,4.581-5 c1.383,0,2.115,0.103,2.461,0.149v2.753h-1.97c-1.226,0-1.654,1.163-1.654,2.473v1.724h3.593L19.73,18.18h-3.106v8.697 C22.481,26.083,27,21.075,27,15C27,8.373,21.627,3,15,3z"/></svg></a></li> 
+      <li><a href="https://www.instagram.com/trysolvve/" target=”_blank”><svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 64 64" width="48px" height="48px"><path d="M 31.820312 12 C 13.438312 12 12 13.439312 12 31.820312 L 12 32.179688 C 12 50.560688 13.438313 52 31.820312 52 L 32.179688 52 C 50.561688 52 52 50.560688 52 32.179688 L 52 32 C 52 13.452 50.548 12 32 12 L 31.820312 12 z M 43.994141 18 C 45.099141 17.997 45.997 18.889141 46 19.994141 C 46.003 21.099141 45.110859 21.997 44.005859 22 C 42.900859 22.003 42.003 21.110859 42 20.005859 C 41.997 18.900859 42.889141 18.003 43.994141 18 z M 31.976562 22 C 37.498562 21.987 41.987 26.454563 42 31.976562 C 42.013 37.498562 37.545437 41.987 32.023438 42 C 26.501437 42.013 22.013 37.545437 22 32.023438 C 21.987 26.501437 26.454563 22.013 31.976562 22 z M 31.986328 26 C 28.672328 26.008 25.992 28.701625 26 32.015625 C 26.008 35.328625 28.700672 38.008 32.013672 38 C 35.327672 37.992 38.008 35.299328 38 31.986328 C 37.992 28.672328 35.299328 25.992 31.986328 26 z"/></svg></a></li> 
+      <li><a href="https://twitter.com/trysolvve" target=”_blank”><svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 72 72" width="64px" height="64px"><path d="M61.115,18.856C63.666,21.503,64,25.709,64,36s-0.334,14.497-2.885,17.144C58.563,55.791,55.906,56,36,56	s-22.563-0.209-25.115-2.856C8.334,50.497,8,46.291,8,36s0.334-14.497,2.885-17.144S16.094,16,36,16S58.563,16.209,61.115,18.856z M31.464,44.476l13.603-8.044l-13.603-7.918V44.476z"/></svg></a></li> 
+ 
+    </ul>
+  </div>
+  </div>
+    </div>
+  </div>
+      </div>
+<style>
+
+  h5{
+    font-size:15px;
+  }
+
+  h2 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 18px;
+} 
+  body, button, input, select, textarea{
+    font-size:16px;
+  }
+  .blog_sharer li {
+    margin-right:10px;
+  }
+ form#comment_form input, form#comment_form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 8px;
+    background-color: transparent;
+    border: 1px solid #560764;
+    border-radius: 4px;
+}
+.rev-btn {
+    background: #560764 !important;
+    color: #ffffff;
+}
+  .rev-btn:hover {
+    background: #000000;
+}
+.com-auth {
+    text-transform: capitalize;
+    margin: 0;
+  color:#000
+}
+  .com-date {
+    font-size: 14px;
+    color: #959595;
+}
+.com-sec {
+    border-bottom: 1px solid #e8e4e4;
+    margin-bottom: 22px;
+    display: flex;
+    gap: 15px;
+}
+  .cmnt-auth-av {
+    width: 90px;
+}
+.blg-cmnt {
+    background: #ff7c992b;
+    padding: 30px;
+} 
+.blog-inner-img {
+    width: 100%;
+    margin-bottom: 20px;
+} 
+  .blgg.wrapper {
+    padding-top: 40px !important;
+}
+.btn.blocg_act {
+    background: #4d4c4c;
+    color: #ffffff;
+    font-weight: 900;
+    padding: 15px 30px;
+    margin: 26px;
+}
+  .widget .latest-blog-posts-list {
+  margin: 0;
+  list-style: none;
+}
+.widget .latest-blog-posts-list li {
+  margin: 0 0 10px 0;
+  padding: 0 0 10px 0;
+  border-bottom: dotted 1px #CCC;
+  background: none;
+  word-wrap: break-word;
+  line-height: 1.3em;
+  list-style: none;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+  .widget .latest-blog-posts-list li img {
+    width: 100px;
+    height: 80px;
+}
+  .drop__profession {
+    font-size: 12px;
+}
+.blog-sid-bar, .blog-cont {
+    padding: 15px;
+  */  box-shadow: rgb(50 50 93 / 25%) 0px 6px 12px -2px, rgb(0 0 0 / 30%) 0px 3px 7px -3px;*/
+}
+  .blog-sid-bar.social svg {
+    width: 40px;
+    height: 36px;
+}
+.article_title {
+    font-size: 25px;
+    padding-top: 15px;
+    margin-bottom: 0;}
+.blog-main{padding:0;}
+.blog-sid-bar.tag {margin-top: 20px;}
+.blog-sid-bar.tag ul {list-style: none;display: flex;flex-wrap: wrap;margin: 0;}
+.blog-sid-bar.tag ul li a:hover {background: transparent;color: #000;}
+.blog-sid-bar.tag ul li a {background: #583d36;color: #fff;padding: 10px;border: 1px solid;}
+.blog-sid-bar.tag ul li {padding: 6px;}
+.blog-sid-bar.social ul {display: flex;align-items: center;list-style: none;}
+.blog-sid-bar.social{margin-top: 20px;}
+.blog-sid-bar.social ul li {margin-right: 12px;}
+.blog-sid-bar.social ul li img {width: 40px;box-shadow: rgb(50 50 93 / 25%) 0px 6px 12px -2px, rgb(0 0 0 / 30%) 0px 3px 7px -3px;}
+.blog_sharer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.rev-btn {
+    padding: 10px;
+}
+  @media (max-width: 768px) {
+.blog-inner-img {width: 100%;height: auto;} 
+}
+.aa-cta-btn {font-size: 18px;border-radius: 60px;padding: 15px 100px;background: #373737;font-weight: 700;margin-top: 20px;}
+.aa-cta-btn-customer {text-align: center;margin-bottom: 35px;}
+.drop__card {width: 76%;justify-content: space-between;padding: 0.75rem 1.25rem 0.75rem 0.75rem;background-color: #f8f8fc;box-shadow: 4px 4px 16px #e1e1e1, -2px -2px 16px #fff;border-radius: 1rem;margin: auto;}
+.drop__card, .drop__data {display: flex;align-items: center;}
+.drop__img {width: 85px;height: 85px;border-radius: 1rem;margin-right: 1rem;}
+.drop__name {font-size: 15px;color: #272a3a;font-weight: 500;} 
+.blog-buy-btn {background: #fd8999;padding: 10px;color: #fff;}
+@media (max-width: 768px) {
+.drop__card, .drop__data {flex-wrap: wrap;justify-content: center;margin-bottom: 15px;}
+.drop__card {width: 99%;}
+}
+.cpasec-img{text-align:center; margin-top:10px;}             
+.cpasec-img img{width:40%;}    
+.shopnow{text-align:center;}   
+.shopnow img{width:20%;}   
+</style>

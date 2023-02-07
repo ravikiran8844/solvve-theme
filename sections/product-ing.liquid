@@ -1,0 +1,113 @@
+<div class="container">
+  <h3 class="title text-center">{{ section.settings.title }}</h3>
+  <div class="desktop">
+  <div class="row">
+    {%- for block in section.blocks -%}
+    <div class="col-sm-6 col-md-3">
+      <div class="ing-box text-center">
+        <img src="{{ block.settings.ing_img|img_url: "master" }}">
+        <h6>{{ block.settings.ing_title }}</h6>
+        <p>{{ block.settings.ing_cnt }}</p>
+      </div>
+    </div>
+    {%- endfor -%}
+    </div>
+  </div>
+    <div class="mobile">
+    <div class="glide" id="product-ing">
+    <div class="glide__track" data-glide-el="track">
+      <div class="glide__slides">
+    {%- for block in section.blocks -%}
+    <div class="glide__slide">
+      <div class="ing-box text-center">
+        <img src="{{ block.settings.ing_img|img_url: "master" }}">
+        <h6>{{ block.settings.ing_title }}</h6>
+        <p>{{ block.settings.ing_cnt }}</p>
+      </div>
+    </div>
+    {%- endfor -%}
+      </div>
+    </div>
+      <div data-glide-el="controls">
+    <button class="slider__arrow slider__arrow--prev glide__arrow glide__arrow--prev" data-glide-dir="<">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+        <path d="M0 12l10.975 11 2.848-2.828-6.176-6.176H24v-3.992H7.646l6.176-6.176L10.975 1 0 12z"/></path>
+      </svg>
+    </button>
+
+    <button class="slider__arrow slider__arrow--next glide__arrow glide__arrow--next" data-glide-dir=">">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+        <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/></path>
+      </svg>
+    </button>
+</div>
+    </div>
+  </div>
+  </div>
+{% schema %}
+  {
+    "name": "Clinically tested",
+    "class":"clinically_tested",
+    "settings": [
+      {
+        "type":"text",
+        "id":"title",
+        "label":"Title"
+      }
+    ],
+    "blocks":[
+      {
+        "type":"image",
+        "name":"Ingredients",
+      "settings":[
+        {
+          "type":"image_picker",
+          "id":"ing_img",
+          "label":"Image"
+        },
+        {
+          "type":"text",
+          "id":"ing_title",
+          "label":"Title"
+        },
+        {
+          "type":"text",
+          "id":"ing_cnt",
+          "label":"Content"
+        }
+      ]
+      }
+    ]
+  }
+{% endschema %}
+<style>
+  .clinically_tested {
+    padding: 60px 0;
+}
+ .ing-box {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 32px;
+    margin-top: 26px;
+    height: 216px;
+}
+  .glide__arrow--next {
+    right: 0;
+}
+</style>
+<script>
+    new Glide('#product-ing', {
+	type: 'slider',
+	perView: 1.3,
+    bound:true,
+    autoplay:5000,
+	breakpoints: {
+		560: {
+			perView: 1.3
+		},
+      460: {
+			perView: 1.3
+		},
+	}
+}).mount();
+</script>

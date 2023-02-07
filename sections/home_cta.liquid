@@ -1,0 +1,44 @@
+<div class="container text-center">
+  <div class="row">
+    <h3>Every girl, woman, & mother</h3>
+    <p>deserves the best!</p>
+  </div>
+  <img class="flt-one" src="{{ 'pngegg.png'|file_url }}">
+  <img class="flt-two" src="{{ 'turmeric.png'|file_url }}">
+</div>
+
+
+{% schema %}
+  {
+    "name": "Home CTA Section",
+    "class":"food_medicine",
+    "settings": []
+  }
+{% endschema %}
+<style>
+  .food_medicine {
+    background: #533092;
+    padding: 60px 0;
+    color: #ffffff;
+    position: relative;
+} 
+  .flt-two {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 130px;
+}
+.flt-one {
+    position: absolute;
+    right: 0;
+    top: -18px;
+    width: 158px;
+}
+@media only screen and (max-width: 540px){
+  .flt-one {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 114px;
+} }
+</style>

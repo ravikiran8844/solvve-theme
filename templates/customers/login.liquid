@@ -1,0 +1,63 @@
+<!-- /templates/customers/login.liquid -->
+<link href="{{'users.css'|asset_url}}" rel="stylesheet" type="text/css" media="all" /> 
+<script src="{{'users.js'|asset_url}}" defer></script>
+<div class="container">
+  <div class="row spacer">
+    <div class="col-sm-12 col-md-6">
+      <div class="spacer form-shadow">
+        <div class="note form-success" id="ResetSuccess">{{ 'customer.recover_password.success' | t }}</div>
+        <div id="CustomerLoginForm" class="form-vertical">       
+          {%-form 'customer_login'-%}
+          <h3 class="text-center page_title">Customer Login</h3>
+          {{ form.errors | default_errors }}
+          <label for="CustomerEmail" class="sign_up_label">Enter Email</label>
+          <input type="email" name="customer[email]" id="CustomerEmail" class="input-full{% if form.errors contains 'email' %} error{% endif %}" placeholder="example@example.com" autocomplete="off" autocorrect="off" autocapitalize="off" autofocus>
+          {%-if form.password_needed-%}
+          <label for="CustomerPassword" class="sign_up_label">Enter Password</label>
+          <input type="password" value="" name="customer[password]" id="CustomerPassword" class="input-full{% if form.errors contains 'password' %} error{% endif %}" placeholder="******">
+          {%-endif-%}
+          {%-if form.password_needed-%}
+          <p class="text-right"><a href="#recover" id="RecoverPassword">{{ 'customer.login.forgot_password' | t }}</a></p>
+          {%-endif-%}
+          <div><input id="signin" type="submit" class="btn btn--full" value="{{ 'customer.login.sign_in' | t }}"></div>
+          <p><a href="/account/register">New to Absolutely Ayur? Sign up now.</a></p>
+          {%-endform-%}
+        </div>
+        <div id="RecoverPasswordForm">
+          <h3 class="text-center page_title">{{ 'customer.recover_password.title' | t }}</h3>
+          <p>{{ 'customer.recover_password.subtext' | t }}</p>
+          <div class="form-vertical">
+            {%-form 'recover_customer_password',class:"customer_email_rest"-%}
+            {{ form.errors | default_errors }}
+            {%-if form.posted_successfully?-%}
+            {%-assign resetPassword = true-%}
+            {%-endif-%}
+            <label for="RecoverEmail" class="hidden-label">{{ 'customer.recover_password.email' | t }}</label>
+            <input type="email" value="" name="email" id="RecoverEmail" class="input-full" placeholder="{{ 'customer.recover_password.email' | t }}" autocorrect="off" autocapitalize="off">
+            <p><input type="submit" class="btn btn--full recover_btn" value="{{ 'customer.recover_password.submit' | t }}"></p>
+            <button type="button" id="HideRecoverPasswordLink" class="text-link">{{ 'customer.recover_password.cancel' | t }}</button>
+            {%-endform-%}
+          </div>
+        </div>
+        {%-if shop.checkout.guest_login-%}
+        <hr>
+        <h2>{{ 'customer.login.guest_title' | t }}</h2>
+        {%-form 'guest_login'-%}
+        <input type="submit" class="btn" value="{{ 'customer.login.guest_continue' | t }}">
+        {%-endform-%}
+        {%-endif-%}
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <img src="{{'aa-sign_up.png'|asset_url}}" style="max-width:100%;margin:0 auto;"/>
+    </div>
+  </div>
+</div>
+<style>
+ #RecoverPasswordForm {
+    display: none;
+}
+  #ResetSuccess {
+    display: none;
+}
+</style>

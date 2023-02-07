@@ -1,0 +1,66 @@
+
+<div class="glide" id="home-slider">
+    <div class="glide__track" data-glide-el="track">
+      <div class="glide__slides">
+ {%- for block in section.blocks -%}
+    <div class="glide__slide">
+      <a href="{{ block.settings.image_link }}">
+        <picture>
+          <source media="(min-width: 601px)" srcset="{{ block.settings.slider_desktop_image | img_url:'master' }}">
+          <source  media="(max-width: 600px)" srcset="{{ block.settings.slider_mobile_image | img_url:'master' }}">
+          <img class="slide-image" data-src="{{ block.settings.slider_desktop_image | img_url:'master' }}" style="width:100%;max-width:100%">
+        </picture> 
+      </a>
+    </div>
+    {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Slider",
+    "class": "home_slider",
+    "blocks": [
+      {
+        "name":"Slider",
+        "type":"image",
+        "settings":[
+          {
+            "type":"image_picker",
+            "id":"slider_desktop_image",
+            "label":"Desktop Image"
+          },
+          {
+            "type":"image_picker",
+            "id":"slider_mobile_image",
+            "label":"Mobile Image"
+          },
+          {
+          "type":"url",
+          "id":"image_link",
+          "label":"Image Link"
+          }
+        ]
+      }
+    ]
+    
+  }
+{% endschema %}
+
+<script>
+     new Glide('#home-slider', {
+	type: 'carousel',
+	perView: 1,
+    autoplay:5000,
+	breakpoints: {
+		560: {
+			perView: 1
+		},
+      460: {
+			perView: 1
+		},
+	}
+}).mount();
+</script>

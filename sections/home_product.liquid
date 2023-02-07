@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+      <h3 class="title">{{ section.settings.title }}</h3>
+      <p class="productdes">{{ section.settings.product_des }}</p>
+      <div class="ct-btn">
+      <a href="{{ section.settings.link }}">Shop Now</a>
+      </div>
+    </div>
+</div>
+{%-schema-%}
+{
+"name": "Product one",
+"class":"product_two",
+"settings": [
+{
+"id":"title",
+"type":"text",
+"label":"Title"
+},
+{
+"id":"product_des",
+"type":"text",
+"label":"product description"
+},
+{
+"id":"link",
+"type":"url",
+"label":"Button link"
+}
+]
+}
+{%-endschema-%}

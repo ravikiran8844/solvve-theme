@@ -1,0 +1,8 @@
+{%-if paginate.pages > 1-%}
+<hr>
+<div class="col-12">
+<div class="pagination">
+  {{ paginate | default_pagination | replace: '&laquo; Previous', '<i class="icon icon-arrow-mright"></i>' | replace: 'Next &raquo;', '<i class="icon icon-arrow-mleft"></i>' }}
+</div>
+</div>
+{%-endif-%}

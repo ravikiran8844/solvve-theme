@@ -1,0 +1,30 @@
+<!-- /templates/customers/register.liquid -->
+<link href="{{'users.css'|asset_url}}" rel="stylesheet" type="text/css" media="all" /> 
+<script src="{{'users.js'|asset_url}}" defer></script>
+<div class="wrapper">
+  <div class="grid spacer">
+    <div class="grid__item large--one-half small--one-whole wide--one-half">
+      <div class="spacer form-shadow">
+        <div class="form-vertical">
+          <h3 class="text-center page_title">{{ 'customer.register.title' | t }}</h3>
+          {%-form 'create_customer'-%}
+          {{ form.errors | default_errors }}
+          <label for="FirstName" class="sign_up_label">{{ 'customer.register.first_name' | t }}</label>
+          <input type="text" name="customer[first_name]" id="FirstName" data_val="fname" class="input-full"  {% if form.first_name %}value="{{ form.first_name }}"{% endif %} autocapitalize="words" autofocus>
+          <label for="LastName" class="sign_up_label">{{ 'customer.register.last_name' | t }}</label>
+          <input type="text" name="customer[last_name]" id="LastName" data_val="lname" class="input-full"  {% if form.last_name %}value="{{ form.last_name }}"{% endif %} autocapitalize="words">
+          <label for="Email" class="sign_up_label">{{ 'customer.register.email' | t }}</label>
+          <input type="email" name="customer[email]" id="Email" class="input-full{% if form.errors contains 'email' %} error{% endif %}"  {% if form.email %} value="{{ form.email }}"{% endif %} autocorrect="off" autocapitalize="off">
+          <label for="CreatePassword" class="sign_up_label">{{ 'customer.register.password' | t }}</label>
+          <input type="password" name="customer[password]" id="CreatePassword" class="input-full{% if form.errors contains 'password' %} error{% endif %}" placeholder="******">
+          <p><input id="signup" type="submit" value="{{ 'customer.register.submit' | t }}" class="btn btn--full"></p>
+          <a href="/account/login">Already have an account? Sign in now.</a>
+          {%-endform-%}
+        </div>
+      </div>
+    </div>
+    <div class="grid__item large--one-half small--one-whole wide--one-half text-center small--hide medium--hide">
+      <img src="{{'aa-sign_up.png'|asset_url}}" style="max-width:100%;margin:0 auto;"/>
+    </div>    
+  </div>
+</div>

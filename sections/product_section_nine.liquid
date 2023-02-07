@@ -1,0 +1,161 @@
+<div class="container">
+  <div class="row">
+    <h3 class="title text-center">We Promise You A Healthy Tomorrow!</h3>
+    <p class="sub-ttl  text-center">You are at the core of what we do and all our products are just to make you happy!</p>
+    <div class="solvve-promise">
+        <div>
+          <div class="promise_icon_box">
+            <div class="promise_icon_img">
+            <img src="{{ 'backed_by_science.png'| file_url }}">
+            </div>
+            <p class="prom-icon-name">Backed by Science</p>
+          </div>
+        </div>
+        <div>
+          <div class="promise_icon_box">
+            <div class="promise_icon_img">
+            <img src="{{ 'balances_hormones.png'| file_url }}">
+            </div>
+            <p class="prom-icon-name">Balances Hormones</p>
+          </div>
+        </div>
+        <div>
+          <div class="promise_icon_box">
+            <div class="promise_icon_img">
+            <img src="{{ 'Balances_Mood_swings.png'| file_url }}">
+            </div>
+            <p class="prom-icon-name">Balances Mood Swings</p>
+          </div>
+        </div>
+      <div>
+          <div class="promise_icon_box">
+            <div class="promise_icon_img">
+            <img src="{{ 'Easy_to_Consume.png'| file_url }}">
+            </div>
+            <p class="prom-icon-name">Easy to Consume</p>
+          </div>
+        </div>
+      <div>
+          <div class="promise_icon_box">
+            <div class="promise_icon_img">
+            <img src="{{ '100_Vegan.png'| file_url }}">
+            </div>
+            <p class="prom-icon-name">100% Vegan</p>
+          </div>
+        </div>
+      <div>
+          <div class="promise_icon_box">
+            <div class="promise_icon_img">
+            <img src="{{ 'Enhance_Chances_of_Pregnancy.png'| file_url }}">
+            </div>
+            <p class="prom-icon-name">Enhance Chances of Pregnancy</p>
+          </div>
+        </div>
+      <div>
+          <div class="promise_icon_box">
+            <div class="promise_icon_img">
+            <img src="{{ 'Instant_doctor_support.png'| file_url }}">
+            </div>
+            <p class="prom-icon-name">Instant Doctor Support</p>
+          </div>
+        </div>
+     
+      </div>
+  </div>
+  <div class="infu-section">
+    <div class="row">
+      <div class="solvve-infu">
+        {%- for block in section.blocks -%}
+        <div>
+          <div class="infu">
+          <video autoplay="" playsinline="" loop="" muted="" class="w-100">
+          <source src="{{ block.settings.video-url }}" type="video/mp4">
+        </video>
+          </div>
+        </div>
+          {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "The Solvve Promise",
+    "class":"solvve_promise",
+    "settings": [],
+    "blocks":[
+      {
+      "type":"video",
+      "name":"influencer",
+        "settings":[
+          {
+      "id": "video-url",
+      "type": "text",
+      "label": "Video url"
+    }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+<script>
+    $(document).ready(function(){
+      $('.solvve-promise').slick({
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        speed: 300,
+        infinite: true,
+        autoplaySpeed: 5000,
+        autoplay: true,
+        responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 5,
+          arrows: false,
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 3,
+          arrows: false,
+        }
+      }
+    ]
+      });
+    });
+
+   $(document).ready(function(){
+      $('.solvve-infu').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        speed: 300,
+        infinite: true,
+        autoplaySpeed: 5000,
+        autoplay: true,
+        responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+          arrows: false,
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+        }
+      }
+    ]
+      });
+    });
+  </script>
+<style>
+  .infu video {
+    border-radius: 30px;
+}
+</style>

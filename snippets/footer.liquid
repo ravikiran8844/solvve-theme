@@ -1,0 +1,33 @@
+<footer>
+  <div class="footer-sub">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <h3 class="subcri-title">STAY IN TUCH</h3>
+        <p>Join our list for exclusive access to discounts,<br>
+            product launches, and real talk on PCOS/PCOD.</p>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        {% form 'customer' %}
+    {{ form.errors | default_errors }}
+    {% if form.posted_successfully? %}
+      <p>{{ 'general.newsletter_form.confirmation' | t }}</p>
+    {% else %}
+      <input type="hidden" name="contact[tags]" value="newsletter">
+      <input type="email"
+        name="contact[email]"
+        id="Email"
+        value="{% if customer.email != blank %}{{ customer.email }}{% endif %}"
+        placeholder="{{ 'general.newsletter_form.email_placeholder' | t }}"
+        autocorrect="off"
+        autocapitalize="off">
+      <button type="submit" name="commit" id="Subscribe">
+        <span>{{ 'general.newsletter_form.submit' | t }}</span>
+      </button>
+    {% endif %}
+  {% endform %}   
+      </div>
+    </div>
+  </div>
+  </div>
+</footer>

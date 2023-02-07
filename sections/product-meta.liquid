@@ -1,0 +1,281 @@
+<div class="container">
+  <div class="row">
+{% assign current_variant = product.selected_or_first_available_variant %}
+{% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+<div class="col-md-6 col-sm-12">
+  <div class="stky">
+        {% assign current_variant = product.selected_or_first_available_variant %}
+
+<div id="product__slider">
+      <div class="slider-galeria-thumbs">
+        {% for image in product.images %}
+        <div class="slide"><img src="{{ image.src | img_url }}" alt="{{ image.alt | escape }}" class="img-responsive rds"></div>
+        {% endfor %}
+      </div>
+      <div class="slider-galeria">
+        {% for image in product.images %}
+        <div class="slide"><img src="{{ image.src | img_url : "large"}}" alt="{{ image.alt | escape }}" class="img-responsive"></div>
+        {% endfor %}
+      </div>
+    </div>
+</div>
+      </div>
+    <div class="col-md-6 col-sm-12">
+    <h1 class="product-title">{{ product.title }}</h1>
+      <ul class="rev-star">
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star-o" aria-hidden="true"></i></li> 
+        <li class="rev-count">1374+ reviews</li>
+      </ul>
+      <div class="product-price-box">MRP: <span class="selling-price">{{ current_variant.price | money }}</span> <del><span class="offer-price">{{ current_variant.compare_at_price | money }}</span></del> <span class="incl-txt">(Incl. of all taxes)</span></div>
+      <div class="product-description">
+        {{ product.description }}
+      </div>
+<form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
+ <div class="var-qty d-none">
+  <select name="id" id="productSelect">
+    {% for variant in product.variants %}
+      {% if variant.available %}
+        <option value="{{ variant.id }}" data-price="{{ variant.price | money }}" data-comprice="{{ variant.compare_at_price | money }}">
+          {{ variant.title }} 
+        </option>
+      {% else %}  
+        <option disabled="disabled">
+          {{ variant.title }} - sold out
+        </option>
+      {% endif %}
+    {% endfor %}
+  </select>
+ 
+   <div class="quantity-control" data-quantity="">
+    <span class="quantity-btn" data-quantity-minus=""><svg viewBox="0 0 409.6 409.6">
+        <g>
+          <g>
+            <path d="M392.533,187.733H17.067C7.641,187.733,0,195.374,0,204.8s7.641,17.067,17.067,17.067h375.467 c9.426,0,17.067-7.641,17.067-17.067S401.959,187.733,392.533,187.733z" />
+          </g>
+        </g>
+      </svg></span>
+    <input type="number" class="quantity-input" data-quantity-target="" value="1"  min="1" max="" name="quantity">
+    <span class="quantity-btn" data-quantity-plus=""><svg viewBox="0 0 426.66667 426.66667">
+        <path d="m405.332031 192h-170.664062v-170.667969c0-11.773437-9.558594-21.332031-21.335938-21.332031-11.773437 0-21.332031 9.558594-21.332031 21.332031v170.667969h-170.667969c-11.773437 0-21.332031 9.558594-21.332031 21.332031 0 11.777344 9.558594 21.335938 21.332031 21.335938h170.667969v170.664062c0 11.777344 9.558594 21.335938 21.332031 21.335938 11.777344 0 21.335938-9.558594 21.335938-21.335938v-170.664062h170.664062c11.777344 0 21.335938-9.558594 21.335938-21.335938 0-11.773437-9.558594-21.332031-21.335938-21.332031zm0 0" /></svg>
+    </span>
+  </div> 
+ </div>  
+ 
+     {% unless product.has_only_default_variant %}
+            {%- for option in product.options_with_values -%}
+              {% assign i = -1 %}          
+                 {% assign percentage = 0 %}
+              <div class="product-card__options mb-5 mt-4">
+                <label class="product-card__options--label h5">{{ option.name }}</label>
+    
+                <div class="product-card__options--swatches row">
+                  {%- for value in option.values -%}
+                    {% assign j = i|plus:1 %}
+              {% assign i = j %} 
+                    {% assign pack_count =  value | split: " " | last  %}
+                    {% assign saving = current_variant.compare_at_price | minus: current_variant.price | times: 100 | divided_by: current_variant.compare_at_price | round %}
+                    {% assign percentage = saving | at_least: percentage %}
+                    <div id="{{ product.variants[i].id }}" class="product-card__options--swatch swatch-{{ option.name | handleize }} product-options col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-6 bg-transparent border-0">
+                      <input
+                        hidden
+                        type="radio"
+                        id="{{ section.id }}-{{ product.id }}-{{ value }}"
+                        name="{{ option.name }}"
+                        value="{{ value | escape }}"
+                        {% if option.selected_value == value %}
+                        checked
+                        {% endif %}>
+                        <label class="w-100"  for="{{ section.id }}-{{ product.id }}-{{ value }}">
+                          <div  >
+                            <div class="variant-select-button">
+                          <div class="discount-percentage"> Sale <span>{{percentage}}%</span></div>    
+                          <div class="fs-5 fw-bold per-bottle"> {{value}} </div>          
+                            <div class="sachets-count"> {{pack_count  | times: 15}}  <span>
+                              Sachets</span> </div>
+                          <div class="variant-price h2">
+                              {{product.variants[i].price | money_without_trailing_zeros}}
+                            </div>
+                            <div class="compare_at_price"><s>{{product.variants[i].compare_at_price | money_without_trailing_zeros}}</s></div>
+                            </div>
+                          </div>
+                        </label>
+                    </div>
+                  {%- endfor -%}
+                </div>
+              </div>
+            {%- endfor -%}
+          {% endunless %}
+          
+  <div class="add-box"><button type="submit" name="add" id="AddToCart">ADD TO CART</button></div>
+</form>
+  <p class="free-book"><b>Buy now</b> & get an exclusive <span>diet book worth ₹ 499 completely free!</span></p>
+   <div class="main-icon-box"><img src="{{ 'main-icon.png' | asset_url }}"></div>       
+  </div>
+  </div>
+</div>
+        </div>
+
+
+
+<style>
+  .hidden{
+    display: none;
+  }
+.custom-buy-button{
+  background: #FF7C99;
+  border: 1px solid #FF7C99;
+  color: #fff;
+  border-radius: 50px;
+  font-family: Inter-Bold;  
+  padding: 15px 0px;
+}
+.variant-select-button{
+  position: relative;
+  background-color: white;
+  padding: 20px 5px;
+  margin: 10px 3px;  
+  text-align: left;
+  border-radius: 10px;
+  box-shadow: 5px 5px #000;
+   border: 1px solid;
+   cursor: pointer;
+}
+.compare_at_price{
+  color: red;
+  font-size: small;
+  font-weight: 500;
+  font-size: 20px;
+
+}
+.discount-percentage{
+  position: absolute;
+    height: 20px;
+    top: -10px;
+    background: linear-gradient(#ff0000 0,#ff1700 100%);
+    box-shadow: 0 3px 10px -5px #000;
+    left: -2px;
+    color: #fff;
+    padding: 2px 5px;
+    font-size: 10px;
+}
+.product-options.active .variant-select-button {
+    background-color: #d1d7d782;
+}
+.variant-price{
+  margin: 10px 0 7px;
+  font-size: 2rem;
+}
+}
+.per-bottle{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+
+}
+.sachets-count{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+</style>
+
+
+{% schema %}
+  {
+    "name": "Product-meta",
+    "class":"product_meta",
+    "settings": []
+  }
+{% endschema %}
+
+
+
+{% javascript %}
+
+document.addEventListener("DOMContentLoaded", function() {
+const productOptions = document.querySelectorAll(".product-options");
+productOptions.forEach(function(option) {
+option.addEventListener("click", function() {
+const v_id = this.id;
+productOptions.forEach(function(p) {
+p.classList.remove("active");
+});
+this.classList.add("active");
+document.querySelector("select#productSelect").value = v_id;
+const changeEvent = new Event("change");
+document.querySelector("select#productSelect").dispatchEvent(changeEvent);
+});
+});
+});
+
+  $('.slider-galeria').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  infinite: false,
+  asNavFor: '.slider-galeria-thumbs',
+});
+$('.slider-galeria-thumbs').slick({
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  arrows: false,
+  asNavFor: '.slider-galeria',
+  vertical: true,
+  verticalSwiping: true,
+  focusOnSelect: true,
+  infinite: false,
+});
+
+  
+   (function () {
+  "use strict";
+  var jQueryPlugin = (window.jQueryPlugin = function (ident, func) {
+    return function (arg) {
+      if (this.length > 1) {
+        this.each(function () {
+          var $this = $(this);
+
+          if (!$this.data(ident)) {
+            $this.data(ident, func($this, arg));
+          }
+        });
+
+        return this;
+      } else if (this.length === 1) {
+        if (!this.data(ident)) {
+          this.data(ident, func(this, arg));
+        }
+
+        return this.data(ident);
+      }
+    };
+  });
+})();
+
+(function () {
+  "use strict";
+  function Guantity($root) {
+    const element = $root;
+    const quantity = $root.first("data-quantity");
+    const quantity_target = $root.find("[data-quantity-target]");
+    const quantity_minus = $root.find("[data-quantity-minus]");
+    const quantity_plus = $root.find("[data-quantity-plus]");
+    var quantity_ = quantity_target.val();
+    $(quantity_minus).click(function () {
+      quantity_target.val(--quantity_);
+    });
+    $(quantity_plus).click(function () {
+      quantity_target.val(++quantity_);
+    });
+  }
+  $.fn.Guantity = jQueryPlugin("Guantity", Guantity);
+  $("[data-quantity]").Guantity();
+})();
+   $("#productSelect").on("change",function(){
+    $(".selling-price").html($('option:selected', this).attr("data-price")),$(".offer-price").html($('option:selected', this).attr("data-comprice"));
+  }); 
+{% endjavascript %}

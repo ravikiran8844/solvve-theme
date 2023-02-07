@@ -1,0 +1,588 @@
+{
+  "current": {
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+          "announcement": "Get Flat 15% OFF | Use Code: NEW15"
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+        }
+      },
+      "slide_show": {
+        "type": "slide_show",
+        "blocks": {
+          "cc0b0269-cc23-4590-9b27-acf4c6fe3cda": {
+            "type": "image",
+            "settings": {
+              "slider_desktop_image": "shopify:\/\/shop_images\/Healthy_PCOS_Supplement.png",
+              "slider_mobile_image": "shopify:\/\/shop_images\/Good_PCOS_Supplement.png",
+              "image_link": "shopify:\/\/products\/pcos-pcod"
+            }
+          }
+        },
+        "block_order": [
+          "cc0b0269-cc23-4590-9b27-acf4c6fe3cda"
+        ],
+        "settings": {
+        }
+      },
+      "home_section_one": {
+        "type": "home_section_one",
+        "blocks": {
+          "b4e31025-e461-4c26-a435-2856b3c0cca3": {
+            "type": "pr_section",
+            "settings": {
+              "pr-content": "Named one of the highlights of women's health technology",
+              "pr-image": "shopify:\/\/shop_images\/The-Week-Logo-Big.png"
+            }
+          },
+          "c6f310f9-f175-475d-8870-4050c20d7040": {
+            "type": "pr_section",
+            "settings": {
+              "pr-content": "Named the number one product that'll make your period less painful",
+              "pr-image": "shopify:\/\/shop_images\/Group_3102.png"
+            }
+          },
+          "65bdf320-3696-45a6-88a6-541000c33fb2": {
+            "type": "pr_section",
+            "settings": {
+              "pr-content": "\"Best Vitamins For Belly Bloat According to Science\"",
+              "pr-image": "shopify:\/\/shop_images\/Group_3103.png"
+            }
+          }
+        },
+        "block_order": [
+          "b4e31025-e461-4c26-a435-2856b3c0cca3",
+          "c6f310f9-f175-475d-8870-4050c20d7040",
+          "65bdf320-3696-45a6-88a6-541000c33fb2"
+        ],
+        "settings": {
+          "title": "We got featured on!",
+          "sub-title": "Want to know our side of the story? Discover the story through the eyes of digital media."
+        }
+      },
+      "home_section_two": {
+        "type": "home_section_two",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/sect-two.jpg",
+          "title": "Reclaim your life from PCOS - We show you how!",
+          "content_one": "Are you someone who is dealing with PCOS? You might have heard people say to lose weight or try PCOS weight loss supplements.<br><br> Trust us; there is a much better way. Solvve’s best supplement for PCOS is a combination of modern science and centuries-old Ayurveda. It offers women strength and power to regain control over the menstrual cycle and restore fertility, happiness, and femininity."
+        }
+      },
+      "home_section_three": {
+        "type": "home_section_three",
+        "blocks": {
+          "c5db5598-6a09-46ed-a2f9-279ab6e66980": {
+            "type": "image",
+            "settings": {
+              "testi_img": "shopify:\/\/shop_images\/Ellipse_91_1.png",
+              "testi_title": "This product is a blessing",
+              "testi_content": "I am a mother of two and never had irregular periods. But in the past few months I started to notice irregular periods and it slowly became a concern. My gynaecologist confirmed that I have PCOD. I wanted something natural and tried Solvve’s PCOD supplement. I can see a great difference in my body. I would totally recommend this product.",
+              "testi_name": "Nitya"
+            }
+          },
+          "bcf3fbcb-7552-447f-be64-753ecb59ee71": {
+            "type": "image",
+            "settings": {
+              "testi_img": "shopify:\/\/shop_images\/Ellipse_93.png",
+              "testi_title": "The best PCOD supplement",
+              "testi_content": "Periods have been a nightmare for me as I had heavy periods that too once in a few months. I was diagnosed with PCOD and I was suggested Solvve by my gynaecologist. It has been a few months since I started taking it and now my periods are not a nightmare anymore.",
+              "testi_name": "Keerthika"
+            }
+          },
+          "665ee595-fd97-4c45-8f72-e2822f7281e4": {
+            "type": "image",
+            "settings": {
+              "testi_img": "shopify:\/\/shop_images\/Ellipse_92.png",
+              "testi_title": "It works!",
+              "testi_content": "I want get pregnant naturally but PCOD was making it difficult for me. That is when my doctor suggested Solvve and I included it in my routine and made few changes in my lifestyle and today I am 5 months pregnant. This product is definitely a boon.",
+              "testi_name": "Varshini"
+            }
+          }
+        },
+        "block_order": [
+          "c5db5598-6a09-46ed-a2f9-279ab6e66980",
+          "bcf3fbcb-7552-447f-be64-753ecb59ee71",
+          "665ee595-fd97-4c45-8f72-e2822f7281e4"
+        ],
+        "settings": {
+        }
+      },
+      "home_product": {
+        "type": "home_product",
+        "settings": {
+          "title": "Solvve’s PCOD\/PCOS Health Supplement",
+          "product_des": "Solvve is a specifically curated brand that is made to benefit women dealing with PCOS\/PCOD concerns.Put together with clinically studied ingredients with combination of Ayurveda and modern medicine.",
+          "link": "shopify:\/\/products\/pcos-pcod"
+        }
+      },
+      "home_section_four": {
+        "type": "home_section_four",
+        "blocks": {
+          "15fe7103-80bd-4bb0-b1b7-c8e4c6e2d3ae": {
+            "type": "icon-box",
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/Reliability.png",
+              "icon_title": "Reliability",
+              "icon_content": "We are committed to reliability by striving to provide specially curated PCOS supplements for a better women’s health."
+            }
+          },
+          "494f5644-155b-47b9-9595-b862d7b25a71": {
+            "type": "icon-box",
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/Innovative.png",
+              "icon_title": "Innovative",
+              "icon_content": "We are one of a kind brand working to provide innovative products for concerning issues."
+            }
+          },
+          "24bc20cd-f305-4797-a571-c6fd754422dd": {
+            "type": "icon-box",
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/Responsibility.png",
+              "icon_title": "Responsibility",
+              "icon_content": "Through our brand we are committed to the responsibility of giving the best."
+            }
+          }
+        },
+        "block_order": [
+          "15fe7103-80bd-4bb0-b1b7-c8e4c6e2d3ae",
+          "494f5644-155b-47b9-9595-b862d7b25a71",
+          "24bc20cd-f305-4797-a571-c6fd754422dd"
+        ],
+        "settings": {
+          "title": "What is Solvve known for?"
+        }
+      },
+      "home_section_five": {
+        "type": "home_section_five",
+        "blocks": {
+          "5ac41bc1-97b2-4c8e-8f67-21dd3d1d06d8": {
+            "type": "faq",
+            "settings": {
+              "faq_title": "Health Assessment",
+              "faq_content": "Help us get to know you with a set of questions. This helps assess your health and get answers to frequent queries. They are developed with the help of doctors, and healthcare professionals."
+            }
+          },
+          "c1d42083-82b8-49be-93b4-438c4cb78fd5": {
+            "type": "faq",
+            "settings": {
+              "faq_title": "Effective Formula",
+              "faq_content": "Our PCOS supplements are packed with supercharged vegan ingredients and adhere to the finest manufacturing practices to ensure that your supplement is of the highest quality every time."
+            }
+          },
+          "4d8d49c1-5aee-4523-b440-cf2a5b004c8d": {
+            "type": "faq",
+            "settings": {
+              "faq_title": "Quick Delivery",
+              "faq_content": "We promise a 100% free and quick delivery to most of the pin codes in India with a very minimal delivery time all over India and real-time tracking of orders."
+            }
+          },
+          "34d6068b-0ea1-4626-a19e-5b93a676e327": {
+            "type": "faq",
+            "settings": {
+              "faq_title": "Free Follow-Up",
+              "faq_content": "Unsure about your health concerns? Talk to our experienced Gynaecologist and get free support and guidance!"
+            }
+          }
+        },
+        "block_order": [
+          "5ac41bc1-97b2-4c8e-8f67-21dd3d1d06d8",
+          "c1d42083-82b8-49be-93b4-438c4cb78fd5",
+          "4d8d49c1-5aee-4523-b440-cf2a5b004c8d",
+          "34d6068b-0ea1-4626-a19e-5b93a676e327"
+        ],
+        "settings": {
+          "title": "How Solvve works?"
+        }
+      },
+      "home_section_six": {
+        "type": "home_section_six",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Vinya_Tejashvi_1.png",
+          "title": "Are you still having questions?",
+          "content": "Do you want a clear understanding on how to tackle your problems? Book an appointment with one of our expert  Nutritionist for free consultations. We keep all your information off the record and are protected by Doctor-Patient confidentiality!",
+          "link": "shopify:\/\/pages\/book-a-consultation"
+        }
+      },
+      "refer-a-friend": {
+        "type": "refer-a-friend",
+        "settings": {
+        }
+      },
+      "product_section_nine": {
+        "type": "product_section_nine",
+        "blocks": {
+          "716183a8-5430-43f7-a6db-3e2225eb0374": {
+            "type": "video",
+            "settings": {
+              "video-url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9d75ab9ddbaf42c9a91e6be459738d3d.mp4"
+            }
+          },
+          "e8b91d7f-5e54-45da-a19c-7b4a6e22d9c2": {
+            "type": "video",
+            "settings": {
+              "video-url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/c504a53dc04b400bb8aed6f006b8ee9c.mp4"
+            }
+          },
+          "1b812727-c6f5-4b7b-b034-68d681d38174": {
+            "type": "video",
+            "settings": {
+              "video-url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/5401e23d13e140b8be12400dce6ebeac.mp4"
+            }
+          },
+          "6d007575-59a4-44dd-83d2-f2db7713fd11": {
+            "type": "video",
+            "settings": {
+              "video-url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/0a1580ec02104d78ab5ec97baa3a1f21.mp4"
+            }
+          },
+          "30516190-d52e-4906-935c-f12ff206ee90": {
+            "type": "video",
+            "settings": {
+              "video-url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/7d2a186fd3204548b869cba3a5ad63ad.mp4"
+            }
+          }
+        },
+        "block_order": [
+          "716183a8-5430-43f7-a6db-3e2225eb0374",
+          "e8b91d7f-5e54-45da-a19c-7b4a6e22d9c2",
+          "1b812727-c6f5-4b7b-b034-68d681d38174",
+          "6d007575-59a4-44dd-83d2-f2db7713fd11",
+          "30516190-d52e-4906-935c-f12ff206ee90"
+        ],
+        "settings": {
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+        }
+      },
+      "app-optimization": {
+        "type": "app-optimization",
+        "blocks": {
+          "30982e93-004a-48cc-a56e-00efd678ae92": {
+            "type": "app",
+            "settings": {
+              "title": "instafeed",
+              "url": "instafeed.nfcube.com\/cdn\/e1f640082ff365375ad2572105457bf8.js",
+              "block_index": true,
+              "block_product": true,
+              "block_collection": true,
+              "block_page": true,
+              "block_blog": true,
+              "block_article": true,
+              "block_cart": true,
+              "block_search": true,
+              "block_customers": true,
+              "block_gift_card": true,
+              "scroll_index": true,
+              "scroll_product": false,
+              "scroll_collection": false,
+              "scroll_page": false,
+              "scroll_blog": false,
+              "scroll_article": false,
+              "scroll_cart": false,
+              "scroll_search": false,
+              "scroll_customers": false,
+              "scroll_gift_card": false,
+              "interaction_index": true,
+              "interaction_product": false,
+              "interaction_collection": false,
+              "interaction_page": false,
+              "interaction_blog": false,
+              "interaction_article": false,
+              "interaction_cart": false,
+              "interaction_search": false,
+              "interaction_customers": false,
+              "interaction_gift_card": false,
+              "interaction_selectors_1": "",
+              "interaction_event_1": "click",
+              "interaction_selectors_2": "",
+              "interaction_event_2": "click"
+            }
+          },
+          "010dbb34-4347-44b7-9e80-50feb341571f": {
+            "type": "app",
+            "settings": {
+              "title": "Review App",
+              "url": "cdn.shopify.com\/proxy\/b7ea296e81af387598bc8c14eb6b6c5c0dd76033a55486b5f06d790f4097c448\/api.goaffpro.com\/loader.js",
+              "block_index": true,
+              "block_product": false,
+              "block_collection": true,
+              "block_page": true,
+              "block_blog": true,
+              "block_article": true,
+              "block_cart": true,
+              "block_search": true,
+              "block_customers": true,
+              "block_gift_card": true,
+              "scroll_index": false,
+              "scroll_product": true,
+              "scroll_collection": false,
+              "scroll_page": false,
+              "scroll_blog": false,
+              "scroll_article": false,
+              "scroll_cart": false,
+              "scroll_search": false,
+              "scroll_customers": false,
+              "scroll_gift_card": false,
+              "interaction_index": false,
+              "interaction_product": true,
+              "interaction_collection": false,
+              "interaction_page": false,
+              "interaction_blog": false,
+              "interaction_article": false,
+              "interaction_cart": false,
+              "interaction_search": false,
+              "interaction_customers": false,
+              "interaction_gift_card": false,
+              "interaction_selectors_1": "",
+              "interaction_event_1": "click",
+              "interaction_selectors_2": "",
+              "interaction_event_2": "click"
+            }
+          },
+          "0fc2f714-584c-4ed6-8fe1-2fd8f572bec0": {
+            "type": "app",
+            "settings": {
+              "title": "Refer friend",
+              "url": "https:\/\/cdn-widget-assets.yotpo.com\/widget-referred-friend\/app.v0.2.5-3811.js",
+              "block_index": false,
+              "block_product": true,
+              "block_collection": true,
+              "block_page": true,
+              "block_blog": true,
+              "block_article": true,
+              "block_cart": true,
+              "block_search": true,
+              "block_customers": true,
+              "block_gift_card": true,
+              "scroll_index": true,
+              "scroll_product": false,
+              "scroll_collection": false,
+              "scroll_page": false,
+              "scroll_blog": false,
+              "scroll_article": false,
+              "scroll_cart": false,
+              "scroll_search": false,
+              "scroll_customers": false,
+              "scroll_gift_card": false,
+              "interaction_index": true,
+              "interaction_product": false,
+              "interaction_collection": false,
+              "interaction_page": false,
+              "interaction_blog": false,
+              "interaction_article": false,
+              "interaction_cart": false,
+              "interaction_search": false,
+              "interaction_customers": false,
+              "interaction_gift_card": false,
+              "interaction_selectors_1": "",
+              "interaction_event_1": "click",
+              "interaction_selectors_2": "",
+              "interaction_event_2": "click"
+            }
+          }
+        },
+        "block_order": [
+          "30982e93-004a-48cc-a56e-00efd678ae92",
+          "010dbb34-4347-44b7-9e80-50feb341571f",
+          "0fc2f714-584c-4ed6-8fe1-2fd8f572bec0"
+        ],
+        "settings": {
+          "enable": true,
+          "debug_enable": true
+        }
+      },
+      "home_cta": {
+        "type": "home_cta",
+        "settings": {
+        }
+      },
+      "product-meta": {
+        "type": "product-meta",
+        "settings": {
+        }
+      },
+      "product_section_one": {
+        "type": "product_section_one",
+        "blocks": {
+          "136395cb-a060-455a-9553-bafdf1754469": {
+            "type": "image",
+            "settings": {
+              "testi_img": "shopify:\/\/shop_images\/Ellipse_91_1.png",
+              "testi_title": "This product is a blessing",
+              "testi_content": "I am a mother of two and never had irregular periods. But in the past few months I started to notice irregular periods and it slowly became a concern. My gynaecologist confirmed that I have PCOD. I wanted something natural and tried Solvve’s PCOD supplement. I can see a great difference in my body. I would totally recommend this product.",
+              "testi_name": "Nithya Siddarth, Trivandram"
+            }
+          },
+          "513caed2-bc4f-4cbe-8e73-369bf272503a": {
+            "type": "image",
+            "settings": {
+              "testi_img": "shopify:\/\/shop_images\/Ellipse_93.png",
+              "testi_title": "The best PCOD supplement",
+              "testi_content": "Periods have been a nightmare for me as I had heavy periods that too once in a few months. I was diagnosed with PCOD and I was suggested Solvve by my gynaecologist. It has been a few months since I started taking it and now my periods are not a nightmare anymore.",
+              "testi_name": "Keerthika"
+            }
+          },
+          "a7083307-f12e-4983-94f9-07cb72d9edd0": {
+            "type": "image",
+            "settings": {
+              "testi_img": "shopify:\/\/shop_images\/Ellipse_92.png",
+              "testi_title": "It works!",
+              "testi_content": "I want get pregnant naturally but PCOD was making it difficult for me. That is when my doctor suggested Solvve and I included it in my routine and made few changes in my lifestyle and today I am 5 months pregnant. This product is definitely a boon.",
+              "testi_name": "Varshini"
+            }
+          }
+        },
+        "block_order": [
+          "136395cb-a060-455a-9553-bafdf1754469",
+          "513caed2-bc4f-4cbe-8e73-369bf272503a",
+          "a7083307-f12e-4983-94f9-07cb72d9edd0"
+        ],
+        "settings": {
+          "title": "Real People! Real Change!"
+        }
+      },
+      "product_section_two": {
+        "type": "product_section_two",
+        "settings": {
+        }
+      },
+      "product_section_three": {
+        "type": "product_section_three",
+        "settings": {
+        }
+      },
+      "product_section_four": {
+        "type": "product_section_four",
+        "settings": {
+        }
+      },
+      "product_section_five": {
+        "type": "product_section_five",
+        "settings": {
+        }
+      },
+      "product_section_six": {
+        "type": "product_section_six",
+        "settings": {
+        }
+      },
+      "product_section_eight": {
+        "type": "product_section_eight",
+        "settings": {
+        }
+      },
+      "product-meta-ebook": {
+        "type": "product-meta-ebook",
+        "settings": {
+        }
+      },
+      "product-ing": {
+        "type": "product-ing",
+        "blocks": {
+          "fb2e4e73-86f2-467a-9a08-d6e38dc25abc": {
+            "type": "image",
+            "settings": {
+              "ing_img": "shopify:\/\/shop_images\/Yashtimadhu.png",
+              "ing_title": "Yashtimadhu",
+              "ing_cnt": "Regulates irregular ovarian follicles"
+            }
+          },
+          "14f30db7-f710-45fc-b583-92e3ec48a9d0": {
+            "type": "image",
+            "settings": {
+              "ing_img": "shopify:\/\/shop_images\/Cinnamon.png",
+              "ing_title": "Cinnamon",
+              "ing_cnt": "Regulates menstrual cycle"
+            }
+          },
+          "587421c0-3aa1-46f4-83a4-ad9f74c994c5": {
+            "type": "image",
+            "settings": {
+              "ing_img": "shopify:\/\/shop_images\/Shatavari.png",
+              "ing_title": "Shatavari root",
+              "ing_cnt": "Balances hormones"
+            }
+          },
+          "8c3903b7-9449-4af8-b113-1739f15861a9": {
+            "type": "image",
+            "settings": {
+              "ing_img": "shopify:\/\/shop_images\/Turmeric_963839da-dbe8-4e45-9640-b2594150e1fb.png",
+              "ing_title": "Organic Turmeric root",
+              "ing_cnt": "Decreases insulin resistance"
+            }
+          },
+          "b2cd5519-c1f3-4afa-8f76-25d9475b1363": {
+            "type": "image",
+            "settings": {
+              "ing_img": "shopify:\/\/shop_images\/Maca_Root.png",
+              "ing_title": "Maca Root",
+              "ing_cnt": "Improves fertility and libido"
+            }
+          },
+          "f4d78cb8-d7c4-40db-9b74-da732cc1e55c": {
+            "type": "image",
+            "settings": {
+              "ing_img": "shopify:\/\/shop_images\/Chasteberry.png",
+              "ing_title": "Chasteberry",
+              "ing_cnt": "Regulates pituitary gland function"
+            }
+          },
+          "94795c42-2322-49c0-baf4-ae75a02129b2": {
+            "type": "image",
+            "settings": {
+              "ing_img": "shopify:\/\/shop_images\/Black_Pepper.png",
+              "ing_title": "Black Pepper Fruit",
+              "ing_cnt": "Antioxidant and anti-inflammatory agent"
+            }
+          },
+          "c2bd2524-6e04-418c-aaa8-376e1a52334e": {
+            "type": "image",
+            "settings": {
+              "ing_img": "shopify:\/\/shop_images\/Gokhru.png",
+              "ing_title": "Gokhru",
+              "ing_cnt": "Reduces cyst growth"
+            }
+          }
+        },
+        "block_order": [
+          "fb2e4e73-86f2-467a-9a08-d6e38dc25abc",
+          "14f30db7-f710-45fc-b583-92e3ec48a9d0",
+          "587421c0-3aa1-46f4-83a4-ad9f74c994c5",
+          "8c3903b7-9449-4af8-b113-1739f15861a9",
+          "b2cd5519-c1f3-4afa-8f76-25d9475b1363",
+          "f4d78cb8-d7c4-40db-9b74-da732cc1e55c",
+          "94795c42-2322-49c0-baf4-ae75a02129b2",
+          "c2bd2524-6e04-418c-aaa8-376e1a52334e"
+        ],
+        "settings": {
+          "title": "8 Clinically Tested, Powerful Herbs"
+        }
+      },
+      "ebook-about": {
+        "type": "ebook-about",
+        "settings": {
+        }
+      },
+      "ebook-food": {
+        "type": "ebook-food",
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  },
+  "presets": {
+    "Default": {
+    }
+  }
+}

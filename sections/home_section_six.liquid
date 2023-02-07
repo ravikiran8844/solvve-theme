@@ -1,0 +1,48 @@
+<section class="section_six">
+  <div class="container">
+    <div class="row">
+      <div class="nutri-sec">
+        <div class="left">
+          <img src="{{ section.settings.image|img_url: "master" }}">
+        </div>
+        <div class="right">
+          <h3>{{ section.settings.title }}</h3>
+          <p>{{ section.settings.content }}</p>
+          <div class="ct-btn">
+            <a href="{{ section.settings.link }}">Book a Consult</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Speak to our nutritionist",
+    "class":"nutritionist",   
+    "settings": [
+      {
+        "type":"image_picker",
+        "id":"image",
+        "label":"Image"
+      },
+      {
+        "type":"text",
+        "id":"title",
+        "label":"Title"
+      },
+      {
+        "type":"text",
+        "id":"content",
+        "label":"Content"
+      },
+      {
+        "type":"url",
+        "id":"link",
+        "label":"Link"
+      }
+    ]
+  }
+{% endschema %}
+

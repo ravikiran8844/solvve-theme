@@ -1,0 +1,149 @@
+<div class="container">
+  <div class="row">
+{% assign current_variant = product.selected_or_first_available_variant %}
+{% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+<div class="col-md-7 col-sm-12">
+        {% assign current_variant = product.selected_or_first_available_variant %}
+
+<div id="product__slider">
+      <div class="slider-galeria-thumbs">
+        {% for image in product.images %}
+        <div class="slide"><img src="{{ image.src | img_url }}" alt="{{ image.alt | escape }}" class="img-responsive rds"></div>
+        {% endfor %}
+      </div>
+      <div class="slider-galeria">
+        {% for image in product.images %}
+        <div class="slide"><img src="{{ image.src | img_url : "large"}}" alt="{{ image.alt | escape }}" class="img-responsive"></div>
+        {% endfor %}
+      </div>
+    </div>
+      </div>
+    <div class="col-md-5 col-sm-12">
+    <h1 class="product-title text-center">{{ product.title }}</h1>
+      <ul class="rev-star">
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+        <li><i class="fa fa-star-o" aria-hidden="true"></i></li> 
+        <li class="rev-count">174+ reviews</li>
+      </ul>
+      <div class="product-description text-center">
+        <p>{{ product.description }}</p>
+      </div>
+      <div class="product-price-box text-center">Paperback: <span class="selling-price">{{ current_variant.price | money }}</span> <del>{{ current_variant.compare_at_price | money }}</del> <span class="incl-txt">(Incl. of all taxes)</span></div>
+<form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
+ <div class="var-qty">
+  <select name="id" id="productSelect">
+    {% for variant in product.variants %}
+      {% if variant.available %}
+        <option value="{{ variant.id }}">
+          {{ variant.title }} 
+        </option>
+      {% else %}  
+        <option disabled="disabled">
+          {{ variant.title }} - sold out
+        </option>
+      {% endif %}
+    {% endfor %}
+  </select>
+   <div class="quantity-control" data-quantity="">
+    <span class="quantity-btn" data-quantity-minus=""><svg viewBox="0 0 409.6 409.6">
+        <g>
+          <g>
+            <path d="M392.533,187.733H17.067C7.641,187.733,0,195.374,0,204.8s7.641,17.067,17.067,17.067h375.467 c9.426,0,17.067-7.641,17.067-17.067S401.959,187.733,392.533,187.733z" />
+          </g>
+        </g>
+      </svg></span>
+    <input type="number" class="quantity-input" data-quantity-target="" value="1"  min="1" max="" name="quantity">
+    <span class="quantity-btn" data-quantity-plus=""><svg viewBox="0 0 426.66667 426.66667">
+        <path d="m405.332031 192h-170.664062v-170.667969c0-11.773437-9.558594-21.332031-21.335938-21.332031-11.773437 0-21.332031 9.558594-21.332031 21.332031v170.667969h-170.667969c-11.773437 0-21.332031 9.558594-21.332031 21.332031 0 11.777344 9.558594 21.335938 21.332031 21.335938h170.667969v170.664062c0 11.777344 9.558594 21.335938 21.332031 21.335938 11.777344 0 21.335938-9.558594 21.335938-21.335938v-170.664062h170.664062c11.777344 0 21.335938-9.558594 21.335938-21.335938 0-11.773437-9.558594-21.332031-21.335938-21.332031zm0 0" /></svg>
+    </span>
+  </div> 
+ </div>  
+  <div class="add-box"><button type="submit" name="add" id="AddToCart">ADD TO CART</button></div>
+</form>
+   <div class="main-icon-box"><img src="{{ 'main-icon.png' | asset_url }}"</div>       
+  </div>
+  </div>
+</div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Product-meta",
+    "class":"product_meta",
+    "settings": []
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+  $('.slider-galeria').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  infinite: false,
+  asNavFor: '.slider-galeria-thumbs',
+});
+$('.slider-galeria-thumbs').slick({
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  arrows: false,
+  asNavFor: '.slider-galeria',
+  vertical: true,
+  verticalSwiping: true,
+  focusOnSelect: true,
+  infinite: false,
+});
+
+  
+   (function () {
+  "use strict";
+  var jQueryPlugin = (window.jQueryPlugin = function (ident, func) {
+    return function (arg) {
+      if (this.length > 1) {
+        this.each(function () {
+          var $this = $(this);
+
+          if (!$this.data(ident)) {
+            $this.data(ident, func($this, arg));
+          }
+        });
+
+        return this;
+      } else if (this.length === 1) {
+        if (!this.data(ident)) {
+          this.data(ident, func(this, arg));
+        }
+
+        return this.data(ident);
+      }
+    };
+  });
+})();
+
+(function () {
+  "use strict";
+  function Guantity($root) {
+    const element = $root;
+    const quantity = $root.first("data-quantity");
+    const quantity_target = $root.find("[data-quantity-target]");
+    const quantity_minus = $root.find("[data-quantity-minus]");
+    const quantity_plus = $root.find("[data-quantity-plus]");
+    var quantity_ = quantity_target.val();
+    $(quantity_minus).click(function () {
+      quantity_target.val(--quantity_);
+    });
+    $(quantity_plus).click(function () {
+      quantity_target.val(++quantity_);
+    });
+  }
+  $.fn.Guantity = jQueryPlugin("Guantity", Guantity);
+  $("[data-quantity]").Guantity();
+})();
+{% endjavascript %}

@@ -1,0 +1,118 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-6">
+      <div class="consul-box">
+        <h3 class="con-ttl">Don’t know <span>where to start?</span></h3>
+        <p>Book a one on consult with our health coach.
+            Get Recommendations on Lifestyle changes, supplements
+            and more to meet your goals.</p>
+        <ul class="consul_icon">
+          <li>
+            <img src="{{ 'free_consult.png'|file_url }}">
+            <p>Free Consult</p>
+          </li>
+          <li>
+            <img src="{{ 'female_only.png'|file_url }}">
+            <p>Female Only</p>
+          </li>
+          <li>
+            <img src="{{ 'privacy.png'|file_url }}">
+            <p>100% Privacy</p>
+          </li>
+          <li>
+            <img src="{{ 'availability.png'|file_url }}">
+            <p>24x7 Availability</p>
+          </li>
+        </ul>
+        <div class="book-btn">
+          <a class="bbtn" src="#">BOOK NOW </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6">
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Book a Consultation",
+    "class": "book_a_consultation",
+    "settings": []
+  }
+{% endschema %}
+<style>
+  .consul_icon {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 35px;
+    padding-top:10px
+}
+.consul-box {
+    text-align: center;
+    padding: 112px 90px;
+}
+.con-ttl {
+    color: #550863;
+}
+.consul_icon p {
+    padding-top: 10px;
+}
+.con-ttl span {
+    color: #F8676C;
+}
+  .book_a_consultation {
+    background: url(https://cdn.shopify.com/s/files/1/0577/8577/8315/files/book_consul.png);
+    background-size: cover;
+}
+  .bbtn {
+    background: #560764;
+    padding: 12px 40px;
+    color: #fff;
+    border-radius: 50px;
+}
+  @media only screen and (max-width: 767px){
+.consul-box {
+    text-align: center;
+    padding: 10px 5px;
+}
+  }
+  @media only screen and (max-width: 540px){ 
+.book_a_consultation {
+    background-position: center;
+    padding-bottom: 15px;
+}
+.consul_icon li img {
+    width: 60px;
+}
+  }
+   @media only screen and (max-width: 400px){
+.consul_icon li img {
+    width: 40px;
+}
+.consul_icon {
+    gap: 20px;
+    padding-left: 0;
+}
+  }
+@media (min-width: 981px) and (max-width: 1060px) {
+  .book_a_consultation {
+    background-position: center center;
+}
+.mail-box, .add-box {
+    gap: 10px;
+    padding: 15px;
+}
+}
+@media (min-width: 1000px) and (max-width: 1300px){
+.consul_icon li img {
+    width: 56px;
+}
+}
+@media only screen and (min-width: 1900px){
+.bbtn {
+    padding: 18px 70px;
+}
+</style>

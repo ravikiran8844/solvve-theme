@@ -1,0 +1,44 @@
+<link href="{{'blog.css'|asset_url}}" rel="stylesheet" type="text/css" media="all" /> 
+<div class="spacer container">
+  <div class="row">
+    <div class="col-12">
+      <div class="blog-top text-center">
+      <h3 class="blog-title f-size">Blog</h3>
+        <p class="blog-top-cnt"></p>
+      </div>
+      <div class="row">
+        {%-paginate blog.articles by 12-%}
+        {%-for article in blog.articles-%}  
+        {%- if forloop.index == 1 -%}
+        <div class="row df">
+          <div class="col-md-6 col-lg-4 col-sm-12">
+            <div class="subarticleblog childarticleblog">
+              <a href="{{ article.url }}"><img src="{{ article.image.src | img_url: '700x' }}"></a>
+              <div class="text-left pubdate">{{blog.title}} - {{ article.created_at | date: "%B %d, %Y" }}</div>
+              <div class="blog-title-box"> 
+            <h6 class="articletitle text-left"><a href="{{ article.url }}">{{article.title }}</a></h6>
+                </div>              
+            </div>
+          </div>
+          {%-else-%}
+          <div class="col-md-6 col-lg-4 col-sm-12">
+            <div class="subarticleblog childarticleblog">
+              <a href="{{ article.url }}"><img src="{{ article.image.src | img_url: '700x' }}"></a>
+              <div class="text-left pubdate">{{blog.title}} - {{ article.created_at | date: "%B %d, %Y" }}</div>
+              <div class="blog-title-box"> 
+            <h6 class="articletitle text-left"><a href="{{ article.url }}">{{article.title }}</a></h6>
+                </div>              
+            </div>
+          </div>
+          {%-endif-%}
+          {%-if forloop.index > 1 and forloop.last-%}
+        </div>
+        {%-endif-%}
+        {%-endfor-%} 
+      </div>
+    </div>
+    {%-include 'pagination'-%}
+    {%-endpaginate-%}
+  </div>
+
+</div>
