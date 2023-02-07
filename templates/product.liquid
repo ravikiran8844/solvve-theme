@@ -3,7 +3,7 @@
 <script src="{{-'glide.js'|asset_url-}}"></script>
 {%- section 'product-meta' -%}
 {%- section 'product_section_one'-%}
-{%- section 'product_section_three'-%}
+{%- include 'why_you_love_it' -%}
 {%- section "product-ing" -%}
 {%- section 'product_section_four'-%}
 {%- section 'product_section_five'-%}
@@ -11,3 +11,38 @@
 {%- section 'home_section_six'-%}
 {%- section 'product_section_eight'-%}
 {%- section 'product_section_nine'-%}
+
+<script>
+  var formId = 'product-form';
+var form = document.querySelector(formId);
+
+// functions
+var cleanUp = function (cartItem) {
+  // Do whatever you need to do after the item(s) have been added
+  // i.e. show message/redirect to cart/etc.
+};
+
+var addFreeItemToCart = function (cartItem) {
+  Shopify.addItem(theme.freeProduct.variants[0].id, 1, function (freeCartItem) {
+    theme.freeProductCanBeAdded = false; // don't allow the free product to be added again this page load
+    cleanUp(cartItem);
+  });
+};
+
+var addItemToCart = function (e) {
+  // add the current product to the cart
+  Shopify.addItemFromForm(formId, function (cartItem) {
+    // if we can add the free product then do it
+    if (theme.freeProduct && theme.currentProductHasFreeProduct && theme.freeProductCanBeAdded) {
+      addFreeItemToCart(cartItem);
+    } else {
+      cleanUp(cartItem);
+    }
+  });
+};
+
+// event listener for submit, which calls addItemToCart()
+form.addEventListener('submit', function (e) {
+  addItemToCart(e);
+});
+</script>

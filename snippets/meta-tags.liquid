@@ -39,3 +39,24 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ og_title | escape }}">
 <meta name="twitter:description" content="{{ og_description | escape }}">
+<script>
+  const observer = new MutationObserver(e=>{
+    e.forEach(({addedNodes: e})=>{
+        e.forEach(e=>{
+            1 === e.nodeType && "SCRIPT" === e.tagName && (e.innerHTML.includes("asyncLoad") && (e.innerHTML = e.innerHTML.replace("if(window.attachEvent)", "document.addEventListener('asyncLazyLoad',function(event){asyncLoad();});if(window.attachEvent)").replaceAll(", asyncLoad", ", function(){}")),
+            e.innerHTML.includes("PreviewBarInjector") && (e.innerHTML = e.innerHTML.replace("DOMContentLoaded", "asyncLazyLoad")),
+            (e.className == 'analytics') && (e.type = 'text/lazyload'),
+            (e.src.includes("assets/storefront/features") || e.src.includes("assets/shopify_pay") || e.src.includes("connect.facebook.net")) && (e.setAttribute("data-src", e.src),
+            e.removeAttribute("src")))
+        }
+        )
+    }
+    )
+}
+);
+observer.observe(document.documentElement, {
+    childList: !0,
+    subtree: !0
+})
+
+</script>

@@ -205,7 +205,7 @@
           "image": "shopify:\/\/shop_images\/Vinya_Tejashvi_1.png",
           "title": "Are you still having questions?",
           "content": "Do you want a clear understanding on how to tackle your problems? Book an appointment with one of our expert  Nutritionist for free consultations. We keep all your information off the record and are protected by Doctor-Patient confidentiality!",
-          "link": "shopify:\/\/pages\/book-a-consultation"
+          "link": "shopify:\/\/pages\/book-a-consultation-form"
         }
       },
       "refer-a-friend": {
@@ -243,7 +243,7 @@
           "30516190-d52e-4906-935c-f12ff206ee90": {
             "type": "video",
             "settings": {
-              "video-url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/7d2a186fd3204548b869cba3a5ad63ad.mp4"
+              "video-url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/37432f7cbbed45d6a86c088a538c6557.mp4"
             }
           }
         },
@@ -575,11 +575,113 @@
         "type": "ebook-food",
         "settings": {
         }
+      },
+      "default_ingradiants": {
+        "type": "default_ingradiants",
+        "blocks": {
+          "386065df-2853-4ef4-bd00-7a2645a83d72": {
+            "type": "meet_ingradiants",
+            "settings": {
+              "ing_image": "shopify:\/\/shop_images\/solvve_a91803c1-b50f-4e48-bf15-15d3cea43a8f.png",
+              "ing_text": "Myo-inositol",
+              "ing_description": "Myo-inositol is a chemical compound found in most life forms. An alteration of insulin signalling has been recognized as the main cause of the pathophysiology of polycystic ovary syndrome (PCOS). PCOS is the most common cause of infertility and affects more than 10% of women of reproductive age. Introduction of inositol in PCOS management has proven effective and safe in countering its effects."
+            }
+          },
+          "f0e99fc4-4436-4ec6-bd92-28bc980352e0": {
+            "type": "meet_ingradiants",
+            "settings": {
+              "ing_image": "shopify:\/\/shop_images\/solvve_a91803c1-b50f-4e48-bf15-15d3cea43a8f.png",
+              "ing_text": "D-Chiro-Inositol",
+              "ing_description": "D-Chiro-Inositol is found in high concentrations in the tissues that store glycogen and that need to save energy: fat and liver! Overall, however, D-Chiro Inositol is less abundant in nature than Myo-Inositol which makes up about 99% of the intracellular pool of inositols. It is generated from Myo-Inositol itself: a part of the latter is converted into D-Chiro by the epimerase enzyme"
+            }
+          },
+          "19082e55-23ae-4a61-8556-c158cc2ded77": {
+            "type": "meet_ingradiants",
+            "settings": {
+              "ing_image": "shopify:\/\/shop_images\/solvve_a91803c1-b50f-4e48-bf15-15d3cea43a8f.png",
+              "ing_text": "L-Methyl-Folate-Calcium",
+              "ing_description": "Folate is a B-vitamin naturally found in some foods. It is needed to form healthy cells, especially red blood cells. They are used to treat or prevent low folate levels. Low folate levels can lead to certain types of anaemia. Women of childbearing age should receive adequate amounts of folic acid either through their diet or supplements to prevent infant spinal cord birth defects."
+            }
+          },
+          "24553e50-f8d2-4c55-9329-6570585d3a84": {
+            "type": "meet_ingradiants",
+            "settings": {
+              "ing_image": "shopify:\/\/shop_images\/solvve_a91803c1-b50f-4e48-bf15-15d3cea43a8f.png",
+              "ing_text": "VITAMIN D-3",
+              "ing_description": "Vitamin D (ergocalciferol-D2, cholecalciferol-D3) is a fat-soluble vitamin that helps your body absorb calcium and phosphorus. Having the right amount of vitamin D, calcium, and phosphorus is important for building and keeping strong bones. Vitamin D3 is also used with medications to treat low levels of calcium or phosphate caused by certain disorders (such as hypoparathyroidism, pseudohypoparathyroidism, familial hypophosphatemia)."
+            }
+          }
+        },
+        "block_order": [
+          "386065df-2853-4ef4-bd00-7a2645a83d72",
+          "f0e99fc4-4436-4ec6-bd92-28bc980352e0",
+          "19082e55-23ae-4a61-8556-c158cc2ded77",
+          "24553e50-f8d2-4c55-9329-6570585d3a84"
+        ],
+        "settings": {
+        }
+      },
+      "default_procedure": {
+        "type": "default_procedure",
+        "blocks": {
+          "c93dbc78-d0dc-4ec8-a996-90438b6678a6": {
+            "type": "default_procedure",
+            "settings": {
+              "proc_category": "Default",
+              "proc_image": "shopify:\/\/shop_images\/step-1_101d419e-4177-46b0-abc7-1a574607e4e2.png",
+              "procques": "Default",
+              "procans": "Add one sachet of Solvve Supplement to an empty glass."
+            }
+          },
+          "bf695ec0-654f-4d8a-b96e-dcc2145735e2": {
+            "type": "default_procedure",
+            "settings": {
+              "proc_category": "Default",
+              "proc_image": "shopify:\/\/shop_images\/step-2_9ba0aac0-adb9-4032-8db2-199cb851e590.png",
+              "procques": "Default",
+              "procans": "To it, add 100 ml of water and shake well."
+            }
+          },
+          "1e58d2cd-e1f3-4c17-869a-6d5d71eece34": {
+            "type": "default_procedure",
+            "settings": {
+              "proc_category": "Default",
+              "proc_image": "shopify:\/\/shop_images\/step-3_d006632f-06ab-40a4-952f-148b997488d8.png",
+              "procques": "Default",
+              "procans": "Hurray! The ultimate magic potion to treat PCOS\/PCOD and its symptoms is now ready."
+            }
+          },
+          "8cf1c78b-e61c-4d70-a8d0-8a1dc59a459a": {
+            "type": "default_procedure",
+            "settings": {
+              "proc_category": "Default",
+              "proc_image": "shopify:\/\/shop_images\/step-4_9f8a5108-ea5f-453a-9b63-2478579781f9.png",
+              "procques": "Default",
+              "procans": "Relish the entire glass of delicious orange-flavored supplement drink."
+            }
+          }
+        },
+        "block_order": [
+          "c93dbc78-d0dc-4ec8-a996-90438b6678a6",
+          "bf695ec0-654f-4d8a-b96e-dcc2145735e2",
+          "1e58d2cd-e1f3-4c17-869a-6d5d71eece34",
+          "8cf1c78b-e61c-4d70-a8d0-8a1dc59a459a"
+        ],
+        "settings": {
+        }
       }
     },
     "content_for_index": [
 
-    ]
+    ],
+    "blocks": {
+      "6279071938380501511": {
+        "type": "shopify:\/\/apps\/powerful-contact-form-builder\/blocks\/app-embed\/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
   },
   "presets": {
     "Default": {

@@ -35,7 +35,9 @@
         {{ product.description }}
       </div>
 <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
- <div class="var-qty d-none">
+
+ <div class="var-qty d-none"> 
+  
   <select name="id" id="productSelect">
     {% for variant in product.variants %}
       {% if variant.available %}
@@ -49,8 +51,9 @@
       {% endif %}
     {% endfor %}
   </select>
- 
+  
    <div class="quantity-control" data-quantity="">
+      
     <span class="quantity-btn" data-quantity-minus=""><svg viewBox="0 0 409.6 409.6">
         <g>
           <g>
@@ -62,22 +65,22 @@
     <span class="quantity-btn" data-quantity-plus=""><svg viewBox="0 0 426.66667 426.66667">
         <path d="m405.332031 192h-170.664062v-170.667969c0-11.773437-9.558594-21.332031-21.335938-21.332031-11.773437 0-21.332031 9.558594-21.332031 21.332031v170.667969h-170.667969c-11.773437 0-21.332031 9.558594-21.332031 21.332031 0 11.777344 9.558594 21.335938 21.332031 21.335938h170.667969v170.664062c0 11.777344 9.558594 21.335938 21.332031 21.335938 11.777344 0 21.335938-9.558594 21.335938-21.335938v-170.664062h170.664062c11.777344 0 21.335938-9.558594 21.335938-21.335938 0-11.773437-9.558594-21.332031-21.335938-21.332031zm0 0" /></svg>
     </span>
-  </div> 
- </div>  
- 
+  </div>
+   <div class="box">Each pack contains 15 sachets</div>
+ </div>
      {% unless product.has_only_default_variant %}
             {%- for option in product.options_with_values -%}
               {% assign i = -1 %}          
                  {% assign percentage = 0 %}
               <div class="product-card__options mb-5 mt-4">
-                <label class="product-card__options--label h5">{{ option.name }}</label>
+                <label class="product-card__options--label h5">Choose Your Wellness Plan</label>
     
                 <div class="product-card__options--swatches row">
                   {%- for value in option.values -%}
                     {% assign j = i|plus:1 %}
               {% assign i = j %} 
                     {% assign pack_count =  value | split: " " | last  %}
-                    {% assign saving = current_variant.compare_at_price | minus: current_variant.price | times: 100 | divided_by: current_variant.compare_at_price | round %}
+                    {% assign saving = product.variants[i].compare_at_price | minus: product.variants[i].price | times: 100 | divided_by: product.variants[i].compare_at_price | round %}
                     {% assign percentage = saving | at_least: percentage %}
                     <div id="{{ product.variants[i].id }}" class="product-card__options--swatch swatch-{{ option.name | handleize }} product-options col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-6 bg-transparent border-0">
                       <input
@@ -90,35 +93,53 @@
                         checked
                         {% endif %}>
                         <label class="w-100"  for="{{ section.id }}-{{ product.id }}-{{ value }}">
-                          <div  >
-                            <div class="variant-select-button">
-                          <div class="discount-percentage"> Sale <span>{{percentage}}%</span></div>    
-                          <div class="fs-5 fw-bold per-bottle"> {{value}} </div>          
-                            <div class="sachets-count"> {{pack_count  | times: 15}}  <span>
-                              Sachets</span> </div>
+                          <div>
+                            <div class="variant-select-button" {% if percentage == 30 %}  data-toggle="tooltip" data-placement="bottom" title="Moneyback Guarantee + Monthly free doctor consultation" {% endif %}>
+                          <div class="product-tags-wrapper">
+                            <div class="discount-percentage"> Sale <span>{{percentage}}%</span>                          </div> 
+                            {% if percentage==15 %}
+                          <div class="product-tag2">
+                            Bestseller  
+                           </div>
+                           {% elsif percentage==30 %}
+                            <div class="product-tag2">
+                              Money-Back Plan
+                              </div>
+                          {% endif %}
+                          </div>   
+        
+                            <div class="days-plan h3">{% if percentage == 30 %}  Moneyback Guarantee Plan {%else%} {{pack_count  | times: 15}}  <span>
+                              Day Plan</span> {%endif%} </div>
+                                                        <div class="fs-5 fw-bold per-bottle"> {{value}} </div>          
+
                           <div class="variant-price h2">
                               {{product.variants[i].price | money_without_trailing_zeros}}
                             </div>
                             <div class="compare_at_price"><s>{{product.variants[i].compare_at_price | money_without_trailing_zeros}}</s></div>
+                      
                             </div>
+                           
                           </div>
+                          
                         </label>
                     </div>
                   {%- endfor -%}
                 </div>
+                 <small>Each pack contains 15 sachets</small>
+
               </div>
             {%- endfor -%}
           {% endunless %}
           
+
   <div class="add-box"><button type="submit" name="add" id="AddToCart">ADD TO CART</button></div>
+         
 </form>
   <p class="free-book"><b>Buy now</b> & get an exclusive <span>diet book worth ₹ 499 completely free!</span></p>
    <div class="main-icon-box"><img src="{{ 'main-icon.png' | asset_url }}"></div>       
   </div>
   </div>
 </div>
-        </div>
-
 
 
 <style>
@@ -151,13 +172,35 @@
   font-size: 20px;
 
 }
+.product-tags-wrapper{
+position: absolute;
+top: -10px;
+left: -2px;
+
+}
 .discount-percentage{
+   display: inline-block;
+    background: red;
+    color: #fff;
+    font-size: 10px;
+    padding: 2px 5px;
+    height: 20px;
+}
+.product-tag2{
+   display: inline-block;
+    background: green;
+    color: #fff;
+    font-size: 10px;
+    padding: 2px 5px;
+    height: 20px;
+}
+.bestseller-tag{
   position: absolute;
     height: 20px;
     top: -10px;
-    background: linear-gradient(#ff0000 0,#ff1700 100%);
+    background: green;
     box-shadow: 0 3px 10px -5px #000;
-    left: -2px;
+    right: 30%;
     color: #fff;
     padding: 2px 5px;
     font-size: 10px;
@@ -176,13 +219,12 @@
   line-height: 1.2;
 
 }
-.sachets-count{
+.days-plan{
   font-size: 18px;
   font-weight: 600;
 }
 
 </style>
-
 
 {% schema %}
   {
@@ -192,26 +234,20 @@
   }
 {% endschema %}
 
-
-
 {% javascript %}
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 
-document.addEventListener("DOMContentLoaded", function() {
-const productOptions = document.querySelectorAll(".product-options");
-productOptions.forEach(function(option) {
-option.addEventListener("click", function() {
-const v_id = this.id;
-productOptions.forEach(function(p) {
-p.classList.remove("active");
-});
-this.classList.add("active");
-document.querySelector("select#productSelect").value = v_id;
-const changeEvent = new Event("change");
-document.querySelector("select#productSelect").dispatchEvent(changeEvent);
-});
-});
-});
-
+   $('document').ready(function(){
+     $('.product-options').click(function(){
+        var v_id =  $(this).attr('id');
+        $('.product-options').removeClass('active')
+        $(this).addClass('active');
+        $("select#productSelect").val(v_id).trigger('change');
+     });
+  });
+  
   $('.slider-galeria').slick({
   slidesToShow: 1,
   slidesToScroll: 1,

@@ -19,7 +19,7 @@
       <div class="testi-box">
       <div class="testi-box-top">
         <div class="testi-profil">
-          <img src="{{ block.settings.testi_img|img_url }}">
+          <img src="{{ block.settings.testi_img|img_url }}" alt="{{ block.settings.testi_img.alt|default: shop.name | escape }}">
         </div>
         <div class="testi-title">
           <h5>“{{ block.settings.testi_title }}”</h5>

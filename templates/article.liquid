@@ -1,5 +1,5 @@
 <link href="{{'blog.css'|asset_url}}" rel="stylesheet" type="text/css" media="all" /> 
-<div class="blgg container" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="blgg container">
   <div class="row">
   <div class="col-sm-12 col-md-12 col-lg-8">
   {% assign number_of_comments = article.comments_count %}
@@ -7,11 +7,10 @@
   {% assign number_of_comments = article.comments_count %}
   {% endif %}
   <div class="blog-cont">
-  <div itemprop="author"><meta itemprop="url" content="{{shop.url}}{{article.url}}" /><meta itemprop="name" content="{{ article.author | camelcase }}" /></div>
-  <h1 class="text-center article_title" itemprop="headline">{{ article.title }}</h1>
-  <p class="text-center art_author" itemprop="dateCreated pubdate datePublished"> <time datetime="{{ article.created_at | date: "%B %d, %Y" }}">by Solvve - {{ article.created_at | date: "%B %d, %Y" }}</time></p>
-  <div><img itemprop="image" class="blog-inner-img" src="{{ article.image.src | img_url: '1299x410' }}"></div>  
-  <div itemprop="articleBody" class="art_content">{{ article.content}}</div>
+  <h1 class="text-center article_title">{{ article.title }}</h1>
+  <p class="text-center art_author"> <time datetime="{{ article.created_at | date: "%B %d, %Y" }}">by Solvve - {{ article.created_at | date: "%B %d, %Y" }}</time></p>
+  <div><img class="blog-inner-img" src="{{ article.image.src | img_url: '1299x410' }}"></div>  
+  <div class="art_content">{{ article.content}}</div>
      <hr>
   <div class="small--text-center medium--text-center"><ul class="no-bullets inline-list blog_sharer"><li><a href="https://www.facebook.com/sharer.php?u={{shop.url}}{{article.url}}" class="btn face_sh" >
  <span> <svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="35px" height="35px">    <path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"/></svg></span> <span>Share</span>

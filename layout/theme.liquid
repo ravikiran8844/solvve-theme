@@ -4,29 +4,33 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
         <meta name="theme-color" content="">
         <link rel="canonical" href="{{ canonical_url }}">
-      <meta name="facebook-domain-verification" content="on04f7i60z71lbxs7czarb4p9q6igu" />
-<!--<meta name="google-site-verification" content="SvXI6tC7YyXY82qZaQonZKPkCV_24yWJXZ2YhF6Ocv8" />-->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11039551800"></script>
-<script type="text/lazyload">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <link rel="shortcut icon" href="{{ 'Solvve_Fav.png'|asset_url }}" type="image/png">
 
-  gtag('config', 'AW-11039551800');
-</script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R802C3VWSD"></script>
-<script type="text/lazyload">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+        <title>
+            {{ page_title }}
+            {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+            {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+            {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+        </title>
+        {%-if page_description-%}
+            <meta name="description" content="{{ page_description | escape }}">
+        {%-endif-%}
+        {%-render 'meta-tags'-%}
+          <!--<meta name="google-site-verification" content="SvXI6tC7YyXY82qZaQonZKPkCV_24yWJXZ2YhF6Ocv8" />-->
+      <!-- Google tag (gtag.js) -->
+      <script async rel="dns-prefetch" type="text/lazyload" src="https://www.googletagmanager.com/gtag/js?id=G-9SNQPG90VV"></script>
+    <script rel="dns-prefetch" type="text/lazyload">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-9SNQPG90VV');
+    </script>      
 
-  gtag('config', 'G-R802C3VWSD');
-</script>
     <!------------------->
 <!-- TruConversion for getsolvve.com -->
 <script type="text/lazyload">
@@ -40,20 +44,6 @@
         tjs.parentNode.insertBefore(js, tjs);
     }(document, 'script', 'ti-js'));
 </script>
-        {%-if settings.favicon != blank-%}
-            <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
-        {%- endif -%}
-        <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
-        <title>
-            {{ page_title }}
-            {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
-            {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-            {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
-        </title>
-        {%-if page_description-%}
-            <meta name="description" content="{{ page_description | escape }}">
-        {%-endif-%}
-        {%-render 'meta-tags'-%}
         {{ content_for_header }} <!-- Header hook for plugins -->
   {{ 'application.css' | asset_url | stylesheet_tag }}
   {{ 'application.js' | asset_url | script_tag }}
@@ -61,25 +51,13 @@
   {{ 'slick-theme.min.css' | asset_url | stylesheet_tag }}
   {{ 'slick.min.js' | asset_url | script_tag }}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://monorail-edge.shopifysvc.com/v1/produce">
+
         <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
-    </head>
+    {% include 'yotpo-widgets-loader-script' %}
+</head>
 <body>
-  <!-- Event snippet for Add to cart New (1) conversion page -->
-<script type="text/lazyload">
-  gtag('event', 'conversion', {
-      'send_to': 'AW-11039551800/86xOCP3pv4YYELjiiJAp',
-      'value': {{ checkout.subtotal_price | divided_by: 100.0 }},
-     'currency': '{{ currency }}'
-  });
-</script>
-    <!-- Event snippet for Page view conversion page -->
-<script type="text/lazyload">
-  gtag('event', 'conversion', {
-      'send_to': 'AW-11039551800/RtBMCK_sv4YYELjiiJAp',
-      'value': {{ checkout.subtotal_price | divided_by: 100.0 }},
-     'currency': '{{ currency }}'
-  });
-</script>
+
 {%-liquid  
   section 'announcement-bar'
   section 'header'-%}  

@@ -1,3 +1,4 @@
+<div class="why_you_live_it">
 <div class="container">
 <!-- Accordion -->
 <div class="acc-container">        
@@ -143,15 +144,8 @@ to treat low levels of calcium or phosphate caused by certain disorders (such as
 </div>
 </div>
 </div>
-{% schema %}
-  {
-    "name": "Why You’ll love it",
-    "class":"why_you_live_it",
-    "settings": []
-  }
-{% endschema %}
-
-
+{%-section 'default_procedure'-%}
+{%-section 'default_ingradiants'-%}
 <script>
   $(document).ready(function() {
 $('.acc-container .acc:nth-child(1) .acc-head').addClass('active');
@@ -170,3 +164,4 @@ $('.acc-head').on('click', function() {
 });     
 });
 </script>
+</div>
