@@ -82,7 +82,7 @@
                     {% assign pack_count =  value | split: " " | last  %}
                     {% assign saving = product.variants[i].compare_at_price | minus: product.variants[i].price | times: 100 | divided_by: product.variants[i].compare_at_price | round %}
                     {% assign percentage = saving | at_least: percentage %}
-                    <div id="{{ product.variants[i].id }}" class="product-card__options--swatch swatch-{{ option.name | handleize }} product-options col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-6 bg-transparent border-0">
+                    <div id="{{ product.variants[i].id }}" class="product-card__options--swatch swatch-{{ option.name | handleize }} product-options col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 bg-transparent border-0">
                       <input
                         hidden
                         type="radio"
@@ -103,16 +103,16 @@
                            </div>
                            {% elsif percentage==30 %}
                             <div class="product-tag2">
-                              Money-Back Plan
+                              Moneyback Plan
                               </div>
                           {% endif %}
                           </div>   
         
-                            <div class="days-plan h3">{% if percentage == 30 %}  Moneyback Guarantee Plan {%else%} {{pack_count  | times: 15}}  <span>
-                              Day Plan</span> {%endif%} </div>
+                            <div class="days-plan h3">{{pack_count  | times: 15}}  <span>
+                              Day Plan</span></div>
                                                         <div class="fs-5 fw-bold per-bottle"> {{value}} </div>          
 
-                          <div class="variant-price h2">
+                          <div class="variant-price h3">
                               {{product.variants[i].price | money_without_trailing_zeros}}
                             </div>
                             <div class="compare_at_price"><s>{{product.variants[i].compare_at_price | money_without_trailing_zeros}}</s></div>
@@ -176,35 +176,57 @@
 position: absolute;
 top: -10px;
 left: -2px;
-
 }
 .discount-percentage{
-   display: inline-block;
+   display: inline;
     background: red;
     color: #fff;
     font-size: 10px;
     padding: 2px 5px;
-    height: 20px;
+    border-radius: 10px;
 }
 .product-tag2{
-   display: inline-block;
+   display: inline;
     background: green;
     color: #fff;
     font-size: 10px;
     padding: 2px 5px;
-    height: 20px;
+    border-radius: 10px;
+    width: fit-content;
+
 }
-.bestseller-tag{
+
+@media (max-width:380px) {
+  .discount-percentage{
+    font-size: 8px;
+  }
+  .product-tag2{
+    font-size: 8px;
+  }
+}
+@media (min-width:1400px) {
+  .discount-percentage{
+    font-size: 8px;
+  }
+  .product-tag2{
+    font-size: 8px;
+  }
+}
+
+@media (min-width:1900px) {
+  .discount-percentage{
+    font-size: 10px;
+  }
+  .product-tag2{
+    font-size: 10px;
+  }
+  .product-tags-wrapper{
   position: absolute;
-    height: 20px;
-    top: -10px;
-    background: green;
-    box-shadow: 0 3px 10px -5px #000;
-    right: 30%;
-    color: #fff;
-    padding: 2px 5px;
-    font-size: 10px;
+  top: -18px;
+  left: -2px;
+  }
 }
+
 .product-options.active .variant-select-button {
     background-color: #d1d7d782;
 }

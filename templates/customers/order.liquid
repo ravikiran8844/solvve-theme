@@ -1,32 +1,64 @@
 <!-- /templates/customers/order.liquid -->
 
-<h2>Billing Address</h2>
-<p><span>Payment Status:</span> <span class="status_{{ order.financial_status }}">{{ order.financial_status }}</span></p>
-<p>{{ order.billing_address.name }}</p>
-<p>{{ order.billing_address.company }}</p>
-<p>{{ order.billing_address.street }}</p>
-<p>{{ order.billing_address.city }}, {{ order.billing_address.province }}</p>
-<p>{{ order.billing_address.country }} {{ order.billing_address.zip }}</p>
-<p>{{ order.billing_address.phone }}</p>
+<div class="container">
+  <div class="row mt-5 mb-5">
+    <div class="col-sm-6 col-lg-4">
+      <h2>Billing Address</h2>
+      <p>
+        <span>Payment Status:</span>
+        <span class="status_{{ order.financial_status }}">{{ order.financial_status }}</span>
+      </p>
+      <p>{{ order.billing_address.name }}</p>
+      <p>{{ order.billing_address.company }}</p>
+      <p>{{ order.billing_address.street }}</p>
+      <p>{{ order.billing_address.city }}, {{ order.billing_address.province }}</p>
+      <p>{{ order.billing_address.country }} {{ order.billing_address.zip }}</p>
+      <p>{{ order.billing_address.phone }}</p>
+    </div>
+    <div class="col-sm-6 col-lg-4">
+      <h2>Shipping Address</h2>
+      <p>
+        <span>Fulfillment Status:</span>
+        <span class="status_{{ order.fulfillment_status }}">{{ order.fulfillment_status }}</span>
+      </p>
+      <p>{{ order.shipping_address.name }}</p>
+      <p>{{ order.shipping_address.company }}</p>
+      <p>{{ order.shipping_address.street }}</p>
+      <p>{{ order.shipping_address.city }}, {{ order.shipping_address.province }}</p>
+      <p>{{ order.shipping_address.country }} {{ order.shipping_address.zip }}</p>
+      <p>{{ order.shipping_address.phone }}</p>
+    </div>
+  </div>
+  <div class="row mb-5">
+    <div class="col-12">
+      <h2>Order Items</h2>
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Order</th>
+              <th scope="col">Item</th>
+              <th scope="col">SKU</th>
+              <th scope="col">Item Price</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Total Price</th>
 
-<h2>Shipping Address</h2>
-<p><span>Fulfillment Status:</span><span class="status_{{ order.fulfillment_status }}">{{ order.fulfillment_status }}</span></p>
-<p>{{ order.shipping_address.name }}</p>
-<p>{{ order.shipping_address.company }}</p>
-<p>{{ order.shipping_address.street }}</p>
-<p>{{ order.shipping_address.city }}, {{ order.shipping_address.province }}</p>
-<p>{{ order.shipping_address.country }} {{ order.shipping_address.zip }}</p>
-<p>{{ order.shipping_address.phone }}</p>
-
-<h2>Order Items</h2>
-<table>
-  {% for line_item in order.line_items %}
-  <tr>
-    <td>{{ line_item.title | link_to: line_item.product.url }}</td>
-    <td>{{ line_item.sku }}</td>
-    <td>{{ line_item.original_price | money }}</td>
-    <td>{{ line_item.quantity }}</td>
-    <td>{{ line_item.line_price | money }}</td>
-  </tr>
-  {% endfor %}
-</table>
+            </tr>
+          </thead>
+          <tbody>
+            {% for line_item in order.line_items %}
+              <tr>
+                <th scope="row">{{ forloop.index }}</th>
+                <td>{{ line_item.title | link_to: line_item.product.url }}</td>
+                <td>{{ line_item.sku }}</td>
+                <td>{{ line_item.original_price | money }}</td>
+                <td>{{ line_item.quantity }}</td>
+                <td>{{ line_item.line_price | money }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

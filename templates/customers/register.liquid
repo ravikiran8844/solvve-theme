@@ -1,21 +1,81 @@
 <!-- /templates/customers/register.liquid -->
-
-{% form 'create_customer' %}
-
-{{ form.errors | default_errors }}
-
-<label for="first_name">First Name</label>
-<input type="text" value="" name="customer[first_name]" size="30" />
-
-<label for="last_name">Last Name</label>
-<input type="text" value="" name="customer[last_name]" size="30" />
-
-<label for="email">Email Address</label>
-<input type="email" value="" name="customer[email]" size="30" />
-
-<label for="password">Password</label>
-<input type="password" value="" name="customer[password]" size="30" />
-
-<input type="submit" value="Create" />
-
-{% endform %}
+<div class="register_page">
+    <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 mt-5 mb-5">
+             <div id="login_form" class="login_form  col-12 col-md-11  col-lg-9">
+               <h2 class="fs-2 mb-3">Create Account</h2>
+                {% form 'create_customer' %}              
+                {{ form.errors | default_errors }}
+                <div class="mb-4">
+                    <label for="customer_first_name" class="p-2">First Name</label>
+                 <div class="">
+                     <input id="customer_first_name" type="text" name="customer[first_name]" class="form-control p-2" />
+                 </div>
+                 </div>
+                 <div class="mb-4">
+                    <label for="customer_last_name" class="p-2">Last Name</label>
+                 <div class="">
+                     <input id="customer_last_name" type="text" name="customer[last_name]" class="form-control p-2" />
+                 </div>
+                 </div>
+                <div class="mb-4">
+                   <label for="customer_email" class="p-2">Email Address</label>
+                <div class="">
+                    <input id="customer_email" type="email" name="customer[email]" class="form-control p-2" />
+                </div>
+                </div>
+                <div class="mb-4">               
+                <label for="customer_password" class="p-2">Password</label>
+                <div class="">
+                    <input id="customer_password" type="password" name="customer[password]" class="form-control p-2" />
+                </div>
+                </div>
+                 <hr class="mt-2 mb-4"></hr>
+                <div class="mb-4">
+                    <input type="submit" value="Create Account" class="btn btn-outline-dark float-end w-50 p-2"/>          
+               </div>
+                {% endform %}
+               <div class="clearfix d-block pt-5"></div>
+               <div class="text-center ">
+                  <a href="/account/login" class="text-dark text-decoration-none"><p class="mt-4">Already have an account? <span class="fw-bold text-capitalize">sign in</span></p></a>
+               </div>
+                
+             </div>
+             <div id="forgot_form" class="login_form col-12 col-md-11  col-lg-9  forget_pass" style="display:none">
+               <h2 class="mb-2 fs-2">Forgot Password</h2>
+                 <p class="mb-4">We will send you an email to reset your password.</p>             
+                {% form 'recover_customer_password' %}
+                
+                {{ form.errors | default_errors }}
+                <div class="mb-4 row"> 
+                    <label for="customer_email"  class="">Email Address</label>
+                    <div class="">
+                        <input type="email" name="email" class="form-control p-2 w-100"/>
+                    </div>
+                </div>                        
+                <input type="submit" value="Submit" class="btn btn-outline-dark btn float-end w-50 p-2" />
+                <p id="fp_cancel" class="bg-light btn p-2 mt-1">Cancel</p>
+                {% endform %}
+             </div>
+      </div> 
+    </div>
+    </div>
+  </div>
+  
+  <script>
+    $(document).ready(function(){
+      $('#forgot_pw').click(function(){
+         $('#forgot_form').show();
+         $('#login_form').hide();
+      });
+       $('#fp_cancel').click(function(){
+         $('#forgot_form').hide();
+         $('#login_form').show();
+      });
+    });
+  </script>
+  
+  
+  
+  
