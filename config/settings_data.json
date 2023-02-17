@@ -17,15 +17,33 @@
         "blocks": {
           "cc0b0269-cc23-4590-9b27-acf4c6fe3cda": {
             "type": "image",
+            "disabled": true,
             "settings": {
               "slider_desktop_image": "shopify:\/\/shop_images\/Healthy_PCOS_Supplement.png",
               "slider_mobile_image": "shopify:\/\/shop_images\/Good_PCOS_Supplement.png",
               "image_link": "shopify:\/\/products\/pcos-pcod"
             }
+          },
+          "db06a25b-2211-444c-b835-a37e78b734f2": {
+            "type": "image",
+            "settings": {
+              "slider_desktop_image": "shopify:\/\/shop_images\/Good_PCOS_Supplement_3a18773c-a3d4-468a-993a-265384668c8e.png",
+              "slider_mobile_image": "shopify:\/\/shop_images\/Best_PCOS_Supplement.png",
+              "image_link": ""
+            }
+          },
+          "74a38ccb-fda7-4145-9661-0a88c8c8723a": {
+            "type": "image",
+            "disabled": true,
+            "settings": {
+              "image_link": ""
+            }
           }
         },
         "block_order": [
-          "cc0b0269-cc23-4590-9b27-acf4c6fe3cda"
+          "cc0b0269-cc23-4590-9b27-acf4c6fe3cda",
+          "db06a25b-2211-444c-b835-a37e78b734f2",
+          "74a38ccb-fda7-4145-9661-0a88c8c8723a"
         ],
         "settings": {
         }
@@ -582,33 +600,65 @@
           "386065df-2853-4ef4-bd00-7a2645a83d72": {
             "type": "meet_ingradiants",
             "settings": {
-              "ing_image": "shopify:\/\/shop_images\/solvve_a91803c1-b50f-4e48-bf15-15d3cea43a8f.png",
-              "ing_text": "Myo-inositol",
-              "ing_description": "Myo-inositol is a chemical compound found in most life forms. An alteration of insulin signalling has been recognized as the main cause of the pathophysiology of polycystic ovary syndrome (PCOS). PCOS is the most common cause of infertility and affects more than 10% of women of reproductive age. Introduction of inositol in PCOS management has proven effective and safe in countering its effects."
+              "ing_image": "shopify:\/\/shop_images\/Yashtimadhu.png",
+              "ing_text": "Yashtimadhu",
+              "ing_description": "Regulates irregular ovarian follicles"
             }
           },
           "f0e99fc4-4436-4ec6-bd92-28bc980352e0": {
             "type": "meet_ingradiants",
             "settings": {
-              "ing_image": "shopify:\/\/shop_images\/solvve_a91803c1-b50f-4e48-bf15-15d3cea43a8f.png",
-              "ing_text": "D-Chiro-Inositol",
-              "ing_description": "D-Chiro-Inositol is found in high concentrations in the tissues that store glycogen and that need to save energy: fat and liver! Overall, however, D-Chiro Inositol is less abundant in nature than Myo-Inositol which makes up about 99% of the intracellular pool of inositols. It is generated from Myo-Inositol itself: a part of the latter is converted into D-Chiro by the epimerase enzyme"
+              "ing_image": "shopify:\/\/shop_images\/Cinnamon.png",
+              "ing_text": "Cinnamon",
+              "ing_description": "Regulates menstrual cycle"
             }
           },
           "19082e55-23ae-4a61-8556-c158cc2ded77": {
             "type": "meet_ingradiants",
             "settings": {
-              "ing_image": "shopify:\/\/shop_images\/solvve_a91803c1-b50f-4e48-bf15-15d3cea43a8f.png",
-              "ing_text": "L-Methyl-Folate-Calcium",
-              "ing_description": "Folate is a B-vitamin naturally found in some foods. It is needed to form healthy cells, especially red blood cells. They are used to treat or prevent low folate levels. Low folate levels can lead to certain types of anaemia. Women of childbearing age should receive adequate amounts of folic acid either through their diet or supplements to prevent infant spinal cord birth defects."
+              "ing_image": "shopify:\/\/shop_images\/Shatavari.png",
+              "ing_text": "Shatavari root",
+              "ing_description": "Balances hormones"
             }
           },
           "24553e50-f8d2-4c55-9329-6570585d3a84": {
             "type": "meet_ingradiants",
             "settings": {
-              "ing_image": "shopify:\/\/shop_images\/solvve_a91803c1-b50f-4e48-bf15-15d3cea43a8f.png",
-              "ing_text": "VITAMIN D-3",
-              "ing_description": "Vitamin D (ergocalciferol-D2, cholecalciferol-D3) is a fat-soluble vitamin that helps your body absorb calcium and phosphorus. Having the right amount of vitamin D, calcium, and phosphorus is important for building and keeping strong bones. Vitamin D3 is also used with medications to treat low levels of calcium or phosphate caused by certain disorders (such as hypoparathyroidism, pseudohypoparathyroidism, familial hypophosphatemia)."
+              "ing_image": "shopify:\/\/shop_images\/Turmeric_963839da-dbe8-4e45-9640-b2594150e1fb.png",
+              "ing_text": "Organic Turmeric root",
+              "ing_description": "Decreases insulin resistance"
+            }
+          },
+          "1441db70-1ebd-4110-bcd4-35113dff800e": {
+            "type": "meet_ingradiants",
+            "settings": {
+              "ing_image": "shopify:\/\/shop_images\/Maca_Root.png",
+              "ing_text": "Maca Root",
+              "ing_description": "Improves fertility and libido"
+            }
+          },
+          "ae49c6e0-7260-427a-aee2-b726124c70b8": {
+            "type": "meet_ingradiants",
+            "settings": {
+              "ing_image": "shopify:\/\/shop_images\/Chasteberry.png",
+              "ing_text": "Chasteberry",
+              "ing_description": "Regulates pituitary gland function"
+            }
+          },
+          "2199601d-15fc-47b9-b131-30a534b06599": {
+            "type": "meet_ingradiants",
+            "settings": {
+              "ing_image": "shopify:\/\/shop_images\/Black_Pepper.png",
+              "ing_text": "Black Pepper Fruit",
+              "ing_description": "Antioxidant and anti-inflammatory agent"
+            }
+          },
+          "7c15bce0-ea70-457a-bf8d-0f1b140991f4": {
+            "type": "meet_ingradiants",
+            "settings": {
+              "ing_image": "shopify:\/\/shop_images\/Gokhru.png",
+              "ing_text": "Gokhru",
+              "ing_description": "Reduces cyst growth"
             }
           }
         },
@@ -616,7 +666,11 @@
           "386065df-2853-4ef4-bd00-7a2645a83d72",
           "f0e99fc4-4436-4ec6-bd92-28bc980352e0",
           "19082e55-23ae-4a61-8556-c158cc2ded77",
-          "24553e50-f8d2-4c55-9329-6570585d3a84"
+          "24553e50-f8d2-4c55-9329-6570585d3a84",
+          "1441db70-1ebd-4110-bcd4-35113dff800e",
+          "ae49c6e0-7260-427a-aee2-b726124c70b8",
+          "2199601d-15fc-47b9-b131-30a534b06599",
+          "7c15bce0-ea70-457a-bf8d-0f1b140991f4"
         ],
         "settings": {
         }
@@ -629,7 +683,7 @@
             "settings": {
               "proc_category": "Default",
               "proc_image": "shopify:\/\/shop_images\/step-1_101d419e-4177-46b0-abc7-1a574607e4e2.png",
-              "procques": "Default",
+              "procques": "default",
               "procans": "Add one sachet of Solvve Supplement to an empty glass."
             }
           },
@@ -638,7 +692,7 @@
             "settings": {
               "proc_category": "Default",
               "proc_image": "shopify:\/\/shop_images\/step-2_9ba0aac0-adb9-4032-8db2-199cb851e590.png",
-              "procques": "Default",
+              "procques": "default",
               "procans": "To it, add 100 ml of water and shake well."
             }
           },
@@ -646,8 +700,8 @@
             "type": "default_procedure",
             "settings": {
               "proc_category": "Default",
-              "proc_image": "shopify:\/\/shop_images\/step-3_d006632f-06ab-40a4-952f-148b997488d8.png",
-              "procques": "Default",
+              "proc_image": "shopify:\/\/shop_images\/step-3.png",
+              "procques": "default",
               "procans": "Hurray! The ultimate magic potion to treat PCOS\/PCOD and its symptoms is now ready."
             }
           },
@@ -656,7 +710,7 @@
             "settings": {
               "proc_category": "Default",
               "proc_image": "shopify:\/\/shop_images\/step-4_9f8a5108-ea5f-453a-9b63-2478579781f9.png",
-              "procques": "Default",
+              "procques": "default",
               "procans": "Relish the entire glass of delicious orange-flavored supplement drink."
             }
           }

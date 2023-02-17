@@ -95,18 +95,16 @@
                         <label class="w-100"  for="{{ section.id }}-{{ product.id }}-{{ value }}">
                           <div>
                             <div class="variant-select-button" {% if percentage == 30 %}  data-toggle="tooltip" data-placement="bottom" title="Moneyback Guarantee + Monthly free doctor consultation" {% endif %}>
-                          <div class="product-tags-wrapper">
-                            <div class="discount-percentage"> Sale <span>{{percentage}}%</span>                          </div> 
-                            {% if percentage==15 %}
-                          <div class="product-tag2">
-                            Bestseller  
-                           </div>
-                           {% elsif percentage==30 %}
-                            <div class="product-tag2">
+                              <div class="product-tag1"> Save {{percentage}}%</div> 
+                              {% if percentage==15 %}
+                              <div class="product-tag2">
+                                Bestseller  
+                              </div>
+                              {% elsif percentage==30 %}
+                              <div class="product-tag2">
                               Moneyback Plan
                               </div>
-                          {% endif %}
-                          </div>   
+                              {% endif %}
         
                             <div class="days-plan h3">{{pack_count  | times: 15}}  <span>
                               Day Plan</span></div>
@@ -173,67 +171,43 @@
 
 }
 .product-tags-wrapper{
-position: absolute;
-top: -10px;
-left: -2px;
+  
 }
-.discount-percentage{
-   display: inline;
-    background: red;
+.product-tag1{
+  position: absolute;
+  top: -10px;
+  display: inline-block;
+  left: -5px;
+      background: linear-gradient(#ff0000 0,#ff1700 100%);
+    box-shadow: 0 3px 10px -5px #000;
+    padding: 2px 5px;
     color: #fff;
     font-size: 10px;
-    padding: 2px 5px;
-    border-radius: 10px;
+    width: 56px;
+    max-height: 20px;
 }
 .product-tag2{
-   display: inline;
-    background: green;
-    color: #fff;
-    font-size: 10px;
-    padding: 2px 5px;
-    border-radius: 10px;
-    width: fit-content;
-
-}
-
-@media (max-width:380px) {
-  .discount-percentage{
-    font-size: 8px;
-  }
-  .product-tag2{
-    font-size: 8px;
-  }
-}
-@media (min-width:1400px) {
-  .discount-percentage{
-    font-size: 8px;
-  }
-  .product-tag2{
-    font-size: 8px;
-  }
-}
-
-@media (min-width:1900px) {
-  .discount-percentage{
-    font-size: 10px;
-  }
-  .product-tag2{
-    font-size: 10px;
-  }
-  .product-tags-wrapper{
   position: absolute;
-  top: -18px;
-  left: -2px;
-  }
+  top: -10px;
+  left: 46px;
+  display: inline-block;
+  background: linear-gradient(#9bc90d 0,#79a70a 100%);
+    box-shadow: 0 3px 10px -5px #000;
+    color: #fff;
+    padding: 2px 5px;
+    font-size: 10px;
+    width: fit-content;
+    max-height: 20px;
+    overflow: hidden;
 }
+
 
 .product-options.active .variant-select-button {
     background-color: #d1d7d782;
 }
 .variant-price{
   margin: 10px 0 7px;
-  font-size: 2rem;
-}
+  font-size: 30px;
 }
 .per-bottle{
   font-size: 16px;
