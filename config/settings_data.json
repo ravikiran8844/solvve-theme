@@ -4,7 +4,7 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "announcement": "Get Flat 15% OFF | Use Code: NEW15"
+          "announcement": "GET FREE E-DIET BOOK WORTH RS. 499 WITH EVERY PURCHASE"
         }
       },
       "header": {
@@ -26,6 +26,7 @@
           },
           "db06a25b-2211-444c-b835-a37e78b734f2": {
             "type": "image",
+            "disabled": true,
             "settings": {
               "slider_desktop_image": "shopify:\/\/shop_images\/Good_PCOS_Supplement_3a18773c-a3d4-468a-993a-265384668c8e.png",
               "slider_mobile_image": "shopify:\/\/shop_images\/Best_PCOS_Supplement.png",
@@ -36,6 +37,41 @@
             "type": "image",
             "disabled": true,
             "settings": {
+              "slider_desktop_image": "shopify:\/\/shop_images\/Solvve_PCOS_SUPPLEMENT.png",
+              "slider_mobile_image": "shopify:\/\/shop_images\/PCOS_SUPPLEMENT.png",
+              "image_link": "https:\/\/getsolvve.com\/products\/pcos-pcod"
+            }
+          },
+          "ef882593-5ea9-4234-8993-3189dd6c0b38": {
+            "type": "image",
+            "disabled": true,
+            "settings": {
+              "slider_desktop_image": "shopify:\/\/shop_images\/Desktop_size_2.png",
+              "slider_mobile_image": "shopify:\/\/shop_images\/Mobile_size_1.png",
+              "image_link": "shopify:\/\/collections\/all"
+            }
+          },
+          "fe42dace-e9dc-4cfd-9ad8-c8f3ad7eab04": {
+            "type": "image",
+            "disabled": true,
+            "settings": {
+              "slider_desktop_image": "shopify:\/\/shop_images\/Free_Doctor_Consutation_Banner.png",
+              "slider_mobile_image": "shopify:\/\/shop_images\/Free_Doctor_Consutation_Mobile_Banner.png",
+              "image_link": ""
+            }
+          },
+          "7c495989-91c4-458b-ab0e-68696e61cf1b": {
+            "type": "image",
+            "settings": {
+              "slider_desktop_image": "shopify:\/\/shop_images\/solvve_new_mob_banner_1-_28_oct_3x_e72e4cdd-eecb-4187-855b-85249582f90d.png",
+              "slider_mobile_image": "shopify:\/\/shop_images\/solvve_new_mob_banner_1-_28_oct_3x_b1af483f-3fcc-4998-a0d4-e7375e863a4d.png",
+              "image_link": ""
+            }
+          },
+          "ff42eebb-d884-4b26-9080-1f684c897529": {
+            "type": "image",
+            "disabled": true,
+            "settings": {
               "image_link": ""
             }
           }
@@ -43,7 +79,11 @@
         "block_order": [
           "cc0b0269-cc23-4590-9b27-acf4c6fe3cda",
           "db06a25b-2211-444c-b835-a37e78b734f2",
-          "74a38ccb-fda7-4145-9661-0a88c8c8723a"
+          "74a38ccb-fda7-4145-9661-0a88c8c8723a",
+          "ef882593-5ea9-4234-8993-3189dd6c0b38",
+          "fe42dace-e9dc-4cfd-9ad8-c8f3ad7eab04",
+          "7c495989-91c4-458b-ab0e-68696e61cf1b",
+          "ff42eebb-d884-4b26-9080-1f684c897529"
         ],
         "settings": {
         }
@@ -88,7 +128,7 @@
         "settings": {
           "image": "shopify:\/\/shop_images\/sect-two.jpg",
           "title": "Reclaim your life from PCOS - We show you how!",
-          "content_one": "Are you someone who is dealing with PCOS? You might have heard people say to lose weight or try PCOS weight loss supplements.<br><br> Trust us; there is a much better way. Solvve’s best supplement for PCOS is a combination of modern science and centuries-old Ayurveda. It offers women strength and power to regain control over the menstrual cycle and restore fertility, happiness, and femininity."
+          "content_one": "Are you someone who is dealing with PCOS? You might have heard people say to lose weight or try PCOS weight loss supplements.<br><br> Trust us; there is a much better way. Solvve’s best supplement for PCOS is a combination of modern science and centuries-old Ayurveda. It offers women strength and power to regain control over the menstrual cycle and restore Reproductive, happiness, and femininity."
         }
       },
       "home_section_three": {
@@ -219,6 +259,9 @@
       },
       "home_section_six": {
         "type": "home_section_six",
+        "custom_css": [
+          ".nutritionist {display: none;}"
+        ],
         "settings": {
           "image": "shopify:\/\/shop_images\/Vinya_Tejashvi_1.png",
           "title": "Are you still having questions?",
@@ -479,6 +522,9 @@
       },
       "product_section_four": {
         "type": "product_section_four",
+        "custom_css": [
+          ".consumer_study {display: none;}"
+        ],
         "settings": {
         }
       },
@@ -510,7 +556,7 @@
             "settings": {
               "ing_img": "shopify:\/\/shop_images\/Yashtimadhu.png",
               "ing_title": "Yashtimadhu",
-              "ing_cnt": "Regulates irregular ovarian follicles"
+              "ing_cnt": "Reduces inflammation"
             }
           },
           "14f30db7-f710-45fc-b583-92e3ec48a9d0": {
@@ -518,7 +564,7 @@
             "settings": {
               "ing_img": "shopify:\/\/shop_images\/Cinnamon.png",
               "ing_title": "Cinnamon",
-              "ing_cnt": "Regulates menstrual cycle"
+              "ing_cnt": "Reduces blood sugar level"
             }
           },
           "587421c0-3aa1-46f4-83a4-ad9f74c994c5": {
@@ -526,7 +572,7 @@
             "settings": {
               "ing_img": "shopify:\/\/shop_images\/Shatavari.png",
               "ing_title": "Shatavari root",
-              "ing_cnt": "Balances hormones"
+              "ing_cnt": "Regulates menstrual cycle"
             }
           },
           "8c3903b7-9449-4af8-b113-1739f15861a9": {
@@ -534,7 +580,7 @@
             "settings": {
               "ing_img": "shopify:\/\/shop_images\/Turmeric_963839da-dbe8-4e45-9640-b2594150e1fb.png",
               "ing_title": "Organic Turmeric root",
-              "ing_cnt": "Decreases insulin resistance"
+              "ing_cnt": "Reduces inflammation"
             }
           },
           "b2cd5519-c1f3-4afa-8f76-25d9475b1363": {
@@ -542,7 +588,7 @@
             "settings": {
               "ing_img": "shopify:\/\/shop_images\/Maca_Root.png",
               "ing_title": "Maca Root",
-              "ing_cnt": "Improves fertility and libido"
+              "ing_cnt": "Combats insulin resistance"
             }
           },
           "f4d78cb8-d7c4-40db-9b74-da732cc1e55c": {
@@ -550,7 +596,7 @@
             "settings": {
               "ing_img": "shopify:\/\/shop_images\/Chasteberry.png",
               "ing_title": "Chasteberry",
-              "ing_cnt": "Regulates pituitary gland function"
+              "ing_cnt": "Regularizes periods"
             }
           },
           "94795c42-2322-49c0-baf4-ae75a02129b2": {
@@ -558,7 +604,7 @@
             "settings": {
               "ing_img": "shopify:\/\/shop_images\/Black_Pepper.png",
               "ing_title": "Black Pepper Fruit",
-              "ing_cnt": "Antioxidant and anti-inflammatory agent"
+              "ing_cnt": "Strengthens immuni"
             }
           },
           "c2bd2524-6e04-418c-aaa8-376e1a52334e": {
@@ -566,7 +612,7 @@
             "settings": {
               "ing_img": "shopify:\/\/shop_images\/Gokhru.png",
               "ing_title": "Gokhru",
-              "ing_cnt": "Reduces cyst growth"
+              "ing_cnt": "Helps reduce pain"
             }
           }
         },

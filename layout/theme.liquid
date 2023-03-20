@@ -26,39 +26,34 @@
     {%- if page_description -%}
       <meta name="description" content="{{ page_description | escape }}">
     {%- endif -%}
+    {% if template.name == 'collection' %}
+     <meta name="robots" content="noindex">
+    {% endif %}
     {%- render 'meta-tags' -%}<!--<meta name="google-site-verification" content="SvXI6tC7YyXY82qZaQonZKPkCV_24yWJXZ2YhF6Ocv8" />-->
-    <!-- Google tag (gtag.js) --><script
-      async
-      rel="dns-prefetch"
-      type="text/lazyload"
-      src="https://www.googletagmanager.com/gtag/js?id=G-9SNQPG90VV"> </script>
+  <!-- Google tag (gtag.js) -->
+      <script async rel="dns-prefetch" type="text/lazyload" src="https://www.googletagmanager.com/gtag/js?id=G-9SNQPG90VV"></script>
     <script rel="dns-prefetch" type="text/lazyload">
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-                                                                                                                  gtag('js', new Date());
-                                                                                                                
-                                                                                                                  gtag('config', 'G-9SNQPG90VV');
-    </script>
+      gtag('js', new Date());
+    
+      gtag('config', 'G-9SNQPG90VV');
+    </script>      
 
     <!------------------->
-    <!-- TruConversion for getsolvve.com -->
-    <script type="text/lazyload">
-      var _tip = _tip || [];
-      (function(d,s,id){
-                                                                                                                    var js, tjs = d.getElementsByTagName(s)[0];
-                                                                                                                    if(d.getElementById(id)) { return; }
-                                                                                                                    js = d.createElement(s); js.id = id;
-                                                                                                                    js.async = true;
-                                                                                                                    js.src = d.location.protocol + '//app.truconversion.com/ti-js/22931/ad7b7.js';
-                                                                                                                    tjs.parentNode.insertBefore(js, tjs);
-                                                                                                                }(document, 'script', 'ti-js'));
-    </script>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N992ZC9');</script>
+<!-- TruConversion for getsolvve.com -->
+<script type="text/lazyload">
+    var _tip = _tip || [];
+    (function(d,s,id){
+        var js, tjs = d.getElementsByTagName(s)[0];
+        if(d.getElementById(id)) { return; }
+        js = d.createElement(s); js.id = id;
+        js.async = true;
+        js.src = d.location.protocol + '//app.truconversion.com/ti-js/22931/ad7b7.js';
+        tjs.parentNode.insertBefore(js, tjs);
+    }(document, 'script', 'ti-js'));
+</script>
+
     {{ content_for_header }}
     <!-- Header hook for plugins -->
     {{ 'application.css' | asset_url | stylesheet_tag }}
@@ -74,6 +69,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </script>
     {% include 'yotpo-widgets-loader-script' %}
     {% include 'structured-data' %}
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N992ZC9');</script>
+<!-- End Google Tag Manager -->
   </head>
   <body>
 
@@ -84,5 +86,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {%- section 'footer' -%}
     {% section 'app-optimization' %}
     {% render 'qr-tracking' %}
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N992ZC9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   </body>
 </html>
