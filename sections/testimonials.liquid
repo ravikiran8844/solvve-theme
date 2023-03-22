@@ -1,0 +1,182 @@
+{{ 'testimonials.css' | asset_url | stylesheet_tag }}
+
+{% if section.blocks.size > 0 %}
+  <div class="testimonials__wrapper-{{ section.id }} container">
+    <div class="row  g-0 px-3 py-5">
+      <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+        <div class="d-flex justify-content-center align-items-center mb-4">
+          <span class="fs-2 testimonials__main-heading">{{ section.settings.heading }}</span>
+        </div>
+      </div>
+      <div class="col-12 my-3 testimonial-wrapper page-width">
+        {% for block in section.blocks %}
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="testimonial__item mx-2 p-3">
+              <div class="d-flex mt-3">
+                <div class="me-2">
+                  <img src="{{ block.settings.image |img_url: 'master' }}" alt="{{ block.settings.name }}">
+                </div>
+                <div>
+                  <p>
+                    <span class="testimonials__name">{{ block.settings.name }}</span>
+                    <br>
+                    <span>
+                      <svg
+                        width="13"
+                        height="14"
+                        viewBox="0 0 13 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_7168_2526)">
+                          <path d="M6.42092 12.3711C3.46605 12.3711 1.0708 9.97589 1.0708 7.02102C1.0708 4.06615 3.46605 1.6709 6.42092 1.6709C9.3758 1.6709 11.771 4.06615 11.771 7.02102C11.771 9.97589 9.3758 12.3711 6.42092 12.3711ZM5.88752 9.16107L9.67005 5.378L8.91355 4.62149L5.88752 7.64806L4.37397 6.13451L3.61746 6.89101L5.88752 9.16107Z" fill="#666868" />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_7168_2526">
+                            <rect
+                              width="12.8403"
+                              height="12.8403"
+                              fill="white"
+                              transform="translate(0.000488281 0.60083)" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                    <span class="testimonials__buyer">VERIFIED BUYER</span>
+                  </p>
+
+                </div>
+              </div>
+              <div>
+                <svg
+                  width="100"
+                  height="20"
+                  viewBox="0 0 100 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.13865 7.18262L9.58848 2.26367L12.3323 7.18262L17.4279 8.20739L13.6062 12.204L14.2921 17.9428L9.58848 15.3809L4.78681 17.9428L5.37477 12.204L1.74902 8.20739L7.13865 7.18262Z" fill="#FFA944" />
+                  <path d="M27.0806 7.1825L29.5304 2.26355L32.2742 7.1825L37.3699 8.20729L33.5481 12.2039L34.2341 17.9427L29.5304 15.3807L24.7287 17.9427L25.3167 12.2039L21.6909 8.20729L27.0806 7.1825Z" fill="#FFA944" />
+                  <path d="M47.0224 7.1825L49.4723 2.26355L52.2161 7.1825L57.3117 8.20729L53.49 12.2039L54.1759 17.9427L49.4723 15.3807L44.6706 17.9427L45.2586 12.2039L41.6328 8.20729L47.0224 7.1825Z" fill="#FFA944" />
+                  <path d="M66.9643 7.1825L69.4139 2.26355L72.1581 7.1825L77.2536 8.20729L73.4319 12.2039L74.118 17.9427L69.4139 15.3807L64.6125 17.9427L65.2005 12.2039L61.5747 8.20729L66.9643 7.1825Z" fill="#FFA944" />
+                  <path d="M86.9055 7.1825L89.3558 2.26355L92.0993 7.1825L97.1954 8.20729L93.3731 12.2039L94.0592 17.9427L89.3558 15.3807L84.5542 17.9427L85.142 12.2039L81.5161 8.20729L86.9055 7.1825Z" fill="#FFA944" />
+                </svg>
+              </div>
+              <div class="mt-3 testimonials__text mb-3">
+                {{ block.settings.text }}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="text-center py-5">
+        <a href="{{section.settings.btn_link}}" class="btn testimonials-button">Know More</a>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+
+{% style %}
+  .testimonials__wrapper-{{ section.id }}{
+    background-color: {{ section.settings.bg_color }}
+    ;
+  }
+  .testimonials-button {
+    padding: 9.04762px 50.381px 7.75298px 50.5714px;
+    color: #fff;
+    background: #FF7C99;
+    border-radius: 28.5714px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .testimonials-button:hover {
+    color: #fff;
+    background: #FF7C99;
+  }
+{% endstyle %}
+
+<style></style>
+<script>
+  $('.testimonial-wrapper').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+
+          slidesToShow: 3
+        }
+      }, {
+        breakpoint: 767,
+        settings: {
+          arrows: false,
+          slidesToShow: 2
+        }
+      }, {
+        breakpoint: 560,
+        settings: {
+          arrows: false,
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Testimonials",
+    "class": "section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color",
+        "default": "#E5E5E5"
+      }, {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Rated 5 star"
+      }, {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button Link"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Testimonial",
+        "type": "testimonial-section",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }, {
+            "type": "text",
+            "label": "Name",
+            "id": "name",
+            "default": "Name"
+          }, {
+            "type": "richtext",
+            "label": "Text",
+            "id": "text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Testimonials"
+      }
+    ]
+  }
+{% endschema %}

@@ -221,7 +221,8 @@
 }
 /**** Home Section eight ****/
     .solvve_promise {
-    padding: 60px 0;
+    padding-top: 60px;
+    padding-bottom: 0px;
 }
   .promise_icon_box {
     text-align: center;

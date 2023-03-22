@@ -1,0 +1,87 @@
+<div class="container pb-5">
+  <div class="col-12 d-flex justify-content-center">
+    <div class="fs-2 mb-5 pr-main-heading">
+      {{ section.settings.heading }}
+    </div>
+  </div>
+  <div class="row pt-5 pr-wrapper">
+    <div class="col-12 col-md-6 px-3">
+      <img src="{{ section.settings.image |img_url: 'master' }}" alt="{{ section.settings.heading }}">
+    </div>
+    <div class="col-12 col-md-6 m-auto">
+      <div class="pr-text mb-5">120 women who were clinically tested with PCOS PCOD condition took part in our research and consumed one sachet of Solvve continuously for 84 days. The results of the study are as follows-</div>
+      <div>
+        <div class="pr-text-percent">92%</div>
+        <div class="pr-text">started getting period on time</div>
+      </div>
+      <hr>
+      <div>
+        <div class="pr-text-percent">97%</div>
+        <div class="pr-text">saw reduction in acne & facial hair</div>
+      </div>
+      <hr>
+      <div>
+        <div class="pr-text-percent">90%</div>
+        <div class="pr-text">experienced lesser period pain</div>
+      </div>
+      <hr>
+    </div>
+  </div>
+</div>
+
+
+
+<style>
+  .pr-wrapper hr {
+    border: 0.75px solid #FF7C99;
+  }
+  .pr-text-percent {
+    font-family: 'Inter-Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    color: #FF7C99;
+  }
+  .pr-text {
+    font-family: 'Inter-Light';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16.5px;
+    line-height: 160%;
+    color: #FFFFFF;
+  }
+  .pr-wrapper {
+    background: #533092;
+  }
+  .pr-main-heading {
+    max-width: 345.76px;
+    font-family: 'Inter-Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 137.52%;
+    text-align: center;
+    color: #533092;
+  }
+</style>
+{% schema %}
+  {
+    "name": "Promissing Results",
+    "class": "section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Promising Results From Our Clinical Research"
+      }, {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }
+
+    ]
+  }
+{% endschema %}

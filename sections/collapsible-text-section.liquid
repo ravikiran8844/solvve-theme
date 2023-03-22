@@ -1,0 +1,143 @@
+<div class="container">
+  <div class="accordion-section__wrapper">
+    {% comment %}
+    <section class="accordion-section">
+    <input
+    type="checkbox"
+    name="collapse"
+    id="handle1">
+    <h2 class="handle">
+    <label for="handle1">
+    Key Ingredients</label>
+    </h2>
+    <div class="content">
+    <p>
+    <strong>Key Ingredients:</strong>
+    {{ product.metafields.custom.key_ingredients }}
+    </p>
+
+    </div>
+    </section>
+
+    {% endcomment %}
+    <section class="accordion-section">
+      <input
+        type="checkbox"
+        name="collapse2"
+        id="handle2">
+      <h2 class="handle">
+        <label for="handle2">Manufacturer Details</label>
+      </h2>
+      <div class="content">
+        <p>
+          <strong>Manufactured By:</strong>
+          Lactonova Nutripharm Pvt Ltd.,
+          #81-3, IDA Mallapur, Uppal (M),
+                                                                                                                                                                                                                                                          Hyderabad - 500 076.
+
+        </p>
+        <p>
+          <strong>Country of Origin:</strong>
+          India
+        </p>
+        <p>
+          <strong>Marketed By:</strong>
+          Revolutionary Nutrition Pvt Ltd.
+          128, Duraisamy Naidu Layout, Peelamedu,
+                                                                                                                                                                                                                                      Coimbatore, Tamil Nadu - 641004, India.
+        </p>
+      </div>
+    </section>
+  </div>
+
+</div>
+
+
+<style>
+  .accordion-section p strong {
+    font-family: Inter-Bold;
+  }
+  .accordion-section__wrapper {
+    margin: 20px 0;
+  }
+  .accordion-section {
+    margin: 20px 0;
+  }
+  .accordion-section .handle {
+    text-align: center;
+  }
+  .collapisble-section__wrapper {
+    margin: 0 auto;
+  }
+  .accordion-section > input[type="checkbox"] {
+    position: absolute;
+    left: -100vw;
+  }
+
+  .accordion-section .content {
+    overflow-y: hidden;
+    height: 0;
+    transition: height 0.3s ease;
+  }
+
+  .accordion-section > input[type="checkbox"]:checked ~ .content {
+    height: auto;
+    overflow: visible;
+  }
+
+  .accordion-section label {
+    display: block;
+  }
+
+  .accordion-section {}
+
+  .accordion-section > input[type="checkbox"]:checked ~ .content {
+    padding: 15px;
+    border: 1px solid #e8e8e8;
+    border-top: 0;
+  }
+
+  .accordion-section .handle {
+    margin: 0;
+    font-size: 1.125em;
+    line-height: 1.2em;
+  }
+
+  .accordion-section label {
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 15px;
+    background: #e8e8e8;
+  }
+
+  .accordion-section .handle label::after {
+    float: right;
+  content: "\25bc";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: .58em;
+  line-height: 1.556em;
+  vertical-align: middle;
+  }
+
+  .accordion-section label:hover,
+  .accordion-section label:focus {
+    background: #d8d8d8;
+  }
+</style>
+
+
+{% schema %}
+  {
+    "name": "Collapsible Text",
+    "class": "section",
+    "tag": "section",
+    "settings": [],
+    "presets": [
+      {
+        "name": "Collapsible Text"
+      }
+    ]
+  }
+{% endschema %}

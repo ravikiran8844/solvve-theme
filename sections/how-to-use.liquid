@@ -1,0 +1,197 @@
+<div class="htu-section">
+  <div class="container py-5">
+    <div class="row g-0">
+      <div class="col-12">
+        <div class="htu-heading h2 mb-3 text-center">{{ section.settings.heading }}</div>
+      </div>
+      <div class="htu-items__wrapper col-12 d-flex overflow-auto">
+        {% for block in section.blocks %}
+          <div class="col-8 col-sm-6 col-md-3 text-center px-4">
+            <div class="my-4">
+              <img src="{{block.settings.step_image | img_url: 'master'}}" alt="{{block.settings.heading}}">
+            </div>
+            <div class="htu-step__heading fs-2">{{ block.settings.heading }}</div>
+            <div class="htu-step__subheading my-3">{{ block.settings.subheading }}</div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="col-12">
+        <div class="text-center my-3 htu-bottom-txt-heading">
+          {{ section.settings.bottom_text }}
+        </div>
+        <div class="d-flex justify-content-center py-3">
+          <div class="htu-bottom__wrapper px-4 py-3">
+            {% if section.settings.bottom_content_line1 != blank %}
+              <div class="d-flex">
+                <div class="me-2">
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 15 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.62112e-06 7.49128C0.00402679 3.34615 3.36284 -0.00482251 7.50858 5.20989e-06C11.6549 0.00483293 15.0046 3.36197 15 7.50845C14.9954 11.6538 11.6361 15.0059 7.49115 15C3.34487 14.9941 -0.00401955 11.6375 3.62112e-06 7.49128ZM3.06298 7.79999C4.0744 8.81139 5.08717 9.82414 6.09028 10.8272C8.04447 8.87281 10.0038 6.91383 11.9491 4.96826C11.6967 4.71534 11.4365 4.45465 11.1667 4.18403C9.48235 5.86836 7.78806 7.56262 6.07875 9.27217C5.32749 8.52066 4.57757 7.77022 3.83435 7.02675C3.57768 7.28423 3.32046 7.54197 3.06298 7.79999Z" fill="#FF7C99" />
+                  </svg>
+                </div>
+                <div class="htu-bottom-txt">{{ section.settings.bottom_content_line1 }}</div>
+              </div>
+            {% endif %}
+
+            {% if section.settings.bottom_content_line2 != blank %}
+              <div class="d-flex">
+                <div class="me-2">
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 15 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.62112e-06 7.49128C0.00402679 3.34615 3.36284 -0.00482251 7.50858 5.20989e-06C11.6549 0.00483293 15.0046 3.36197 15 7.50845C14.9954 11.6538 11.6361 15.0059 7.49115 15C3.34487 14.9941 -0.00401955 11.6375 3.62112e-06 7.49128ZM3.06298 7.79999C4.0744 8.81139 5.08717 9.82414 6.09028 10.8272C8.04447 8.87281 10.0038 6.91383 11.9491 4.96826C11.6967 4.71534 11.4365 4.45465 11.1667 4.18403C9.48235 5.86836 7.78806 7.56262 6.07875 9.27217C5.32749 8.52066 4.57757 7.77022 3.83435 7.02675C3.57768 7.28423 3.32046 7.54197 3.06298 7.79999Z" fill="#FF7C99" />
+                  </svg>
+                </div>
+                <div class="htu-bottom-txt">{{ section.settings.bottom_content_line2 }}</div>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<style>
+  .htu-bottom__wrapper {
+    background: #6843AC;
+    border-radius: 53.5px;
+  }
+  .htu-section {
+    background-color: {{ section.settings.bg_color}}
+    ;
+  }
+  .htu-heading {
+    font-family: 'Inter-Bold';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 41px;
+    color: #FFFFFF;
+  }
+  .htu-step__subheading {
+    font-family: 'Inter-Light';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 132%;
+    color: #FFFFFF;
+
+  }
+  .htu-step__heading {
+    font-family: 'Jenna Sue';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .htu-items__wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .htu-items__wrapper {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .htu-bottom-txt-heading {
+    font-family: 'Inter-Bold';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+  }
+  .htu-bottom-txt {
+    font-family: 'Inter-Light';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15.6835px;
+    line-height: 152.3%;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "How to Use",
+    "class": "section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color",
+        "default": "#533092"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "How to use"
+      },
+      {
+        "type": "text",
+        "id": "bottom_text",
+        "label": "Bottom Text",
+        "default": "Dosage & Duration"
+      },
+      {
+        "type": "text",
+        "id": "bottom_content",
+        "label": "Bottom Content",
+        "default": "Dosage & Duration"
+      }, {
+        "type": "color",
+        "id": "bottom_content_bg",
+        "label": "Bottom Content Background",
+        "default": "#6843AC"
+      }, {
+        "type": "text",
+        "id": "bottom_content_line1",
+        "label": "Bottom Text Line 1"
+      }, {
+        "type": "text",
+        "id": "bottom_content_line2",
+        "label": "Bottom Text Line 2"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Steps",
+        "type": "steps-block",
+        "limit": 4,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "step_image",
+            "label": "Image"
+          }, {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Step 1"
+          }, {
+            "type": "text",
+            "id": "subheading",
+            "label": "Subheading",
+            "default": "Add one sachet of Solvve supplement to an empty glass."
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

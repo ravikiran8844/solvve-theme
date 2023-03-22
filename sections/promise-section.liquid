@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="row">
+    <h3 class="title text-center">We Promise You A Healthy Tomorrow!</h3>
+    <p class="sub-ttl  text-center">Our products are specially curated to provide a happy and healthy tomorrow!
+    </p>
+    <div class="solvve-promise">
+      {% for block in section.blocks %}
+        <div>
+          <div class="promise_icon_box">
+            <div class="promise_icon_img">
+              <img src="{{ block.settings.image | img_url: 'master' }}" alt="Solvve PCOD and PCOS supplement Promises">
+            </div>
+            <p class="prom-icon-name">{{ block.settings.text }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+<style>
+  .prom-icon-name {
+    font-family: 'Inter-Light';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 144%;
+    text-transform: capitalize;
+    color: #2D2D2D;
+  }
+</style>
+{% schema %}
+  {
+    "name": "Promise Section",
+    "class": "solvve_promise",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "promise-block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }, {
+            "type": "text",
+            "id": "text",
+            "label": "Text",
+            "default": "Text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+
+
+<script>
+  $(document).ready(function() {
+    $('.solvve-promise').slick({
+      slidesToShow: 7,
+      slidesToScroll: 1,
+      speed: 300,
+      infinite: true,
+      autoplaySpeed: 5000,
+      autoplay: true,
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 5,
+            arrows: false
+          }
+        }, {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 3,
+            arrows: false
+          }
+        }
+      ]
+    });
+  });
+</script>

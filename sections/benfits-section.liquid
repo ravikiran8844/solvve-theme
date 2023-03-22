@@ -1,0 +1,76 @@
+<div class="container pt-5">
+  <div class="row g-0">
+    <div class="col-12 col-md-6 my-5">
+      <img
+        loading="lazy"
+        src="{{section.settings.image | img_url: 'master'}}"
+        alt="{{section.settings.heading}}">
+    </div>
+    <div class="col-12 col-md-6 m-auto">
+      <div class="fs-2 bs-heading ms-3 mb-3">
+        {{ section.settings.heading }}
+      </div>
+      <div class="bs-content ms-3">{{ section.settings.content }}</div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .bs-heading {
+    font-family: 'Inter-Bold';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 131.02%;
+    color: #FF7C99;
+  }
+  .bs-content {
+    font-family: 'Inter-Light';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 199.69%;
+    color: #696969;
+  }
+  .bs-content ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .bs-content li {
+    position: relative;
+    padding-left: 1.5em; /* space to preserve indentation on wrap */
+  }
+  .bs-content li:before {
+    content: '\2713'; /* placeholder for the SVG */
+    position: absolute;
+    left: 0; /* place the SVG at the start of the padding */
+    width: 1em;
+    height: 1em;
+    color: #FF7C99;
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Benefits Section",
+    "class": "section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "label": "Image",
+        "id": "image"
+      }, {
+        "type": "text",
+        "label": "heading",
+        "id": "heading",
+        "default": "Amazing Benefits Of Solvve"
+      }, {
+        "type": "richtext",
+        "label": "content",
+        "id": "content",
+        "default": "<p>content</p>"
+      }
+
+    ]
+  }
+{% endschema %}

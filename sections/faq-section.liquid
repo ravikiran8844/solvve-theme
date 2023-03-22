@@ -1,0 +1,112 @@
+{% if section.blocks.size > 0 %}
+  <div class="container">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center">
+        <h3 class="faq-main-heading title text-center">{{ section.settings.heading }}</h3>
+      </div>
+      <div class="col-12">
+        <!-- Accordion -->
+        <div class="acc-container">
+          {% for block in section.blocks %}
+            <div class="acc">
+              <div class="acc-head">
+                <p class="faq-section-question px-3">{{ block.settings.question }}</p>
+              </div>
+              <div class="acc-content">
+                <div class="faq-section-answer px-3">{{ block.settings.faq_answer }}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+
+
+<style>
+  .faq-main-heading {
+    max-width: 409px;
+    font-family: 'Inter-Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 131%;
+    color: #533092;
+  }
+  .faq-section-question {
+    font-family: 'Inter-Bold';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    color: #101920;
+  }
+  .faq-section-answer {
+    font-family: 'Inter-Light';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #101920;
+  }
+  .acc-head:before,
+  .acc-head:after {
+    background-color: #101920 !important;
+  }
+</style>
+
+
+
+<script>
+  $(document).ready(function() {
+    $('.acc-head').on('click', function() {
+      if ($(this).hasClass('active')) {
+        $(this).siblings('.acc-content').slideUp();
+        $(this).removeClass('active');
+      } else {
+        $('.acc-content').slideUp();
+        $('.acc-head').removeClass('active');
+        $(this).siblings('.acc-content').slideToggle();
+        $(this).toggleClass('active');
+      }
+    });
+  });
+</script>
+{% schema %}
+  {
+    "name": "FAQ",
+    "class": "faq_section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Questions that people frequently ask about Solvve"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "faq",
+        "type": "faq-block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Question",
+            "default": "Question"
+
+          }, {
+            "type": "richtext",
+            "id": "faq_answer",
+            "label": "Answer",
+            "default": "<p>Answer goes here...</p>"
+
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
