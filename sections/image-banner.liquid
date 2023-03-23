@@ -5,13 +5,13 @@
       <div class="d-md-none mobile-banner">
         <img
           loading="lazy"
-          src="{{section.settings.mobile-image |img_url: 'master'}}"
+          src="{{ section.settings.mobile-image | image_url }}"
           alt={{ section.settings.heading }}>
       </div>
       <div class="d-none d-md-block desktop-banner">
         <img
           loading="lazy"
-          src="{{section.settings.image |img_url: 'master'}}"
+          src="{{ section.settings.image | image_url }}"
           alt={{ section.settings.heading }}>
       </div>
     </div>
@@ -20,7 +20,7 @@
 
 <style>
   .ib-section__wrapper {
-    background-color: {{ section.settings.bg_color}}
+    background-color: {{ section.settings.bg_color }}
     ;
   }
   .ib-main-heading {
@@ -31,43 +31,44 @@
     line-height: 131.02%;
     text-align: center;
     text-transform: capitalize;
-    color: {{ section.settings.text_color}}
+    color: {{ section.settings.text_color }}
     ;
   }
 </style>
 {% schema %}
-  {
-    "name": "Image Banner",
-    "class": "section",
-    "tag": "section",
-    "settings": [
-      {
-        "type": "color",
-        "label": "Background Color",
-        "id": "bg_color",
-        "default": "#fff"
-      },
-      {
-        "type": "text",
-        "label": "Heading",
-        "id": "heading",
-        "default": "No More Irregular / Delayed Periods"
-      },
-      {
-        "type": "color",
-        "label": "text-color",
-        "id": "text_color",
-        "default": "#533092"
-      },
-      {
-        "type": "image_picker",
-        "label": "Desktop Image",
-        "id": "image"
-      }, {
-        "type": "image_picker",
-        "label": "Mobile Image",
-        "id": "mobile-image"
-      }
-    ]
-  }
+{
+  "name": "Image Banner",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color",
+      "label": "Background Color",
+      "id": "bg_color",
+      "default": "#fff"
+    },
+    {
+      "type": "text",
+      "label": "Heading",
+      "id": "heading",
+      "default": "No More Irregular / Delayed Periods"
+    },
+    {
+      "type": "color",
+      "label": "text-color",
+      "id": "text_color",
+      "default": "#533092"
+    },
+    {
+      "type": "image_picker",
+      "label": "Desktop Image",
+      "id": "image"
+    },
+    {
+      "type": "image_picker",
+      "label": "Mobile Image",
+      "id": "mobile-image"
+    }
+  ]
+}
 {% endschema %}

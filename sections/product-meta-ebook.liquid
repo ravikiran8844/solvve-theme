@@ -1,19 +1,19 @@
 <div class="container">
   <div class="row">
 {% assign current_variant = product.selected_or_first_available_variant %}
-{% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+
 <div class="col-md-7 col-sm-12">
         {% assign current_variant = product.selected_or_first_available_variant %}
 
 <div id="product__slider">
       <div class="slider-galeria-thumbs">
         {% for image in product.images %}
-        <div class="slide"><img src="{{ image.src | img_url }}" alt="{{ image.alt | escape }}" class="img-responsive rds"></div>
+        <div class="slide"><img src="{{ image.src | image_url: width: 100, height: 100 }}" alt="{{ image.alt | escape }}" class="img-responsive rds"></div>
         {% endfor %}
       </div>
       <div class="slider-galeria">
         {% for image in product.images %}
-        <div class="slide"><img src="{{ image.src | img_url : "large"}}" alt="{{ image.alt | escape }}" class="img-responsive"></div>
+        <div class="slide"><img src="{{ image.src | image_url: width: 480, height: 480 }}" alt="{{ image.alt | escape }}" class="img-responsive"></div>
         {% endfor %}
       </div>
     </div>
@@ -72,11 +72,13 @@
 
 
 {% schema %}
-  {
-    "name": "Product-meta",
-    "class":"product_meta",
-    "settings": []
-  }
+{
+  "name": "Product-meta",
+  "class": "product_meta",
+  "settings": [
+
+  ]
+}
 {% endschema %}
 
 {% stylesheet %}

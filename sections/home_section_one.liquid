@@ -9,7 +9,7 @@
         <div>
       <div class="pr-box-in {% cycle 'odds': 'sone', 'stwo', 'sthree' %}">
         <div class="pr-img-box">
-        <img src="{{ block.settings.pr-image|img_url: 'master' }}" alt="{{ block.pr-image.alt|default: shop.name | escape }}">
+        <img src="{{ block.settings.pr-image | image_url }}" alt="{{ block.pr-image.alt | default: shop.name | escape }}">
         </div>
       </div>
       </div>
@@ -19,40 +19,39 @@
 </div>
 </div>
 {% schema %}
-  {
-    "name": "Home Section One",
-    "settings": [
-      {
-        "type":"text",
-        "id":"title",
-        "label":"Section Title"
-      },
-      {
-        "type":"text",
-        "id":"sub-title",
-        "label":"Section Sub Title"
-      }
-    ],
-    "blocks":[
-      {
-        "name":"PR Section",
-        "type":"pr_section",
-        "settings":[
-          {
-            "type":"text",
-            "id":"pr-content",
-            "label":"PR Content"
-          },
-          {
-            "type":"image_picker",
-            "id":"pr-image",
-            "label":"PR logo"
-          }
-        ]
-      }
-    ]
-    
-  }
+{
+  "name": "Home Section One",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title"
+    },
+    {
+      "type": "text",
+      "id": "sub-title",
+      "label": "Section Sub Title"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "PR Section",
+      "type": "pr_section",
+      "settings": [
+        {
+          "type": "text",
+          "id": "pr-content",
+          "label": "PR Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "pr-image",
+          "label": "PR logo"
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}
 
 <style>

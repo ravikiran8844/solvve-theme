@@ -76,37 +76,36 @@
   });
 </script>
 {% schema %}
-  {
-    "name": "FAQ",
-    "class": "faq_section",
-    "settings": [
-      {
-        "type": "text",
-        "id": "heading",
-        "label": "Heading",
-        "default": "Questions that people frequently ask about Solvve"
-      }
-    ],
-    "blocks": [
-      {
-        "name": "faq",
-        "type": "faq-block",
-        "settings": [
-          {
-            "type": "text",
-            "id": "question",
-            "label": "Question",
-            "default": "Question"
-
-          }, {
-            "type": "richtext",
-            "id": "faq_answer",
-            "label": "Answer",
-            "default": "<p>Answer goes here...</p>"
-
-          }
-        ]
-      }
-    ]
-  }
+{
+  "name": "FAQ",
+  "class": "faq_section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Questions that people frequently ask about Solvve"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "faq",
+      "type": "faq-block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "faq_answer",
+          "label": "Answer",
+          "default": "<p>Answer goes here...</p>"
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}

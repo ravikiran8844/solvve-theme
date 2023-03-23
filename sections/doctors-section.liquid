@@ -10,7 +10,7 @@
         <div class="col-12 col-sm-6 col-lg-4 card ds-item me-3">
           <img
             class="card-img-top"
-            src="{{block.settings.image | img_url: 'master'}}"
+            src="{{ block.settings.image | image_url }}"
             alt="Card image cap">
           <div class="card-body">
             <p class="card-text">{{ block.settings.content }}</p>
@@ -78,6 +78,7 @@
   }
   .card {
     border: none !important;
+    background-color: transparent;
   }
   .ds-item b,
   .ds-item strong {
@@ -90,36 +91,36 @@
 
 
 {% schema %}
-  {
-    "name": "Doctors Section",
-    "class": "section",
-    "tag": "section",
-    "settings": [
-      {
-        "type": "text",
-        "id": "heading",
-        "label": "Heading",
-        "default": "Recommended By Leading Doctors"
-      }
-
-    ],
-    "blocks": [
-      {
-        "name": "Block",
-        "type": "doctor-block",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image"
-          }, {
-            "type": "richtext",
-            "id": "content",
-            "label": "Content",
-            "default": "<p>Content</p>"
-          }
-        ]
-      }
-    ]
-  }
+{
+  "name": "Doctors Section",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Recommended By Leading Doctors"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Block",
+      "type": "doctor-block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Content</p>"
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}

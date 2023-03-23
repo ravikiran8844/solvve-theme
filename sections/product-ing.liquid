@@ -5,7 +5,7 @@
     {%- for block in section.blocks -%}
     <div class="col-sm-6 col-md-3">
       <div class="ing-box text-center">
-        <img src="{{ block.settings.ing_img|img_url: "master" }}">
+        <img src="{{ block.settings.ing_img | image_url }}">
         <h6>{{ block.settings.ing_title }}</h6>
         <p>{{ block.settings.ing_cnt }}</p>
       </div>
@@ -20,7 +20,7 @@
     {%- for block in section.blocks -%}
     <div class="glide__slide">
       <div class="ing-box text-center">
-        <img src="{{ block.settings.ing_img|img_url: "master" }}">
+        <img src="{{ block.settings.ing_img | image_url }}">
         <h6>{{ block.settings.ing_title }}</h6>
         <p>{{ block.settings.ing_cnt }}</p>
       </div>
@@ -45,40 +45,40 @@
   </div>
   </div>
 {% schema %}
-  {
-    "name": "Clinically tested",
-    "class":"clinically_tested",
-    "settings": [
-      {
-        "type":"text",
-        "id":"title",
-        "label":"Title"
-      }
-    ],
-    "blocks":[
-      {
-        "type":"image",
-        "name":"Ingredients",
-      "settings":[
+{
+  "name": "Clinically tested",
+  "class": "clinically_tested",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Ingredients",
+      "settings": [
         {
-          "type":"image_picker",
-          "id":"ing_img",
-          "label":"Image"
+          "type": "image_picker",
+          "id": "ing_img",
+          "label": "Image"
         },
         {
-          "type":"text",
-          "id":"ing_title",
-          "label":"Title"
+          "type": "text",
+          "id": "ing_title",
+          "label": "Title"
         },
         {
-          "type":"text",
-          "id":"ing_cnt",
-          "label":"Content"
+          "type": "text",
+          "id": "ing_cnt",
+          "label": "Content"
         }
       ]
-      }
-    ]
-  }
+    }
+  ]
+}
 {% endschema %}
 <style>
   .clinically_tested {

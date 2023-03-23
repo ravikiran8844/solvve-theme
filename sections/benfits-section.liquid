@@ -3,8 +3,8 @@
     <div class="col-12 col-md-6 my-5">
       <img
         loading="lazy"
-        src="{{section.settings.image | img_url: 'master'}}"
-        alt="{{section.settings.heading}}">
+        src="{{ section.settings.image | image_url }}"
+        alt="{{ section.settings.heading }}">
     </div>
     <div class="col-12 col-md-6 m-auto">
       <div class="fs-2 bs-heading ms-3 mb-3">
@@ -50,27 +50,28 @@
 </style>
 
 {% schema %}
-  {
-    "name": "Benefits Section",
-    "class": "section",
-    "tag": "section",
-    "settings": [
-      {
-        "type": "image_picker",
-        "label": "Image",
-        "id": "image"
-      }, {
-        "type": "text",
-        "label": "heading",
-        "id": "heading",
-        "default": "Amazing Benefits Of Solvve"
-      }, {
-        "type": "richtext",
-        "label": "content",
-        "id": "content",
-        "default": "<p>content</p>"
-      }
-
-    ]
-  }
+{
+  "name": "Benefits Section",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Image",
+      "id": "image"
+    },
+    {
+      "type": "text",
+      "label": "heading",
+      "id": "heading",
+      "default": "Amazing Benefits Of Solvve"
+    },
+    {
+      "type": "richtext",
+      "label": "content",
+      "id": "content",
+      "default": "<p>content</p>"
+    }
+  ]
+}
 {% endschema %}

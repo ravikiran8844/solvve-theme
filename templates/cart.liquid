@@ -17,7 +17,7 @@
   <div class="product">
     <div class="product-image">
       <a href="{{ item.url | within: collections.all }}">
-        <img src="{{ item | img_url: 'medium' }}" alt="{{ item.title | escape }}">
+        <img src="{{ item | image_url: width: 240, height: 240 }}" alt="{{ item.title | escape }}">
       </a>
     </div>
     <div class="product-details">
@@ -481,7 +481,7 @@
 }
 </style>
 <script>
-  Shopify.moneyformat = {{shop.money_format | json}};
+  Shopify.moneyformat = {{ shop.money_format | json }};
   /* Set rates + misc */ 
 var fadeTime = 300;
 

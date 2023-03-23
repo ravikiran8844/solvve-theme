@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
 {% assign current_variant = product.selected_or_first_available_variant %}
-{% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+
 <div class="col-md-6 col-sm-12">
   <div class="stky">
         {% assign current_variant = product.selected_or_first_available_variant %}
@@ -11,12 +11,12 @@
               <div class="col-12">
                 <div class="slider-main">
                   {% for image in product.images %}
-                  <div class="slide"><img src="{{ image.src | img_url : "large"}}" alt="{{ image.alt | escape }}" class="img-responsive"></div>
+                  <div class="slide"><img src="{{ image.src | image_url: width: 480, height: 480 }}" alt="{{ image.alt | escape }}" class="img-responsive"></div>
                   {% endfor %}
                 </div>
                 <div class="slider-galeria-thumbs-mobile">
                   {% for image in product.images %}
-                  <div class="slide"><img src="{{ image.src | img_url }}" alt="{{ image.alt | escape }}" class="img-responsive rds"></div>
+                  <div class="slide"><img src="{{ image.src | image_url: width: 100, height: 100 }}" alt="{{ image.alt | escape }}" class="img-responsive rds"></div>
                   {% endfor %}
                 </div>
               </div>     
@@ -25,8 +25,8 @@
         </div>
       </div>
           <div class="col-md-6 col-sm-12">
-          <h1 class="fs-2 product-title pt-4">{{product.metafields.custom.product_title}}</h1>
-          <div class="product-subtitle">{{product.metafields.custom.product_subtitle}}</div>
+          <h1 class="fs-2 product-title pt-4">{{ product.metafields.custom.product_title }}</h1>
+          <div class="product-subtitle">{{ product.metafields.custom.product_subtitle }}</div>
           <div class="d-flex my-4">
             <div class="me-2"><svg width="49" height="50" viewBox="0 0 49 50" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <rect width="48.7333" height="49.8667" fill="url(#pattern0)"/>
@@ -85,12 +85,12 @@
           
                       <div class="product-card__options--swatches row">
                         {%- for value in option.values -%}
-                          {% assign j = i|plus:1 %}
+                          {% assign j = i | plus: 1 %}
                     {% assign i = j %} 
-                          {% assign pack_count =  value | split: " " | last  %}
+                          {% assign pack_count =  value | split: " " | last %}
                           {% assign saving = product.variants[i].compare_at_price | minus: product.variants[i].price | times: 100 | divided_by: product.variants[i].compare_at_price | round %}
                           {% assign percentage = saving | at_least: percentage %}
-                          <div id="{{ product.variants[i].id }}" class="product-card__options--swatch swatch-{{ option.name | handleize }} product-options col-6 col-lg-3">
+                        <div id="{{ product.variants[i].id }}" class="product-card__options--swatch swatch-{{ option.name | handleize }} product-options col-6 col-lg-3 {%if forloop.index==1%}active{% endif %}">
                             <input
                               hidden
                               type="radio"
@@ -118,16 +118,19 @@
                                     {% endif %}
                                    {% endcomment %}
               
-                                  <div class="days-plan mb-1">{{pack_count  | times: 15}}  <span>
+                                  <div class="days-plan mb-1">{{ pack_count | times: 15 }}  <span>
                                     Days</span></div>
-                                                              <div class="per-bottle"> {{value}} </div>       
-                                                              <div class="no-of-sachets mt-1">{{pack_count  | times: 15}}  <span>
+                                                              <div class="per-bottle"> {{ value }} </div>       
+                                                              <div class="no-of-sachets mt-1">{{ pack_count | times: 15 }}  <span>
                                                                 Sachets</span></div>   
 
                                 <div class="variant-price my-2">
-                                    {{product.variants[i].price | money}}
+                                    {{ product.variants[i].price | money }}
                                   </div>
-                                  <div class="compare_at_price"><s>{{product.variants[i].compare_at_price |money}}</s></div>
+                                  <div class="compare_at_price">{% if product.variants[i].compare_at_price > product.variants[i].price  %} 
+                                    <s>{{ product.variants[i].compare_at_price | money }}</s>
+                                    {%else%} &nbsp
+                                  {% endif %}</div>
                             
                                   </div>
                                 
@@ -160,7 +163,7 @@
        </div>
 
       <div>
-        <img src="{{'payment-methods.png' |file_url}}" alt="payment methods">
+        <img src="{{ 'payment-methods.png' | file_url }}" alt="payment methods">
       </div>
 
 <hr>
@@ -170,7 +173,7 @@
     <path d="M36.1611 5.91501C36.1611 5.72462 36.0859 5.54211 35.9518 5.40744C35.8178 5.27276 35.6362 5.19723 35.4467 5.19723H30.2079C29.8136 5.19723 29.4935 5.51853 29.4935 5.91501C29.4935 6.31114 29.8136 6.63278 30.2079 6.63278H31.1604C31.6037 6.63312 32.0357 6.77154 32.3973 7.02858C32.7589 7.28561 33.0328 7.64859 33.1808 8.06834H30.2079C29.8136 8.06834 29.4935 8.38963 29.4935 8.78611C29.4935 9.18225 29.8136 9.50388 30.2079 9.50388H33.1808C33.0328 9.92327 32.7589 10.2866 32.3973 10.5433C32.0357 10.8003 31.6037 10.9388 31.1604 10.9394H30.2079C29.9221 10.9394 29.6636 11.1107 29.5513 11.3749C29.4387 11.6391 29.4938 11.945 29.6915 12.1528L33.5015 16.1608C33.774 16.4475 34.2261 16.4581 34.5116 16.184C34.797 15.9102 34.8072 15.456 34.5347 15.1692L31.82 12.3134C32.5171 12.1805 33.159 11.8424 33.6649 11.342C34.1704 10.842 34.5167 10.2021 34.6599 9.50381H35.4471H35.4468C35.8414 9.50381 36.1612 9.18217 36.1612 8.78603C36.1612 8.38955 35.8414 8.06826 35.4468 8.06826H34.6606C34.5548 7.54737 34.3347 7.05685 34.0163 6.63274H35.4471H35.4468C35.6363 6.63274 35.8179 6.55686 35.952 6.42253C36.086 6.28786 36.1612 6.10535 36.1612 5.91496L36.1611 5.91501ZM19.254 24.0923V20.0044C19.254 19.6079 18.9342 19.2866 18.5396 19.2866C18.1453 19.2866 17.8252 19.6079 17.8252 20.0044V24.0789L14.6897 22.8709C14.3213 22.7288 13.9083 22.914 13.7668 23.2838C13.6256 23.654 13.8097 24.0693 14.1781 24.2112L17.4006 25.4526L15.0786 28.5657L15.0789 28.566C14.8421 28.8832 14.9061 29.333 15.2221 29.5709C15.5378 29.8084 15.9855 29.7442 16.2222 29.4267L18.5542 26.2999L21.0201 29.441C21.2647 29.7517 21.7137 29.8047 22.0233 29.5593C22.3329 29.3142 22.386 28.863 22.1421 28.5516L19.7094 25.4536L23.0453 24.2142C23.415 24.0765 23.6038 23.6639 23.4671 23.2924C23.3303 22.9209 22.9197 22.7309 22.55 22.8679L19.254 24.0923ZM32.8274 0C29.6739 0 26.699 1.4714 24.7756 3.9823C22.7219 2.96993 20.8097 1.6912 19.0877 0.178763C18.8071 -0.0690376 18.3842 -0.0577588 18.1172 0.204055C16.4115 1.86454 14.4565 3.24503 12.3232 4.29468C7.9501 6.46547 3.59096 6.97437 0.703158 7.01882C0.312965 7.02498 0 7.34456 0 7.7366V22.2415C0 27.7615 1.75263 33.1755 5.06838 37.8988C8.27396 42.4652 12.8514 46.2789 18.3047 48.9281V48.9285C18.501 49.0238 18.7303 49.0238 18.9266 48.9285C24.3804 46.2792 28.9573 42.4651 32.1629 37.8991C35.4787 33.1761 37.2313 27.7613 37.2313 22.2418V19.4336C40.0232 18.0865 42.052 15.5347 42.7433 12.5016C43.4346 9.46848 42.7127 6.28391 40.7824 3.85071C38.8523 1.41716 35.924 5.77501e-06 32.8269 5.77501e-06L32.8274 0ZM35.803 22.2416C35.803 27.464 34.1408 32.592 30.9958 37.0712C27.9903 41.3525 23.7152 44.9469 18.6156 47.4828C13.5162 44.9467 9.24151 41.3524 6.23527 37.0712C3.0903 32.5916 1.42816 27.4637 1.42816 22.2416V8.43501C4.44215 8.31743 8.68729 7.70015 12.9559 5.58172C15.0259 4.56112 16.9397 3.24862 18.6397 1.6835C20.2783 3.05375 22.0694 4.22923 23.9768 5.18622C23.5822 5.88314 23.2713 6.62454 23.0501 7.3949C21.6876 6.71882 20.3773 5.94126 19.1302 5.06932C18.8767 4.89159 18.5389 4.89774 18.2919 5.08401C16.9492 6.09604 15.5164 6.98067 14.0111 7.72643C10.9981 9.20571 7.76121 10.171 4.43327 10.5825C4.07675 10.6287 3.80971 10.9335 3.80971 11.2945V22.2416C3.80971 26.967 5.32145 31.6181 8.18174 35.693C10.6655 39.2313 14.1536 42.3116 18.2699 44.6005V44.6009C18.4852 44.7205 18.7465 44.7205 18.9618 44.6009C23.0777 42.3115 26.5659 39.2309 29.05 35.6933C31.9103 31.6188 33.422 26.9676 33.422 22.242V20.4246C34.2299 20.3781 35.0297 20.2342 35.8033 19.996L35.803 22.2416ZM31.9929 20.4076V22.2416C31.9929 26.6693 30.5713 31.0345 27.8818 34.8653C25.5917 38.1284 22.3936 40.9862 18.6157 43.1494C14.838 40.9862 11.6399 38.1284 9.34968 34.8653C6.66017 31.0344 5.23856 26.669 5.23856 22.2416L5.2389 11.921C8.50605 11.4527 11.6799 10.4718 14.6443 9.014C16.0748 8.30476 17.444 7.47697 18.737 6.53871C20.0171 7.40311 21.3575 8.17356 22.7478 8.84477C22.3719 11.6239 23.1492 14.4359 24.8978 16.6224C26.646 18.8088 29.2117 20.1774 31.9934 20.4075L31.9929 20.4076ZM32.8274 19.0065C30.5083 19.0065 28.2842 18.0809 26.6445 16.4335C25.0049 14.786 24.0837 12.5514 24.0837 10.2213C24.0837 7.89128 25.0049 5.65662 26.6445 4.00882C28.2842 2.36136 30.5083 1.43579 32.8274 1.43579C35.1464 1.43579 37.3705 2.36136 39.0105 4.00882C40.6502 5.65662 41.5714 7.89128 41.5714 10.2213C41.5687 12.5503 40.6468 14.7837 39.0075 16.4304C37.3682 18.0775 35.1457 19.0041 32.8274 19.0065Z" fill="#252525"/>
     </svg>
     </div>
-    <div class="my-2">
+    <div class="my-2 px-2">
       Secure Payments
     </div>
   </div>
@@ -190,8 +193,8 @@
       </svg>
       
     </div>
-    <div class="my-2">
-      Instant Despatch
+    <div class="my-2 px-2">
+      Instant Dispatch
     </div>
   </div>
 
@@ -205,7 +208,7 @@
       </svg>
       
     </div>
-    <div class="my-2">
+    <div class="my-2 px-2">
       Free Shipping
     </div>
   </div>
@@ -216,22 +219,22 @@
   <div class="mb-2 available-on">Available On</div>
   <div class="col-12 d-flex flex-wrap">
     <div class="col-4 text-center my-3 p-2">
-      <img src="{{'amazon.png' |file_url}}" alt="Available On">
+      <img src="{{ 'amazon.png' | file_url }}" alt="Available On">
     </div>
     <div class="col-4 text-center my-3 p-2">
-      <img src="{{'flipkart.png' |file_url}}" alt="Available On">
+      <img src="{{ 'flipkart.png' | file_url }}" alt="Available On">
     </div>
     <div class="col-4 text-center my-3 p-2">
-      <img src="{{'tata1mg.png' |file_url}}" alt="Available On">
+      <img src="{{ 'tata1mg.png' | file_url }}" alt="Available On">
     </div>
     <div class="col-4 text-center my-3 p-2">
-      <img src="{{'meesho.png' |file_url}}" alt="Available On">
+      <img src="{{ 'meesho.png' | file_url }}" alt="Available On">
     </div>
     <div class="col-4 text-center my-3 p-2">
-      <img src="{{'netmeds.png' |file_url}}" alt="Available On">
+      <img src="{{ 'netmeds.png' | file_url }}" alt="Available On">
     </div>
     <div class="col-4 text-center my-3 p-2">
-      <img src="{{'healthkart.png' |file_url}}" alt="Available On">
+      <img src="{{ 'healthkart.png' | file_url }}" alt="Available On">
     </div>
   </div>
   <hr>
@@ -429,11 +432,13 @@ color: #666666;
 </style>
 
 {% schema %}
-  {
-    "name": "Product-meta",
-    "class":"product_meta",
-    "settings": []
-  }
+{
+  "name": "Product-meta",
+  "class": "product_meta",
+  "settings": [
+
+  ]
+}
 {% endschema %}
 
 {% javascript %}

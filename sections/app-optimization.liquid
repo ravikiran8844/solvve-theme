@@ -175,7 +175,7 @@
 {%- if request.design_mode -%}
 {%- comment -%}
   The code below will be loaded only in the Theme Editor
-{%- endcomment-%}
+{%- endcomment -%}
 {%- assign urls = content_for_header | split: 'var urls =' | last | split: 'for (var i = 0' | first | remove: ';' | split: ',' -%}
 
 <template id="sd-app-list-template">
@@ -453,286 +453,286 @@
 {%- endif -%}
 
 {% schema %}
-  {
-    "name": "App Optimiztion",
-    "settings": [
-      {
-        "type": "checkbox",
-         "id": "enable",
-         "label": "Enable App Optimization?",
-         "default": true
-      },
-      {
-        "type": "checkbox",
-         "id": "debug_enable",
-         "label": "Enable debug?",
-         "default": false,
-         "info": "Output script loading information in console.log"
-      }
-    ],
-    "blocks": [
-      {
-        "type": "app",
-        "name": "Application",
-        "settings": [
-          {
-            "type": "text",
-            "id": "title",
-            "label": "App title"
-          },
-          {
-            "type": "text",
-            "id": "url",
-            "label": "App ScriptTag URL",
-            "placeholder": "e.g. shopifycdn.com/assets/v4/spr.js",
-            "info": "Use partial URL, e.g: shopifycdn.com/assets/v4/spr.js"
-          },
-          {
-            "type": "header",
-            "content": "Block script from loading"
-          },
-          {
-            "type": "paragraph",
-            "content": "On selected pages, the app will not be loaded"
-          },
-          {
-            "type": "checkbox",
-            "id": "block_index",
-            "label": "Index"
-          },
-          {
-            "type": "checkbox",
-            "id": "block_product",
-            "label": "Product"
-          },
-          {
-            "type": "checkbox",
-            "id": "block_collection",
-            "label": "Collection"
-          },
-           {
-            "type": "checkbox",
-            "id": "block_page",
-            "label": "Page"
-          },
-          {
-            "type": "checkbox",
-            "id": "block_blog",
-            "label": "Blog"
-          },
-          {
-            "type": "checkbox",
-            "id": "block_article",
-            "label": "Article"
-          },
-          {
-            "type": "checkbox",
-            "id": "block_cart",
-            "label": "Cart"
-          },  
-          {
-            "type": "checkbox",
-            "id": "block_search",
-            "label": "Search"
-          },        
-          {
-            "type": "checkbox",
-            "id": "block_customers",
-            "label": "Customers"
-          }, 
-          {
-            "type": "checkbox",
-            "id": "block_gift_card",
-            "label": "Gift card"
-          }, 
-          {
-            "type": "header",
-            "content": "Load script on user page scroll"
-          },
-          {
-            "type": "paragraph",
-            "content": "On selected pages, the app will start to load when the user scrolls the page."
-          },
-          {
-            "type": "checkbox",
-            "id": "scroll_index",
-            "label": "Index"
-          },
-          {
-            "type": "checkbox",
-            "id": "scroll_product",
-            "label": "Product"
-          },
-          {
-            "type": "checkbox",
-            "id": "scroll_collection",
-            "label": "Collection"
-          },
-           {
-            "type": "checkbox",
-            "id": "scroll_page",
-            "label": "Page"
-          },
-          {
-            "type": "checkbox",
-            "id": "scroll_blog",
-            "label": "Blog"
-          },
-          {
-            "type": "checkbox",
-            "id": "scroll_article",
-            "label": "Article"
-          },
-          {
-            "type": "checkbox",
-            "id": "scroll_cart",
-            "label": "Cart"
-          },  
-          {
-            "type": "checkbox",
-            "id": "scroll_search",
-            "label": "Search"
-          },        
-          {
-            "type": "checkbox",
-            "id": "scroll_customers",
-            "label": "Customers"
-          }, 
-          {
-            "type": "checkbox",
-            "id": "scroll_gift_card",
-            "label": "Gift card"
-          },
-          {
-            "type": "header",
-            "content": "Load script on user interaction"
-          },
-          {
-            "type": "paragraph",
-            "content": "On selected pages, the app will start to load when the user will trigger the assigned events."
-          },
-          {
-            "type": "checkbox",
-            "id": "interaction_index",
-            "label": "Index"
-          },
-          {
-            "type": "checkbox",
-            "id": "interaction_product",
-            "label": "Product"
-          },
-          {
-            "type": "checkbox",
-            "id": "interaction_collection",
-            "label": "Collection"
-          },
-           {
-            "type": "checkbox",
-            "id": "interaction_page",
-            "label": "Page"
-          },
-          {
-            "type": "checkbox",
-            "id": "interaction_blog",
-            "label": "Blog"
-          },
-          {
-            "type": "checkbox",
-            "id": "interaction_article",
-            "label": "Article"
-          },
-          {
-            "type": "checkbox",
-            "id": "interaction_cart",
-            "label": "Cart"
-          },  
-          {
-            "type": "checkbox",
-            "id": "interaction_search",
-            "label": "Search"
-          },        
-          {
-            "type": "checkbox",
-            "id": "interaction_customers",
-            "label": "Customers"
-          }, 
-          {
-            "type": "checkbox",
-            "id": "interaction_gift_card",
-            "label": "Gift card"
-          },
-          {
-            "type": "header",
-            "content": "User interaction event 1"
-          },
-          {
-            "type": "text",
-            "id": "interaction_selectors_1",
-            "label": "CSS selectors list",
-            "info": "Comma separated CSS selectors",
-            "placeholder": ".btn, .menu"
-          },
-          {
-            "type": "select",
-            "id": "interaction_event_1",
-            "label": "Interaction event name",
-            "options": [
-              {
-                "value": "click",
-                "label": "click"
-              },
-              {
-                "value": "mousedown",
-                "label": "mousedown"
-              },
-              {
-                "value": "mouseup",
-                "label": "mouseup"
-              },
-              {
-                "value": "focus",
-                "label": "focus"
-              }
-            ],
-            "default": "click"
-          },
-          {
-            "type": "header",
-            "content": "User interaction event 2"
-          },
-          {
-            "type": "text",
-            "id": "interaction_selectors_2",
-            "label": "CSS selectors list",
-            "info": "Comma separated CSS selectors",
-            "placeholder": ".btn, .menu"
-          },
-          {
-            "type": "select",
-            "id": "interaction_event_2",
-            "label": "Interaction event name",
-            "options": [
-              {
-                "value": "click",
-                "label": "click"
-              },
-              {
-                "value": "mousedown",
-                "label": "mousedown"
-              },
-              {
-                "value": "mouseup",
-                "label": "mouseup"
-              },
-              {
-                "value": "focus",
-                "label": "focus"
-              }
-            ],
-            "default": "click"
-          }
-        ]
-      }
-    ]
-  }
+{
+  "name": "App Optimiztion",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable",
+      "label": "Enable App Optimization?",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "debug_enable",
+      "label": "Enable debug?",
+      "default": false,
+      "info": "Output script loading information in console.log"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "app",
+      "name": "Application",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "App title"
+        },
+        {
+          "type": "text",
+          "id": "url",
+          "label": "App ScriptTag URL",
+          "placeholder": "e.g. shopifycdn.com/assets/v4/spr.js",
+          "info": "Use partial URL, e.g: shopifycdn.com/assets/v4/spr.js"
+        },
+        {
+          "type": "header",
+          "content": "Block script from loading"
+        },
+        {
+          "type": "paragraph",
+          "content": "On selected pages, the app will not be loaded"
+        },
+        {
+          "type": "checkbox",
+          "id": "block_index",
+          "label": "Index"
+        },
+        {
+          "type": "checkbox",
+          "id": "block_product",
+          "label": "Product"
+        },
+        {
+          "type": "checkbox",
+          "id": "block_collection",
+          "label": "Collection"
+        },
+        {
+          "type": "checkbox",
+          "id": "block_page",
+          "label": "Page"
+        },
+        {
+          "type": "checkbox",
+          "id": "block_blog",
+          "label": "Blog"
+        },
+        {
+          "type": "checkbox",
+          "id": "block_article",
+          "label": "Article"
+        },
+        {
+          "type": "checkbox",
+          "id": "block_cart",
+          "label": "Cart"
+        },
+        {
+          "type": "checkbox",
+          "id": "block_search",
+          "label": "Search"
+        },
+        {
+          "type": "checkbox",
+          "id": "block_customers",
+          "label": "Customers"
+        },
+        {
+          "type": "checkbox",
+          "id": "block_gift_card",
+          "label": "Gift card"
+        },
+        {
+          "type": "header",
+          "content": "Load script on user page scroll"
+        },
+        {
+          "type": "paragraph",
+          "content": "On selected pages, the app will start to load when the user scrolls the page."
+        },
+        {
+          "type": "checkbox",
+          "id": "scroll_index",
+          "label": "Index"
+        },
+        {
+          "type": "checkbox",
+          "id": "scroll_product",
+          "label": "Product"
+        },
+        {
+          "type": "checkbox",
+          "id": "scroll_collection",
+          "label": "Collection"
+        },
+        {
+          "type": "checkbox",
+          "id": "scroll_page",
+          "label": "Page"
+        },
+        {
+          "type": "checkbox",
+          "id": "scroll_blog",
+          "label": "Blog"
+        },
+        {
+          "type": "checkbox",
+          "id": "scroll_article",
+          "label": "Article"
+        },
+        {
+          "type": "checkbox",
+          "id": "scroll_cart",
+          "label": "Cart"
+        },
+        {
+          "type": "checkbox",
+          "id": "scroll_search",
+          "label": "Search"
+        },
+        {
+          "type": "checkbox",
+          "id": "scroll_customers",
+          "label": "Customers"
+        },
+        {
+          "type": "checkbox",
+          "id": "scroll_gift_card",
+          "label": "Gift card"
+        },
+        {
+          "type": "header",
+          "content": "Load script on user interaction"
+        },
+        {
+          "type": "paragraph",
+          "content": "On selected pages, the app will start to load when the user will trigger the assigned events."
+        },
+        {
+          "type": "checkbox",
+          "id": "interaction_index",
+          "label": "Index"
+        },
+        {
+          "type": "checkbox",
+          "id": "interaction_product",
+          "label": "Product"
+        },
+        {
+          "type": "checkbox",
+          "id": "interaction_collection",
+          "label": "Collection"
+        },
+        {
+          "type": "checkbox",
+          "id": "interaction_page",
+          "label": "Page"
+        },
+        {
+          "type": "checkbox",
+          "id": "interaction_blog",
+          "label": "Blog"
+        },
+        {
+          "type": "checkbox",
+          "id": "interaction_article",
+          "label": "Article"
+        },
+        {
+          "type": "checkbox",
+          "id": "interaction_cart",
+          "label": "Cart"
+        },
+        {
+          "type": "checkbox",
+          "id": "interaction_search",
+          "label": "Search"
+        },
+        {
+          "type": "checkbox",
+          "id": "interaction_customers",
+          "label": "Customers"
+        },
+        {
+          "type": "checkbox",
+          "id": "interaction_gift_card",
+          "label": "Gift card"
+        },
+        {
+          "type": "header",
+          "content": "User interaction event 1"
+        },
+        {
+          "type": "text",
+          "id": "interaction_selectors_1",
+          "label": "CSS selectors list",
+          "info": "Comma separated CSS selectors",
+          "placeholder": ".btn, .menu"
+        },
+        {
+          "type": "select",
+          "id": "interaction_event_1",
+          "label": "Interaction event name",
+          "options": [
+            {
+              "value": "click",
+              "label": "click"
+            },
+            {
+              "value": "mousedown",
+              "label": "mousedown"
+            },
+            {
+              "value": "mouseup",
+              "label": "mouseup"
+            },
+            {
+              "value": "focus",
+              "label": "focus"
+            }
+          ],
+          "default": "click"
+        },
+        {
+          "type": "header",
+          "content": "User interaction event 2"
+        },
+        {
+          "type": "text",
+          "id": "interaction_selectors_2",
+          "label": "CSS selectors list",
+          "info": "Comma separated CSS selectors",
+          "placeholder": ".btn, .menu"
+        },
+        {
+          "type": "select",
+          "id": "interaction_event_2",
+          "label": "Interaction event name",
+          "options": [
+            {
+              "value": "click",
+              "label": "click"
+            },
+            {
+              "value": "mousedown",
+              "label": "mousedown"
+            },
+            {
+              "value": "mouseup",
+              "label": "mouseup"
+            },
+            {
+              "value": "focus",
+              "label": "focus"
+            }
+          ],
+          "default": "click"
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}

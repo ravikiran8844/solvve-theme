@@ -16,7 +16,7 @@
       "login_form_error": "Wrong password!",
       "login_form_submit": "Enter",
       "modal": "Password modal",
-      "admin_link_html": "Are you the store owner? <a href=\"\/admin\" class=\"link underlined-link\">Log in here<\/a>",
+      "admin_link_html": "Are you the store owner? <a href=\"/admin\" class=\"link underlined-link\">Log in here</a>",
       "powered_by_shopify_html": "This shop will be powered by {{ shopify }}",
       "label": "Early Access Login",
       "label_2": "Early Access Login*",
@@ -98,7 +98,7 @@
       "total": "Total:",
       "coupon_code_text": "Coupon code will be applied on the checkout page",
       "estimate_shipping": "Estimate Shipping Rates",
-      "country": "Country\/Region",
+      "country": "Country/Region",
       "state": "State",
       "zip_code": "ZIP Code",
       "postal_code": "Postal Code",
@@ -122,6 +122,14 @@
       "loading": "Loading...",
       "view_all": "View All Collection",
       "no_more": "No More Product"
+    },
+    "newsletter_form": {
+      "confirmation": "TODO",
+      "email_placeholder": "TODO",
+      "submit": "TODO"
+    },
+    "accessibility": {
+      "error": "TODO"
     }
   },
   "brands_page": {
@@ -231,13 +239,13 @@
         "view_store_info": "View store information",
         "check_other_stores": "Check availability at other stores",
         "pick_up_available": "Pickup available",
-        "pick_up_available_at_html": "Pickup available at <span class=\"strong\">{{ location_name }}<\/span>",
-        "pick_up_unavailable_at_html": "Pickup currently unavailable at <span class=\"strong\">{{ location_name }}<\/span>",
+        "pick_up_available_at_html": "Pickup available at <span class=\"strong\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "Pickup currently unavailable at <span class=\"strong\">{{ location_name }}</span>",
         "unavailable": "Couldn't load pickup availability",
         "refresh": "Refresh"
       },
       "price": {
-        "from_price_html": "<span class=\"text\">From<\/span> {{ price }}",
+        "from_price_html": "<span class=\"text\">From</span> {{ price }}",
         "regular_price": "Regular price",
         "sale_price": "Sale price",
         "unit_price": "Unit price"
@@ -387,9 +395,9 @@
       "cart_quantity_error_alert": "You can only add {{maxQuantity}} of this product to your cart",
       "cart_quantity_error_alert_2": "The quantity of this product is insufficient.",
       "quick_cart": "Quick Cart",
-      "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping<\/a> calculated at checkout",
+      "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping</a> calculated at checkout",
       "taxes_included_but_shipping_at_checkout": "Tax included and shipping calculated at checkout",
-      "taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
+      "taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
       "taxes_and_shipping_at_checkout": "Taxes and shipping calculated at checkout",
       "headings": {
         "product": "Product",
@@ -450,7 +458,7 @@
       "sort_by_label": "Sort by",
       "title": "Collection",
       "to": "to",
-      "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">clear all<\/a>",
+      "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">clear all</a>",
       "view_as": "View as",
       "image": "Images",
       "product": "Product",
@@ -468,10 +476,10 @@
     }
   },
   "localization": {
-    "country_label": "Country\/region",
+    "country_label": "Country/region",
     "language_label": "Language",
     "update_language": "Update language",
-    "update_country": "Update country\/region"
+    "update_country": "Update country/region"
   },
   "currency": {
     "change_text": "The store's currency changed to",
@@ -507,9 +515,9 @@
       "address1": "Address 1",
       "address2": "Address 2",
       "city": "City",
-      "country": "Country\/region",
+      "country": "Country/region",
       "province": "Province",
-      "zip": "Postal\/ZIP code",
+      "zip": "Postal/ZIP code",
       "phone": "Phone",
       "set_default": "Set as default address",
       "add": "Add address",
@@ -685,10 +693,10 @@
   "notify_form": {
     "general": {
       "label": "Notify me",
-      "title": "Leave your email and we will notify as soon as the product \/ variant is back in stock",
+      "title": "Leave your email and we will notify as soon as the product / variant is back in stock",
       "placeholder": "Insert your email",
       "submit": "Subscribe",
-      "success": "Thanks! We've received your request and will respond shortly when this product \/ variant becomes available!",
+      "success": "Thanks! We've received your request and will respond shortly when this product / variant becomes available!",
       "error": "Please use a valid email address, such as john@example.com."
     }
   },
@@ -740,7 +748,7 @@
   "compare_color": {
     "general": {
       "title": "Compare Color",
-      "text": "Click On Color \/ Pattern To Compare, Click And Drag Images To Reorder"
+      "text": "Click On Color / Pattern To Compare, Click And Drag Images To Reorder"
     }
   },
   "lookbook": {

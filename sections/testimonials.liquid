@@ -14,7 +14,7 @@
             <div class="testimonial__item mx-2 p-3">
               <div class="d-flex mt-3">
                 <div class="me-2">
-                  <img src="{{ block.settings.image |img_url: 'master' }}" alt="{{ block.settings.name }}">
+                  <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.name }}">
                 </div>
                 <div>
                   <p>
@@ -68,7 +68,7 @@
         {% endfor %}
       </div>
       <div class="text-center py-5">
-        <a href="{{section.settings.btn_link}}" class="btn testimonials-button">Know More</a>
+        <a href="{{ section.settings.btn_link }}" class="btn testimonials-button">Know More</a>
       </div>
     </div>
   </div>
@@ -130,53 +130,57 @@
 </script>
 
 {% schema %}
-  {
-    "name": "Testimonials",
-    "class": "section",
-    "tag": "section",
-    "settings": [
-      {
-        "type": "color",
-        "id": "bg_color",
-        "label": "Background Color",
-        "default": "#E5E5E5"
-      }, {
-        "type": "text",
-        "id": "heading",
-        "label": "Heading",
-        "default": "Rated 5 star"
-      }, {
-        "type": "url",
-        "id": "btn_link",
-        "label": "Button Link"
-      }
-    ],
-    "blocks": [
-      {
-        "name": "Testimonial",
-        "type": "testimonial-section",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image"
-          }, {
-            "type": "text",
-            "label": "Name",
-            "id": "name",
-            "default": "Name"
-          }, {
-            "type": "richtext",
-            "label": "Text",
-            "id": "text"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Testimonials"
-      }
-    ]
-  }
+{
+  "name": "Testimonials",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#E5E5E5"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Rated 5 star"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Testimonial",
+      "type": "testimonial-section",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "label": "Name",
+          "id": "name",
+          "default": "Name"
+        },
+        {
+          "type": "richtext",
+          "label": "Text",
+          "id": "text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials"
+    }
+  ]
+}
 {% endschema %}

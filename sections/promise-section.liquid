@@ -8,7 +8,7 @@
         <div>
           <div class="promise_icon_box">
             <div class="promise_icon_img">
-              <img src="{{ block.settings.image | img_url: 'master' }}" alt="Solvve PCOD and PCOS supplement Promises">
+              <img src="{{ block.settings.image | image_url }}" alt="Solvve PCOD and PCOS supplement Promises">
             </div>
             <p class="prom-icon-name">{{ block.settings.text }}</p>
           </div>
@@ -31,29 +31,32 @@
   }
 </style>
 {% schema %}
-  {
-    "name": "Promise Section",
-    "class": "solvve_promise",
-    "settings": [],
-    "blocks": [
-      {
-        "type": "block",
-        "name": "promise-block",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image"
-          }, {
-            "type": "text",
-            "id": "text",
-            "label": "Text",
-            "default": "Text"
-          }
-        ]
-      }
-    ]
-  }
+{
+  "name": "Promise Section",
+  "class": "solvve_promise",
+  "settings": [
+
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "promise-block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Text"
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}
 
 

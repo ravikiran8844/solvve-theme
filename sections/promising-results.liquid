@@ -6,7 +6,7 @@
   </div>
   <div class="row pt-5 pr-wrapper">
     <div class="col-12 col-md-6 px-3">
-      <img src="{{ section.settings.image |img_url: 'master' }}" alt="{{ section.settings.heading }}">
+      <img src="{{ section.settings.image | image_url }}" alt="{{ section.settings.heading }}">
     </div>
     <div class="col-12 col-md-6 m-auto">
       <div class="pr-text mb-5">120 women who were clinically tested with PCOS PCOD condition took part in our research and consumed one sachet of Solvve continuously for 84 days. The results of the study are as follows-</div>
@@ -66,22 +66,22 @@
   }
 </style>
 {% schema %}
-  {
-    "name": "Promissing Results",
-    "class": "section",
-    "tag": "section",
-    "settings": [
-      {
-        "type": "text",
-        "id": "heading",
-        "label": "Heading",
-        "default": "Promising Results From Our Clinical Research"
-      }, {
-        "type": "image_picker",
-        "id": "image",
-        "label": "Image"
-      }
-
-    ]
-  }
+{
+  "name": "Promissing Results",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Promising Results From Our Clinical Research"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ]
+}
 {% endschema %}

@@ -1,4 +1,4 @@
-<link href="{{'blog.css'|asset_url}}" rel="stylesheet" type="text/css" media="all" /> 
+<link href="{{ 'blog.css' | asset_url }}" rel="stylesheet" type="text/css" media="all" /> 
 <div class="blgg container">
   <div class="row">
   <div class="col-sm-12 col-md-12 col-lg-8">
@@ -9,8 +9,8 @@
   <div class="blog-cont">
   <h1 class="text-center article_title">{{ article.title }}</h1>
   <p class="text-center art_author"> <time datetime="{{ article.created_at | date: "%B %d, %Y" }}">by Solvve - {{ article.created_at | date: "%B %d, %Y" }}</time></p>
-  <div><img class="blog-inner-img" src="{{ article.image.src | img_url: '1299x410' }}"></div>  
-  <div class="art_content">{{ article.content}}</div>
+  <div><img class="blog-inner-img" src="{{ article.image.src | image_url: width: 1299, height: 410 }}"></div>  
+  <div class="art_content">{{ article.content }}</div>
     
   
   {% if article.metafields.custom.faq_question_1 != blank and article.metafields.custom.faq_answer_1 != blank %}
@@ -18,36 +18,36 @@
      <div class="h5 mb-3 faq-title">Frequently Asked Questions</div>
       <details>
           <summary class="collapsible h6 faq-question">{{ article.metafields.custom.faq_question_1 }}</summary>
-          <div class="paragraph_collapsable">{{article.metafields.custom.faq_answer_1 }}</div>
+          <div class="paragraph_collapsable">{{ article.metafields.custom.faq_answer_1 }}</div>
         </details>
           {% if article.metafields.custom.faq_question_2 != blank and article.metafields.custom.faq_answer_2 != blank %}
         <details>
           <summary class="collapsible  h6 faq-question">{{ article.metafields.custom.faq_question_2 }}</summary>
-          <div class="paragraph_collapsable">{{article.metafields.custom.faq_answer_2 }}</div>
+          <div class="paragraph_collapsable">{{ article.metafields.custom.faq_answer_2 }}</div>
         </details>
         {% endif %}
               {% if article.metafields.custom.faq_question_3 != blank and article.metafields.custom.faq_answer_3 != blank %}
         <details>
           <summary class="collapsible h6  faq-question">{{ article.metafields.custom.faq_question_3 }}</summary>
-          <div class="paragraph_collapsable">{{article.metafields.custom.faq_answer_3 }}</div>
+          <div class="paragraph_collapsable">{{ article.metafields.custom.faq_answer_3 }}</div>
         </details>
         {% endif %}
               {% if article.metafields.custom.faq_question_4 != blank and article.metafields.custom.faq_answer_4 != blank %}
         <details>
           <summary class="collapsible h6 faq-question">{{ article.metafields.custom.faq_question_4 }}</summary>
-          <div class="paragraph_collapsable">{{article.metafields.custom.faq_answer_4 }}</div>
+          <div class="paragraph_collapsable">{{ article.metafields.custom.faq_answer_4 }}</div>
         </details>
         {% endif %}
               {% if article.metafields.custom.faq_question_5 != blank and article.metafields.custom.faq_answer_5 != blank %}
         <details>
           <summary class="collapsible h6 faq-question">{{ article.metafields.custom.faq_question_5 }}</summary>
-          <div class="paragraph_collapsable">{{article.metafields.custom.faq_answer_5 }}</div>
+          <div class="paragraph_collapsable">{{ article.metafields.custom.faq_answer_5 }}</div>
         </details>
         {% endif %}
               {% if article.metafields.custom.faq_question_6 != blank and article.metafields.custom.faq_answer_6 != blank %}
         <details>
           <summary class="collapsible h6 faq-question">{{ article.metafields.custom.faq_question_6 }}</summary>
-          <div class="paragraph_collapsable">{{article.metafields.custom.faq_answer_6 }}</div>
+          <div class="paragraph_collapsable">{{ article.metafields.custom.faq_answer_6 }}</div>
         </details>
         {% endif %}
 
@@ -57,26 +57,26 @@
 
  
 
-<div class="small--text-center medium--text-center"><ul class="no-bullets inline-list blog_sharer"><li><a href="https://www.facebook.com/sharer.php?u={{shop.url}}{{article.url}}" class="btn face_sh" >
+<div class="small--text-center medium--text-center"><ul class="no-bullets inline-list blog_sharer"><li><a href="https://www.facebook.com/sharer.php?u={{ shop.url }}{{ article.url }}" class="btn face_sh" >
  <span> <svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="35px" height="35px">    <path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"/></svg></span> <span>Share</span>
   </a></li>
    <li>
-    <a href="https://twitter.com/share?url={{shop.url}}{{article.url}}" class="btn twt_sh">
+    <a href="https://twitter.com/share?url={{ shop.url }}{{ article.url }}" class="btn twt_sh">
 <span><svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="35px" height="35px">    <path d="M25,2C12.317,2,2,12.317,2,25s10.317,23,23,23s23-10.317,23-23S37.683,2,25,2z M36.237,20.524 c0.01,0.236,0.016,0.476,0.016,0.717C36.253,28.559,30.68,37,20.491,37c-3.128,0-6.041-0.917-8.491-2.489 c0.433,0.052,0.872,0.077,1.321,0.077c2.596,0,4.985-0.884,6.879-2.37c-2.424-0.044-4.468-1.649-5.175-3.847 c0.339,0.065,0.686,0.1,1.044,0.1c0.505,0,0.995-0.067,1.458-0.195c-2.532-0.511-4.441-2.747-4.441-5.432c0-0.024,0-0.047,0-0.07 c0.747,0.415,1.6,0.665,2.509,0.694c-1.488-0.995-2.464-2.689-2.464-4.611c0-1.015,0.272-1.966,0.749-2.786 c2.733,3.351,6.815,5.556,11.418,5.788c-0.095-0.406-0.145-0.828-0.145-1.262c0-3.059,2.48-5.539,5.54-5.539 c1.593,0,3.032,0.672,4.042,1.749c1.261-0.248,2.448-0.709,3.518-1.343c-0.413,1.292-1.292,2.378-2.437,3.064 c1.122-0.136,2.188-0.432,3.183-0.873C38.257,18.766,37.318,19.743,36.237,20.524z"/></svg></span>  <span>Tweet </span> </a>
 </li>
   <li>
-    <a href="https://pinterest.com/pin/create/button/?url={{shop.url}}{{article.url}}" class="btn twt_sh">
+    <a href="https://pinterest.com/pin/create/button/?url={{ shop.url }}{{ article.url }}" class="btn twt_sh">
 <span><svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="35px" height="35px"><path d="M25,2C12.3178711,2,2,12.3178711,2,25c0,9.8841553,6.2675781,18.3302612,15.036377,21.5769653	c-0.2525635-2.2515869-0.2129517-5.9390259,0.2037964-7.7243652c0.3902588-1.677002,2.5212402-10.6871338,2.5212402-10.6871338	s-0.6433105-1.2883301-0.6433105-3.1911011c0-2.9901733,1.7324219-5.2211914,3.8898315-5.2211914	c1.8349609,0,2.7197876,1.3776245,2.7197876,3.0281982c0,1.8457031-1.1734619,4.6026611-1.78125,7.1578369	c-0.506897,2.1409302,1.0733643,3.8865356,3.1836548,3.8865356c3.821228,0,6.7584839-4.0296021,6.7584839-9.8453369	c0-5.147583-3.697998-8.7471924-8.9795532-8.7471924c-6.1167603,0-9.7072754,4.588562-9.7072754,9.3309937	c0,1.8473511,0.7111816,3.8286743,1.6000977,4.9069824c0.175293,0.2133179,0.2009277,0.3994141,0.1488647,0.6160278	c-0.1629028,0.678894-0.5250854,2.1392822-0.5970459,2.4385986c-0.0934448,0.3944702-0.3117676,0.4763184-0.7186279,0.2869263	c-2.685791-1.2503052-4.364502-5.1756592-4.364502-8.3295898c0-6.7815552,4.9268188-13.0108032,14.206543-13.0108032	c7.4588623,0,13.2547607,5.3138428,13.2547607,12.4179077c0,7.4100342-4.6729126,13.3729858-11.1568604,13.3729858	c-2.178894,0-4.2263794-1.132019-4.9267578-2.4691772c0,0-1.0783081,4.1048584-1.3404541,5.1112061	c-0.4524536,1.7404175-2.3892822,5.3460083-3.3615723,6.9837036C20.1704712,47.6074829,22.5397949,48,25,48	c12.6826172,0,23-10.3173828,23-23C48,12.3178711,37.6826172,2,25,2z"/></svg></span>  <span>Pin it </span> </a>
 </li>
   <li>
-    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{shop.url}}{{article.url}}" class="btn twt_sh">
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ shop.url }}{{ article.url }}" class="btn twt_sh">
       <span><svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="35px" height="35px">    <path d="M15,3C8.373,3,3,8.373,3,15c0,6.627,5.373,12,12,12s12-5.373,12-12C27,8.373,21.627,3,15,3z M10.496,8.403 c0.842,0,1.403,0.561,1.403,1.309c0,0.748-0.561,1.309-1.496,1.309C9.561,11.022,9,10.46,9,9.712C9,8.964,9.561,8.403,10.496,8.403z M12,20H9v-8h3V20z M22,20h-2.824v-4.372c0-1.209-0.753-1.488-1.035-1.488s-1.224,0.186-1.224,1.488c0,0.186,0,4.372,0,4.372H14v-8 h2.918v1.116C17.294,12.465,18.047,12,19.459,12C20.871,12,22,13.116,22,15.628V20z"/></svg></span><span>Share</span>
     </a>
   </li>
 </ul></div>
   </div>
  
-  <div class="text-center"><a class="btn blocg_act" href="{{blog.url}}">Back to the Blogs</a></div>
+  <div class="text-center"><a class="btn blocg_act" href="{{ blog.url }}">Back to the Blogs</a></div>
   {% if blog.comments_enabled? %}
   <div class="row">
   <div class="col-12">
@@ -85,7 +85,7 @@
   {% for comment in article.comments %}
   <div class="com-sec">
     <div class="cmnt-auth-av">
-      <img src="{{ 'default.png'|asset_url }}">
+      <img src="{{ 'default.png' | asset_url }}">
     </div>
     <div class="com-box">
     <h5 class="com-auth">{{ comment.author }} </h5>
@@ -146,7 +146,7 @@ Edit the 2 values right below: what's your blog handle and how many articles do 
 <div class="latest-blog-posts-wrapper">
   <ul class="latest-blog-posts-list">
   {% for article in blogs[your_blog_handle_here].articles limit: how_many_articles_to_show %}
-    <li><img src="{{ article.image.src | img_url: '700x' }}">
+    <li><img src="{{ article.image.src | image_url: width: 700 }}">
     <div>{{ article.title | link_to: article.url }}<p>{{ article.created_at | date: "%B %d, %Y" }}</p></div> 
     </li>
   {% endfor %}

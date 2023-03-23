@@ -6,9 +6,9 @@
     <div class="glide__slide">
       <a href="{{ block.settings.image_link }}">
         <picture>
-          <source media="(min-width: 601px)" srcset="{{ block.settings.slider_desktop_image | img_url:'master' }}">
-          <source  media="(max-width: 600px)" srcset="{{ block.settings.slider_mobile_image | img_url:'master' }}">
-          <img class="slide-image" data-src="{{ block.settings.slider_desktop_image | img_url:'master' }}" style="width:100%;max-width:100%">
+          <source media="(min-width: 601px)" srcset="{{ block.settings.slider_desktop_image | image_url }}">
+          <source  media="(max-width: 600px)" srcset="{{ block.settings.slider_mobile_image | image_url }}">
+          <img class="slide-image" data-src="{{ block.settings.slider_desktop_image | image_url }}" style="width:100%;max-width:100%">
         </picture> 
       </a>
     </div>
@@ -19,34 +19,33 @@
 
 
 {% schema %}
-  {
-    "name": "Slider",
-    "class": "home_slider",
-    "blocks": [
-      {
-        "name":"Slider",
-        "type":"image",
-        "settings":[
-          {
-            "type":"image_picker",
-            "id":"slider_desktop_image",
-            "label":"Desktop Image"
-          },
-          {
-            "type":"image_picker",
-            "id":"slider_mobile_image",
-            "label":"Mobile Image"
-          },
-          {
-          "type":"url",
-          "id":"image_link",
-          "label":"Image Link"
-          }
-        ]
-      }
-    ]
-    
-  }
+{
+  "name": "Slider",
+  "class": "home_slider",
+  "blocks": [
+    {
+      "name": "Slider",
+      "type": "image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "slider_desktop_image",
+          "label": "Desktop Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "slider_mobile_image",
+          "label": "Mobile Image"
+        },
+        {
+          "type": "url",
+          "id": "image_link",
+          "label": "Image Link"
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}
 
 <script>
