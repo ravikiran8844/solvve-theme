@@ -1,16 +1,56 @@
 <div class="announcement-bar">
-  <p>{{ section.settings.announcement }}</p>
+  <p class="announcement-bar-text">{{ section.settings.announcement }}</p>
 </div>
 {% schema %}
-{
-  "name": "Announcement Bar",
-  "class": "announcement_bar",
-  "settings": [
-    {
-      "id": "announcement",
-      "type": "text",
-      "label": "Announcement Text"
-    }
-  ]
-}
+  {
+    "name": "Announcement Bar",
+    "class": "announcement_bar",
+    "settings": [
+      {
+        "id": "announcement",
+        "type": "text",
+        "label": "Announcement Text"
+      }
+    ]
+  }
 {% endschema %}
+
+
+<style>
+  .announcement-bar-text::after {
+    content: 'FREE';
+    background: red;
+    color: #fff;
+    padding: 2px 4px;
+    margin: 0 10px;
+    font-size: 12px;
+    font-family: Inter-Light;
+    border-radius: 4px;
+    animation: blinker 1.5s linear infinite;
+  }
+  .announcement-bar-text::before {
+    content: 'FREE';
+    background: red;
+    color: #fff;
+    padding: 2px 4px;
+    font-family: Inter-Light;
+
+    margin: 0 10px;
+    font-size: 12px;
+    border-radius: 4px;
+
+    animation: blinker 1.5s linear infinite;
+  }
+
+  @keyframes blinker {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: .5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+</style>
