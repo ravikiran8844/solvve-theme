@@ -1,0 +1,227 @@
+{% assign current_variant = product.selected_or_first_available_variant %}
+
+<div
+  id="sticky-atc"
+  class="sticky_cart sticky-addtocart col-12"
+  style="display: none;">
+  <div class="container py-3 px-3">
+    <div class="row">
+      {% form 'product', product %}
+
+        <div class="col-12 d-flex align-items-center">
+          <div class="sticky-product-image_wrapper d-none d-md-block col-md-2">
+            <div class="sticky-product-image">
+              <img src="{{product.featured_image | img_url: 'medium'}}">
+            </div>
+          </div>
+          <div class="d-none d-md-block col-md-3 ms-3">
+            <div class="sticky-product-title">{{ product.title }}</div>
+            <div>
+              <span>
+                <svg
+                  width="21"
+                  height="20"
+                  viewBox="0 0 21 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.750006 10.1977C0.755643 4.84063 5.12831 0.477967 10.4694 0.500084C15.8338 0.522201 20.1566 4.85754 20.1497 10.2081C20.1423 15.5777 15.7909 19.92 10.4368 19.8996C5.07323 19.8797 0.744368 15.5435 0.750006 10.1977ZM9.18396 11.8382C9.08812 11.7181 9.04346 11.6518 8.98881 11.5949C8.3678 10.9505 7.74896 10.3044 7.12188 9.66601C6.79663 9.33512 6.32566 9.34943 6.03164 9.68292C5.7658 9.98475 5.78445 10.4219 6.08975 10.7376C6.91242 11.5884 7.73942 12.435 8.56512 13.2828C8.98058 13.7095 9.37912 13.7108 9.7963 13.2841C11.4607 11.5811 13.1247 9.8772 14.7882 8.1729C15.1417 7.81079 15.1582 7.33376 14.8312 7.01805C14.5142 6.71232 14.0744 6.74571 13.7232 7.10609C12.2669 8.59919 10.8115 10.0932 9.35787 11.5884C9.29845 11.6496 9.25856 11.7294 9.18396 11.8382Z" fill="#21C427" />
+                </svg>
+              </span>
+              <span>In stock</span>
+            </div>
+          </div>
+
+
+          <div class="d-none d-md-block col-md-3 me-3">
+            <div>
+              {% assign percent = current_variant.compare_at_price | minus: current_variant.price | times: 100 | divided_by: current_variant.compare_at_price | round %}
+ <div class="sticky-save" >
+  <span>SAVE</span> <span class="save-amount">
+    {{percent}}
+    </span><span>%</span>
+ </div>
+              <div>
+                <span id="selling-price" class="selling-price">{{ current_variant.price | money }}</span>
+                <del>
+                  <span class="offer-price">{{ current_variant.compare_at_price | money }}</span>
+                </del>
+              </div>
+
+            </div>
+            <select
+              name="id"
+              id="productSelect"
+              style="display:none;">
+              {% for variant in product.variants %}
+                <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}>
+                  {{ variant.title }} - {{ variant.price | money }}
+                </option>
+              {% endfor %}
+            </select>
+           
+          </div>
+          <div class="d-none d-lg-block col-lg-2">
+            <div class="quantity-control" data-quantity="">
+              <span class="quantity-btn" data-quantity-minus=""><svg viewBox="0 0 409.6 409.6">
+                  <g>
+                    <g>
+                      <path d="M392.533,187.733H17.067C7.641,187.733,0,195.374,0,204.8s7.641,17.067,17.067,17.067h375.467 c9.426,0,17.067-7.641,17.067-17.067S401.959,187.733,392.533,187.733z" />
+                    </g>
+                  </g>
+                </svg></span>
+              <input type="number" class="quantity-input" data-quantity-target="" value="1"  min="1" max="" name="quantity">
+              <span class="quantity-btn" data-quantity-plus=""><svg viewBox="0 0 426.66667 426.66667">
+                  <path d="m405.332031 192h-170.664062v-170.667969c0-11.773437-9.558594-21.332031-21.335938-21.332031-11.773437 0-21.332031 9.558594-21.332031 21.332031v170.667969h-170.667969c-11.773437 0-21.332031 9.558594-21.332031 21.332031 0 11.777344 9.558594 21.335938 21.332031 21.335938h170.667969v170.664062c0 11.777344 9.558594 21.335938 21.332031 21.335938 11.777344 0 21.335938-9.558594 21.335938-21.335938v-170.664062h170.664062c11.777344 0 21.335938-9.558594 21.335938-21.335938 0-11.773437-9.558594-21.332031-21.335938-21.332031zm0 0" /></svg>
+              </span>
+            </div> 
+          </div>
+
+          <div class="col-12 col-md-3 col-lg-3 sticky-btn__wrapper">
+
+            <div>
+              <button type="submit" class="sticky-btn btn add-box">
+                <span>
+                  <svg
+                    width="20"
+                    height="16"
+                    viewBox="0 0 20 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M7.40332 6.90323L18.8953 6.90323L18.8953 8.11291L7.40332 8.11291L7.40332 6.90323Z"
+                      fill="white" />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6.7998 4.48386L19.5014 4.48386L19.5014 5.69353L6.7998 5.69353L6.7998 4.48386Z"
+                      fill="white" />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.75 0.854839C0.75 0.520795 1.0208 0.25 1.35484 0.25H5.73631L8.45808 9.32258H17.6855C18.0195 9.32258 18.2903 9.59338 18.2903 9.92742C18.2903 10.2615 18.0195 10.5323 17.6855 10.5323H7.55805L4.83627 1.45968H1.35484C1.0208 1.45968 0.75 1.18888 0.75 0.854839Z"
+                      fill="white" />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M9.52026 12.9516C9.01919 12.9516 8.613 13.3578 8.613 13.8589C8.613 14.3599 9.01919 14.7661 9.52026 14.7661C10.0213 14.7661 10.4275 14.3599 10.4275 13.8589C10.4275 13.3578 10.0213 12.9516 9.52026 12.9516ZM7.40332 13.8589C7.40332 12.6897 8.3511 11.7419 9.52026 11.7419C10.6894 11.7419 11.6372 12.6897 11.6372 13.8589C11.6372 15.028 10.6894 15.9758 9.52026 15.9758C8.3511 15.9758 7.40332 15.028 7.40332 13.8589Z"
+                      fill="white" />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M15.5701 12.9516C15.069 12.9516 14.6628 13.3578 14.6628 13.8589C14.6628 14.3599 15.069 14.7661 15.5701 14.7661C16.0711 14.7661 16.4773 14.3599 16.4773 13.8589C16.4773 13.3578 16.0711 12.9516 15.5701 12.9516ZM13.4531 13.8589C13.4531 12.6897 14.4009 11.7419 15.5701 11.7419C16.7392 11.7419 17.687 12.6897 17.687 13.8589C17.687 15.028 16.7392 15.9758 15.5701 15.9758C14.4009 15.9758 13.4531 15.028 13.4531 13.8589Z"
+                      fill="white" />
+                  </svg>
+                </span>
+                Add to cart</button>
+            </div>
+
+          </div>
+
+        </div>
+      {% endform %}
+
+    </div>
+  </div>
+</div>
+
+<style>
+  .sticky-btn__wrapper {
+    flex-grow: 1;
+  }
+</style>
+
+<style>
+  .sticky-save{
+    background: #21C327;
+    color: #fff;
+    width: fit-content;
+    padding: 2px 4px;
+    font-family: Inter-Light;
+    font-size: 13.5px;
+
+  }
+  .sticky-product-title {
+    font-family: 'Inter-Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    color: #000000;
+  }
+  .sticky-addtocart {
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: -6px -9px 27px rgba(128, 122, 122, 0.25);
+  }
+  .sticky-product-image_wrapper {
+    position: relative;
+    width: 100.5px;
+    background: #F8F5F5;
+
+  }
+  .sticky-product-image {
+    position: absolute;
+    top: -70px;
+    border: 0.75px solid #D1D1D1;
+  }
+  .sticky-addtocart {
+    background-color: #fff;
+    position: sticky;
+    bottom: 0;
+  }
+  .sticky-btn {
+    background: #FE7C99;
+    width: 100%;
+    border-radius: 3.75px;
+    font-family: 'Inter-Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19.5px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+  }
+  .sticky-btn:hover {
+    color: #FFFFFF;
+    background: #FE7C99;
+
+  }
+</style>
+
+
+<script>
+  $(document).ready(function() {
+    var w = $(window).width();
+    if (w <= 800) {
+
+      $(document).scroll(function() {
+        var y = $(this).scrollTop();
+
+        if (y > 1200) {
+          $('.sticky_cart ').fadeIn(1200);
+        } else if (y < 1000) {
+          $('.sticky_cart ').fadeOut(1200);
+        } else {
+          $('.sticky_cart ').fadeOut(600);
+        }
+      });
+
+    } else {
+
+      $(document).scroll(function() {
+        var y = $(this).scrollTop();
+        if (y > 1000) {
+          $('.sticky_cart ').fadeIn();
+        } else {
+          $('.sticky_cart ').fadeOut();
+        }
+      });
+
+    }
+
+  });
+</script>

@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <h3 class="title text-center">We Promise You A Healthy Tomorrow!</h3>
-    <p class="sub-ttl  text-center">Our products are specially curated to provide a happy and healthy tomorrow!
+    <p class="sub-ttl  text-center">'Cos menstrual problems should not determine a woman's growth or future
     </p>
     <div class="solvve-promise">
       {% for block in section.blocks %}
@@ -31,32 +31,29 @@
   }
 </style>
 {% schema %}
-{
-  "name": "Promise Section",
-  "class": "solvve_promise",
-  "settings": [
-
-  ],
-  "blocks": [
-    {
-      "type": "block",
-      "name": "promise-block",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
-        },
-        {
-          "type": "text",
-          "id": "text",
-          "label": "Text",
-          "default": "Text"
-        }
-      ]
-    }
-  ]
-}
+  {
+    "name": "Promise Section",
+    "class": "solvve_promise",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "promise-block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }, {
+            "type": "text",
+            "id": "text",
+            "label": "Text",
+            "default": "Text"
+          }
+        ]
+      }
+    ]
+  }
 {% endschema %}
 
 

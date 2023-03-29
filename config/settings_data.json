@@ -19,17 +19,17 @@
             "type": "image",
             "disabled": true,
             "settings": {
-              "slider_desktop_image": "shopify://shop_images/Healthy_PCOS_Supplement.png",
-              "slider_mobile_image": "shopify://shop_images/Good_PCOS_Supplement.png",
-              "image_link": "shopify://products/pcos-pcod"
+              "slider_desktop_image": "shopify:\/\/shop_images\/Healthy_PCOS_Supplement.png",
+              "slider_mobile_image": "shopify:\/\/shop_images\/Good_PCOS_Supplement.png",
+              "image_link": "shopify:\/\/products\/pcos-pcod"
             }
           },
           "db06a25b-2211-444c-b835-a37e78b734f2": {
             "type": "image",
             "disabled": true,
             "settings": {
-              "slider_desktop_image": "shopify://shop_images/Good_PCOS_Supplement_3a18773c-a3d4-468a-993a-265384668c8e.png",
-              "slider_mobile_image": "shopify://shop_images/Best_PCOS_Supplement.png",
+              "slider_desktop_image": "shopify:\/\/shop_images\/Good_PCOS_Supplement_3a18773c-a3d4-468a-993a-265384668c8e.png",
+              "slider_mobile_image": "shopify:\/\/shop_images\/Best_PCOS_Supplement.png",
               "image_link": ""
             }
           },
@@ -37,44 +37,43 @@
             "type": "image",
             "disabled": true,
             "settings": {
-              "slider_desktop_image": "shopify://shop_images/Solvve_PCOS_SUPPLEMENT.png",
-              "slider_mobile_image": "shopify://shop_images/PCOS_SUPPLEMENT.png",
-              "image_link": "https://getsolvve.com/products/pcos-pcod"
+              "slider_desktop_image": "shopify:\/\/shop_images\/Solvve_PCOS_SUPPLEMENT.png",
+              "slider_mobile_image": "shopify:\/\/shop_images\/PCOS_SUPPLEMENT.png",
+              "image_link": "https:\/\/getsolvve.com\/products\/pcos-pcod"
             }
           },
           "ef882593-5ea9-4234-8993-3189dd6c0b38": {
             "type": "image",
             "disabled": true,
             "settings": {
-              "slider_desktop_image": "shopify://shop_images/Desktop_size_2.png",
-              "slider_mobile_image": "shopify://shop_images/Mobile_size_1.png",
-              "image_link": "shopify://collections/all"
+              "slider_desktop_image": "shopify:\/\/shop_images\/Desktop_size_2.png",
+              "slider_mobile_image": "shopify:\/\/shop_images\/Mobile_size_1.png",
+              "image_link": "shopify:\/\/collections\/all"
             }
           },
           "fe42dace-e9dc-4cfd-9ad8-c8f3ad7eab04": {
             "type": "image",
             "disabled": true,
             "settings": {
-              "slider_desktop_image": "shopify://shop_images/Free_Doctor_Consutation_Banner.png",
-              "slider_mobile_image": "shopify://shop_images/Free_Doctor_Consutation_Mobile_Banner.png",
-              "image_link": ""
-            }
-          },
-          "7c495989-91c4-458b-ab0e-68696e61cf1b": {
-            "type": "image",
-            "disabled": true,
-            "settings": {
-              "slider_desktop_image": "shopify://shop_images/solvve_new_mob_banner_1-_28_oct_3x_e72e4cdd-eecb-4187-855b-85249582f90d.png",
-              "slider_mobile_image": "shopify://shop_images/solvve_new_mob_banner_1-_28_oct_3x_b1af483f-3fcc-4998-a0d4-e7375e863a4d.png",
+              "slider_desktop_image": "shopify:\/\/shop_images\/Free_Doctor_Consutation_Banner.png",
+              "slider_mobile_image": "shopify:\/\/shop_images\/Free_Doctor_Consutation_Mobile_Banner.png",
               "image_link": ""
             }
           },
           "ff42eebb-d884-4b26-9080-1f684c897529": {
             "type": "image",
             "settings": {
-              "slider_desktop_image": "shopify://shop_images/pcos_supplement_c980f782-c801-47a4-954b-44c2575b489b.png",
-              "slider_mobile_image": "shopify://shop_images/pcos_pcod_supplement.png",
-              "image_link": "https://getsolvve.com/products/pcos-pcod"
+              "slider_desktop_image": "shopify:\/\/shop_images\/pcos_supplement_c980f782-c801-47a4-954b-44c2575b489b.png",
+              "slider_mobile_image": "shopify:\/\/shop_images\/pcos_pcod_supplement.png",
+              "image_link": "https:\/\/getsolvve.com\/products\/pcos-pcod"
+            }
+          },
+          "7c495989-91c4-458b-ab0e-68696e61cf1b": {
+            "type": "image",
+            "settings": {
+              "slider_desktop_image": "shopify:\/\/shop_images\/solvve_new_mob_banner_1-_28_oct_3x_e72e4cdd-eecb-4187-855b-85249582f90d.png",
+              "slider_mobile_image": "shopify:\/\/shop_images\/solvve_new_mob_banner_1-_28_oct_3x_b1af483f-3fcc-4998-a0d4-e7375e863a4d.png",
+              "image_link": ""
             }
           },
           "5ca2f7f2-750b-47b4-ae16-0f71ca4430f1": {
@@ -98,8 +97,8 @@
           "74a38ccb-fda7-4145-9661-0a88c8c8723a",
           "ef882593-5ea9-4234-8993-3189dd6c0b38",
           "fe42dace-e9dc-4cfd-9ad8-c8f3ad7eab04",
-          "7c495989-91c4-458b-ab0e-68696e61cf1b",
           "ff42eebb-d884-4b26-9080-1f684c897529",
+          "7c495989-91c4-458b-ab0e-68696e61cf1b",
           "5ca2f7f2-750b-47b4-ae16-0f71ca4430f1",
           "d4288676-3226-4d4d-9231-8ec192325f0c"
         ],
@@ -113,21 +112,21 @@
             "type": "pr_section",
             "settings": {
               "pr-content": "Named one of the highlights of women's health technology",
-              "pr-image": "shopify://shop_images/The-Week-Logo-Big.png"
+              "pr-image": "shopify:\/\/shop_images\/The-Week-Logo-Big.png"
             }
           },
           "c6f310f9-f175-475d-8870-4050c20d7040": {
             "type": "pr_section",
             "settings": {
               "pr-content": "Named the number one product that'll make your period less painful",
-              "pr-image": "shopify://shop_images/Group_3102.png"
+              "pr-image": "shopify:\/\/shop_images\/Group_3102.png"
             }
           },
           "65bdf320-3696-45a6-88a6-541000c33fb2": {
             "type": "pr_section",
             "settings": {
               "pr-content": "\"Best Vitamins For Belly Bloat According to Science\"",
-              "pr-image": "shopify://shop_images/Group_3103.png"
+              "pr-image": "shopify:\/\/shop_images\/Group_3103.png"
             }
           }
         },
@@ -144,7 +143,7 @@
       "home_section_two": {
         "type": "home_section_two",
         "settings": {
-          "image": "shopify://shop_images/sect-two.jpg",
+          "image": "shopify:\/\/shop_images\/sect-two.jpg",
           "title": "Reclaim your life from PCOS - We show you how!",
           "content_one": "Are you someone who is dealing with PCOS? You might have heard people say to lose weight or try PCOS weight loss supplements.<br><br> Trust us; there is a much better way. Solvve’s best supplement for PCOS is a combination of modern science and centuries-old Ayurveda. It offers women strength and power to regain control over the menstrual cycle and restore Reproductive, happiness, and femininity."
         }
@@ -155,7 +154,7 @@
           "c5db5598-6a09-46ed-a2f9-279ab6e66980": {
             "type": "image",
             "settings": {
-              "testi_img": "shopify://shop_images/Ellipse_91_1.png",
+              "testi_img": "shopify:\/\/shop_images\/Ellipse_91_1.png",
               "testi_title": "This product is a blessing",
               "testi_content": "I am a mother of two and never had irregular periods. But in the past few months I started to notice irregular periods and it slowly became a concern. My gynaecologist confirmed that I have PCOD. I wanted something natural and tried Solvve’s PCOD supplement. I can see a great difference in my body. I would totally recommend this product.",
               "testi_name": "Nitya"
@@ -164,7 +163,7 @@
           "bcf3fbcb-7552-447f-be64-753ecb59ee71": {
             "type": "image",
             "settings": {
-              "testi_img": "shopify://shop_images/Ellipse_93.png",
+              "testi_img": "shopify:\/\/shop_images\/Ellipse_93.png",
               "testi_title": "The best PCOD supplement",
               "testi_content": "Periods have been a nightmare for me as I had heavy periods that too once in a few months. I was diagnosed with PCOD and I was suggested Solvve by my gynaecologist. It has been a few months since I started taking it and now my periods are not a nightmare anymore.",
               "testi_name": "Keerthika"
@@ -173,7 +172,7 @@
           "665ee595-fd97-4c45-8f72-e2822f7281e4": {
             "type": "image",
             "settings": {
-              "testi_img": "shopify://shop_images/Ellipse_92.png",
+              "testi_img": "shopify:\/\/shop_images\/Ellipse_92.png",
               "testi_title": "It works!",
               "testi_content": "I want get pregnant naturally but PCOD was making it difficult for me. That is when my doctor suggested Solvve and I included it in my routine and made few changes in my lifestyle and today I am 5 months pregnant. This product is definitely a boon.",
               "testi_name": "Varshini"
@@ -191,9 +190,9 @@
       "home_product": {
         "type": "home_product",
         "settings": {
-          "title": "Solvve’s PCOD/PCOS Health Supplement",
-          "product_des": "Solvve is a specifically curated brand that is made to benefit women dealing with PCOS/PCOD concerns.Put together with clinically studied ingredients with combination of Ayurveda and modern medicine.",
-          "link": "shopify://products/pcos-pcod"
+          "title": "Solvve’s PCOD\/PCOS Health Supplement",
+          "product_des": "Solvve is a specifically curated brand that is made to benefit women dealing with PCOS\/PCOD concerns.Put together with clinically studied ingredients with combination of Ayurveda and modern medicine.",
+          "link": "shopify:\/\/products\/pcos-pcod"
         }
       },
       "home_section_four": {
@@ -202,7 +201,7 @@
           "15fe7103-80bd-4bb0-b1b7-c8e4c6e2d3ae": {
             "type": "icon-box",
             "settings": {
-              "icon": "shopify://shop_images/Reliability.png",
+              "icon": "shopify:\/\/shop_images\/Reliability.png",
               "icon_title": "Reliability",
               "icon_content": "We are committed to reliability by striving to provide specially curated PCOS supplements for a better women’s health."
             }
@@ -210,7 +209,7 @@
           "494f5644-155b-47b9-9595-b862d7b25a71": {
             "type": "icon-box",
             "settings": {
-              "icon": "shopify://shop_images/Innovative.png",
+              "icon": "shopify:\/\/shop_images\/Innovative.png",
               "icon_title": "Innovative",
               "icon_content": "We are one of a kind brand working to provide innovative products for concerning issues."
             }
@@ -218,7 +217,7 @@
           "24bc20cd-f305-4797-a571-c6fd754422dd": {
             "type": "icon-box",
             "settings": {
-              "icon": "shopify://shop_images/Responsibility.png",
+              "icon": "shopify:\/\/shop_images\/Responsibility.png",
               "icon_title": "Responsibility",
               "icon_content": "Through our brand we are committed to the responsibility of giving the best."
             }
@@ -281,10 +280,10 @@
           ".nutritionist {display: none;}"
         ],
         "settings": {
-          "image": "shopify://shop_images/Vinya_Tejashvi_1.png",
+          "image": "shopify:\/\/shop_images\/Vinya_Tejashvi_1.png",
           "title": "Are you still having questions?",
           "content": "Do you want a clear understanding on how to tackle your problems? Book an appointment with one of our expert  Nutritionist for free consultations. We keep all your information off the record and are protected by Doctor-Patient confidentiality!",
-          "link": "shopify://pages/book-a-consultation-form"
+          "link": "shopify:\/\/pages\/book-a-consultation-form"
         }
       },
       "refer-a-friend": {
@@ -298,31 +297,31 @@
           "716183a8-5430-43f7-a6db-3e2225eb0374": {
             "type": "video",
             "settings": {
-              "video-url": "https://cdn.shopify.com/videos/c/o/v/9d75ab9ddbaf42c9a91e6be459738d3d.mp4"
+              "video-url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9d75ab9ddbaf42c9a91e6be459738d3d.mp4"
             }
           },
           "e8b91d7f-5e54-45da-a19c-7b4a6e22d9c2": {
             "type": "video",
             "settings": {
-              "video-url": "https://cdn.shopify.com/videos/c/o/v/c504a53dc04b400bb8aed6f006b8ee9c.mp4"
+              "video-url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/c504a53dc04b400bb8aed6f006b8ee9c.mp4"
             }
           },
           "1b812727-c6f5-4b7b-b034-68d681d38174": {
             "type": "video",
             "settings": {
-              "video-url": "https://cdn.shopify.com/videos/c/o/v/5401e23d13e140b8be12400dce6ebeac.mp4"
+              "video-url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/5401e23d13e140b8be12400dce6ebeac.mp4"
             }
           },
           "6d007575-59a4-44dd-83d2-f2db7713fd11": {
             "type": "video",
             "settings": {
-              "video-url": "https://cdn.shopify.com/videos/c/o/v/0a1580ec02104d78ab5ec97baa3a1f21.mp4"
+              "video-url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/0a1580ec02104d78ab5ec97baa3a1f21.mp4"
             }
           },
           "30516190-d52e-4906-935c-f12ff206ee90": {
             "type": "video",
             "settings": {
-              "video-url": "https://cdn.shopify.com/videos/c/o/v/37432f7cbbed45d6a86c088a538c6557.mp4"
+              "video-url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/37432f7cbbed45d6a86c088a538c6557.mp4"
             }
           }
         },
@@ -348,7 +347,7 @@
             "type": "app",
             "settings": {
               "title": "instafeed",
-              "url": "instafeed.nfcube.com/cdn/e1f640082ff365375ad2572105457bf8.js",
+              "url": "instafeed.nfcube.com\/cdn\/e1f640082ff365375ad2572105457bf8.js",
               "block_index": true,
               "block_product": true,
               "block_collection": true,
@@ -389,7 +388,7 @@
             "type": "app",
             "settings": {
               "title": "Review App",
-              "url": "cdn.shopify.com/proxy/b7ea296e81af387598bc8c14eb6b6c5c0dd76033a55486b5f06d790f4097c448/api.goaffpro.com/loader.js",
+              "url": "cdn.shopify.com\/proxy\/b7ea296e81af387598bc8c14eb6b6c5c0dd76033a55486b5f06d790f4097c448\/api.goaffpro.com\/loader.js",
               "block_index": true,
               "block_product": false,
               "block_collection": true,
@@ -430,7 +429,7 @@
             "type": "app",
             "settings": {
               "title": "Refer friend",
-              "url": "https://cdn-widget-assets.yotpo.com/widget-referred-friend/app.v0.2.5-3811.js",
+              "url": "https:\/\/cdn-widget-assets.yotpo.com\/widget-referred-friend\/app.v0.2.5-3811.js",
               "block_index": false,
               "block_product": true,
               "block_collection": true,
@@ -494,7 +493,7 @@
           "136395cb-a060-455a-9553-bafdf1754469": {
             "type": "image",
             "settings": {
-              "testi_img": "shopify://shop_images/Ellipse_91_1.png",
+              "testi_img": "shopify:\/\/shop_images\/Ellipse_91_1.png",
               "testi_title": "This product is a blessing",
               "testi_content": "I am a mother of two and never had irregular periods. But in the past few months I started to notice irregular periods and it slowly became a concern. My gynaecologist confirmed that I have PCOD. I wanted something natural and tried Solvve’s PCOD supplement. I can see a great difference in my body. I would totally recommend this product.",
               "testi_name": "Nithya Siddarth, Trivandram"
@@ -503,7 +502,7 @@
           "513caed2-bc4f-4cbe-8e73-369bf272503a": {
             "type": "image",
             "settings": {
-              "testi_img": "shopify://shop_images/Ellipse_93.png",
+              "testi_img": "shopify:\/\/shop_images\/Ellipse_93.png",
               "testi_title": "The best PCOD supplement",
               "testi_content": "Periods have been a nightmare for me as I had heavy periods that too once in a few months. I was diagnosed with PCOD and I was suggested Solvve by my gynaecologist. It has been a few months since I started taking it and now my periods are not a nightmare anymore.",
               "testi_name": "Keerthika"
@@ -512,7 +511,7 @@
           "a7083307-f12e-4983-94f9-07cb72d9edd0": {
             "type": "image",
             "settings": {
-              "testi_img": "shopify://shop_images/Ellipse_92.png",
+              "testi_img": "shopify:\/\/shop_images\/Ellipse_92.png",
               "testi_title": "It works!",
               "testi_content": "I want get pregnant naturally but PCOD was making it difficult for me. That is when my doctor suggested Solvve and I included it in my routine and made few changes in my lifestyle and today I am 5 months pregnant. This product is definitely a boon.",
               "testi_name": "Varshini"
@@ -567,7 +566,7 @@
           "fb2e4e73-86f2-467a-9a08-d6e38dc25abc": {
             "type": "image",
             "settings": {
-              "ing_img": "shopify://shop_images/Yashtimadhu.png",
+              "ing_img": "shopify:\/\/shop_images\/Yashtimadhu.png",
               "ing_title": "Yashtimadhu",
               "ing_cnt": "Reduces inflammation"
             }
@@ -575,7 +574,7 @@
           "14f30db7-f710-45fc-b583-92e3ec48a9d0": {
             "type": "image",
             "settings": {
-              "ing_img": "shopify://shop_images/Cinnamon.png",
+              "ing_img": "shopify:\/\/shop_images\/Cinnamon.png",
               "ing_title": "Cinnamon",
               "ing_cnt": "Reduces blood sugar level"
             }
@@ -583,7 +582,7 @@
           "587421c0-3aa1-46f4-83a4-ad9f74c994c5": {
             "type": "image",
             "settings": {
-              "ing_img": "shopify://shop_images/Shatavari.png",
+              "ing_img": "shopify:\/\/shop_images\/Shatavari.png",
               "ing_title": "Shatavari root",
               "ing_cnt": "Regulates menstrual cycle"
             }
@@ -591,7 +590,7 @@
           "8c3903b7-9449-4af8-b113-1739f15861a9": {
             "type": "image",
             "settings": {
-              "ing_img": "shopify://shop_images/Turmeric_963839da-dbe8-4e45-9640-b2594150e1fb.png",
+              "ing_img": "shopify:\/\/shop_images\/Turmeric_963839da-dbe8-4e45-9640-b2594150e1fb.png",
               "ing_title": "Organic Turmeric root",
               "ing_cnt": "Reduces inflammation"
             }
@@ -599,7 +598,7 @@
           "b2cd5519-c1f3-4afa-8f76-25d9475b1363": {
             "type": "image",
             "settings": {
-              "ing_img": "shopify://shop_images/Maca_Root.png",
+              "ing_img": "shopify:\/\/shop_images\/Maca_Root.png",
               "ing_title": "Maca Root",
               "ing_cnt": "Combats insulin resistance"
             }
@@ -607,7 +606,7 @@
           "f4d78cb8-d7c4-40db-9b74-da732cc1e55c": {
             "type": "image",
             "settings": {
-              "ing_img": "shopify://shop_images/Chasteberry.png",
+              "ing_img": "shopify:\/\/shop_images\/Chasteberry.png",
               "ing_title": "Chasteberry",
               "ing_cnt": "Regularizes periods"
             }
@@ -615,15 +614,15 @@
           "94795c42-2322-49c0-baf4-ae75a02129b2": {
             "type": "image",
             "settings": {
-              "ing_img": "shopify://shop_images/Black_Pepper.png",
+              "ing_img": "shopify:\/\/shop_images\/Black_Pepper.png",
               "ing_title": "Black Pepper Fruit",
-              "ing_cnt": "Strengthens immuni"
+              "ing_cnt": "Strengthens immunity"
             }
           },
           "c2bd2524-6e04-418c-aaa8-376e1a52334e": {
             "type": "image",
             "settings": {
-              "ing_img": "shopify://shop_images/Gokhru.png",
+              "ing_img": "shopify:\/\/shop_images\/Gokhru.png",
               "ing_title": "Gokhru",
               "ing_cnt": "Helps reduce pain"
             }
@@ -659,7 +658,7 @@
           "386065df-2853-4ef4-bd00-7a2645a83d72": {
             "type": "meet_ingradiants",
             "settings": {
-              "ing_image": "shopify://shop_images/Yashtimadhu.png",
+              "ing_image": "shopify:\/\/shop_images\/Yashtimadhu.png",
               "ing_text": "Yashtimadhu",
               "ing_description": "Regulates irregular ovarian follicles"
             }
@@ -667,7 +666,7 @@
           "f0e99fc4-4436-4ec6-bd92-28bc980352e0": {
             "type": "meet_ingradiants",
             "settings": {
-              "ing_image": "shopify://shop_images/Cinnamon.png",
+              "ing_image": "shopify:\/\/shop_images\/Cinnamon.png",
               "ing_text": "Cinnamon",
               "ing_description": "Regulates menstrual cycle"
             }
@@ -675,7 +674,7 @@
           "19082e55-23ae-4a61-8556-c158cc2ded77": {
             "type": "meet_ingradiants",
             "settings": {
-              "ing_image": "shopify://shop_images/Shatavari.png",
+              "ing_image": "shopify:\/\/shop_images\/Shatavari.png",
               "ing_text": "Shatavari root",
               "ing_description": "Balances hormones"
             }
@@ -683,7 +682,7 @@
           "24553e50-f8d2-4c55-9329-6570585d3a84": {
             "type": "meet_ingradiants",
             "settings": {
-              "ing_image": "shopify://shop_images/Turmeric_963839da-dbe8-4e45-9640-b2594150e1fb.png",
+              "ing_image": "shopify:\/\/shop_images\/Turmeric_963839da-dbe8-4e45-9640-b2594150e1fb.png",
               "ing_text": "Organic Turmeric root",
               "ing_description": "Decreases insulin resistance"
             }
@@ -691,7 +690,7 @@
           "1441db70-1ebd-4110-bcd4-35113dff800e": {
             "type": "meet_ingradiants",
             "settings": {
-              "ing_image": "shopify://shop_images/Maca_Root.png",
+              "ing_image": "shopify:\/\/shop_images\/Maca_Root.png",
               "ing_text": "Maca Root",
               "ing_description": "Improves fertility and libido"
             }
@@ -699,7 +698,7 @@
           "ae49c6e0-7260-427a-aee2-b726124c70b8": {
             "type": "meet_ingradiants",
             "settings": {
-              "ing_image": "shopify://shop_images/Chasteberry.png",
+              "ing_image": "shopify:\/\/shop_images\/Chasteberry.png",
               "ing_text": "Chasteberry",
               "ing_description": "Regulates pituitary gland function"
             }
@@ -707,7 +706,7 @@
           "2199601d-15fc-47b9-b131-30a534b06599": {
             "type": "meet_ingradiants",
             "settings": {
-              "ing_image": "shopify://shop_images/Black_Pepper.png",
+              "ing_image": "shopify:\/\/shop_images\/Black_Pepper.png",
               "ing_text": "Black Pepper Fruit",
               "ing_description": "Antioxidant and anti-inflammatory agent"
             }
@@ -715,7 +714,7 @@
           "7c15bce0-ea70-457a-bf8d-0f1b140991f4": {
             "type": "meet_ingradiants",
             "settings": {
-              "ing_image": "shopify://shop_images/Gokhru.png",
+              "ing_image": "shopify:\/\/shop_images\/Gokhru.png",
               "ing_text": "Gokhru",
               "ing_description": "Reduces cyst growth"
             }
@@ -741,7 +740,7 @@
             "type": "default_procedure",
             "settings": {
               "proc_category": "Default",
-              "proc_image": "shopify://shop_images/step-1_101d419e-4177-46b0-abc7-1a574607e4e2.png",
+              "proc_image": "shopify:\/\/shop_images\/step-1_101d419e-4177-46b0-abc7-1a574607e4e2.png",
               "procques": "default",
               "procans": "Add one sachet of Solvve Supplement to an empty glass."
             }
@@ -750,7 +749,7 @@
             "type": "default_procedure",
             "settings": {
               "proc_category": "Default",
-              "proc_image": "shopify://shop_images/step-2_9ba0aac0-adb9-4032-8db2-199cb851e590.png",
+              "proc_image": "shopify:\/\/shop_images\/step-2_9ba0aac0-adb9-4032-8db2-199cb851e590.png",
               "procques": "default",
               "procans": "To it, add 100 ml of water and shake well."
             }
@@ -759,16 +758,16 @@
             "type": "default_procedure",
             "settings": {
               "proc_category": "Default",
-              "proc_image": "shopify://shop_images/step-3.png",
+              "proc_image": "shopify:\/\/shop_images\/step-3.png",
               "procques": "default",
-              "procans": "Hurray! The ultimate magic potion to treat PCOS/PCOD and its symptoms is now ready."
+              "procans": "Hurray! The ultimate magic potion to treat PCOS\/PCOD and its symptoms is now ready."
             }
           },
           "8cf1c78b-e61c-4d70-a8d0-8a1dc59a459a": {
             "type": "default_procedure",
             "settings": {
               "proc_category": "Default",
-              "proc_image": "shopify://shop_images/step-4_9f8a5108-ea5f-453a-9b63-2478579781f9.png",
+              "proc_image": "shopify:\/\/shop_images\/step-4_9f8a5108-ea5f-453a-9b63-2478579781f9.png",
               "procques": "default",
               "procans": "Relish the entire glass of delicious orange-flavored supplement drink."
             }
@@ -787,10 +786,10 @@
         "type": "image-banner",
         "settings": {
           "bg_color": "#fbf7f8",
-          "heading": "No More Irregular / Delayed Periods",
+          "heading": "What To Expect In Three Months",
           "text_color": "#533092",
-          "image": "shopify://shop_images/solve_section_desktop.png",
-          "mobile-image": "shopify://shop_images/solve_mobile_image.png"
+          "image": "shopify:\/\/shop_images\/large_image.png",
+          "mobile-image": "shopify:\/\/shop_images\/mobile_image.png"
         }
       },
       "testimonials": {
@@ -799,41 +798,33 @@
           "a6b72a27-4b8e-41d1-8a6b-175a739c9d12": {
             "type": "testimonial-section",
             "settings": {
-              "image": "shopify://shop_images/Kajol_post_2_1_1.png",
+              "image": "shopify:\/\/shop_images\/ruchatembe.jpg",
               "name": "Ruchatembe",
-              "text": "<p>I was diagnosed with PCOD some months back. The journey till now hasn't been an easy one. Struggle with weith gain, mood swings has been tough.</p><p>I tried this PCOS/PCOD women’s health supplement and consumed it for a month. It has been a good help from this, my periods are on time with reduced spotting. Great work solvve for introducing this amazing product.</p>"
+              "text": "<p>I was diagnosed with PCOD some months back. The journey till now hasn't been an easy one. Struggle with weith gain, mood swings has been tough.<br\/>.<br\/>I tried this PCOS\/PCOD women’s health supplement and consumed it for a month. It has been a good help from this, my periods are on time with reduced spotting. Great work solvve for introducing this amazing product.<\/p>"
             }
           },
           "c2711894-78ef-497f-add7-4ffc3a852eb3": {
             "type": "testimonial-section",
             "settings": {
-              "image": "shopify://shop_images/Kajol_post_2_1_1.png",
-              "name": "Ruchatembe",
-              "text": "<p>I was diagnosed with PCOD some months back. The journey till now hasn't been an easy one. Struggle with weith gain, mood swings has been tough.</p><p>I tried this PCOS/PCOD women’s health supplement and consumed it for a month. It has been a good help from this, my periods are on time with reduced spotting. Great work solvve for introducing this amazing product.</p>"
+              "image": "shopify:\/\/shop_images\/Screenshot_2023-03-27_at_4.52.59_PM.png",
+              "name": "Riya Arora",
+              "text": "<p>It’s was 2020 when i was diagnosed with PCOS\/PCOD It was traumatising didn’t know how to process because the worst part is mood swings and cramps . I tried everything whatever I could but one thing I concluded upon is ;<br\/>✨Taking no stress is the key!<br\/>✨eating good<br\/>✨moving your body i.e dancing, walking, exercising<br\/>✨drinking SOLVVE<\/p>"
             }
           },
           "1775b1e7-8a78-4455-a2bd-595b74dc7553": {
             "type": "testimonial-section",
             "settings": {
-              "image": "shopify://shop_images/Kajol_post_2_1_1.png",
-              "name": "Ruchatembe",
-              "text": "<p>I was diagnosed with PCOD some months back. The journey till now hasn't been an easy one. Struggle with weith gain, mood swings has been tough.</p><p>I tried this PCOS/PCOD women’s health supplement and consumed it for a month. It has been a good help from this, my periods are on time with reduced spotting. Great work solvve for introducing this amazing product.</p>"
+              "image": "shopify:\/\/shop_images\/Wamika_Kappoor.jpg",
+              "name": "Wamika Kappoor",
+              "text": "<p>I have suffered through the condition of pcos. pcos can be cured with daily lifestyle changes, reducing stress level, exercise and medication. For me this product has been a saviour and I have made it part of my daily lifestyle now.<\/p>"
             }
           },
           "719b4e5f-5f05-4827-99cc-f4de2b7078c0": {
             "type": "testimonial-section",
             "settings": {
-              "image": "shopify://shop_images/Kajol_post_2_1_1.png",
-              "name": "Ruchatembe",
-              "text": "<p>I was diagnosed with PCOD some months back. The journey till now hasn't been an easy one. Struggle with weith gain, mood swings has been tough.</p><p>I tried this PCOS/PCOD women’s health supplement and consumed it for a month. It has been a good help from this, my periods are on time with reduced spotting. Great work solvve for introducing this amazing product.</p>"
-            }
-          },
-          "1ee50577-d0d3-4b3d-b226-3c9848ca2fc6": {
-            "type": "testimonial-section",
-            "settings": {
-              "image": "shopify://shop_images/Kajol_post_2_1_1.png",
-              "name": "Ruchatembe",
-              "text": "<p>I was diagnosed with PCOD some months back. The journey till now hasn't been an easy one. Struggle with weith gain, mood swings has been tough.</p><p>I tried this PCOS/PCOD women’s health supplement and consumed it for a month. It has been a good help from this, my periods are on time with reduced spotting. Great work solvve for introducing this amazing product.</p>"
+              "image": "shopify:\/\/shop_images\/Tanvee_Joshi.jpg",
+              "name": "Tanvee Joshi",
+              "text": "<p>SOLVVE is such a blessing to me as a yoga teacher who has a large clientele with health issues like PCOD\/PCOS. Now I have something to direct my clients to besides the 75 mins yoga sessions, and nutrition consultations.<\/p>"
             }
           }
         },
@@ -841,8 +832,7 @@
           "a6b72a27-4b8e-41d1-8a6b-175a739c9d12",
           "c2711894-78ef-497f-add7-4ffc3a852eb3",
           "1775b1e7-8a78-4455-a2bd-595b74dc7553",
-          "719b4e5f-5f05-4827-99cc-f4de2b7078c0",
-          "1ee50577-d0d3-4b3d-b226-3c9848ca2fc6"
+          "719b4e5f-5f05-4827-99cc-f4de2b7078c0"
         ],
         "settings": {
           "bg_color": "#fbf7f8",
@@ -853,53 +843,44 @@
       "how-to-use": {
         "type": "how-to-use",
         "blocks": {
-          "9ca96d54-3fc3-433e-ba5b-61eec2d05f6d": {
-            "type": "steps-block",
-            "settings": {
-              "step_image": "shopify://shop_images/Group_14470.png",
-              "heading": "Step 1",
-              "subheading": "Add one sachet of Solvve supplement to an empty glass."
-            }
-          },
           "49c68e9a-cbd2-4fcc-8665-1b16792a9e92": {
             "type": "steps-block",
             "settings": {
-              "step_image": "shopify://shop_images/Group_3090.png",
-              "heading": "Step 2",
-              "subheading": "To it, add 100 ml of water and shake well."
+              "step_image": "shopify:\/\/shop_images\/Group_3090.png",
+              "heading": "Step 1",
+              "subheading": "Take 200 ml of water in a glass."
             }
           },
-          "909a979a-72c9-4ae7-b981-9386762c932d": {
+          "9ca96d54-3fc3-433e-ba5b-61eec2d05f6d": {
             "type": "steps-block",
             "settings": {
-              "step_image": "shopify://shop_images/Group_3089.png",
-              "heading": "Step 3",
-              "subheading": "Hurray! The ultimate magic potion to treat PCOS/PCOD and its symptoms is now ready."
+              "step_image": "shopify:\/\/shop_images\/Group_14470.png",
+              "heading": "Step 2",
+              "subheading": "Add 1 sachet of SOLVVE PCOS Supplement to it."
             }
           },
           "10b5f0df-6d8c-49a6-9e63-7e205546a862": {
             "type": "steps-block",
             "settings": {
-              "step_image": "shopify://shop_images/Group_3088.png",
-              "heading": "Step 4",
-              "subheading": "Relish the entire glass of delicious orange-flavored supplement drink."
+              "step_image": "shopify:\/\/shop_images\/Group_3088.png",
+              "heading": "Step 3",
+              "subheading": "Stir well and drink"
             }
           }
         },
         "block_order": [
-          "9ca96d54-3fc3-433e-ba5b-61eec2d05f6d",
           "49c68e9a-cbd2-4fcc-8665-1b16792a9e92",
-          "909a979a-72c9-4ae7-b981-9386762c932d",
+          "9ca96d54-3fc3-433e-ba5b-61eec2d05f6d",
           "10b5f0df-6d8c-49a6-9e63-7e205546a862"
         ],
         "settings": {
           "bg_color": "#533092",
           "heading": "How to use",
           "bottom_text": "Dosage & Duration",
-          "bottom_content": "Dosage & Duration",
+          "bottom_content": "Recommendation",
           "bottom_content_bg": "#6843ac",
-          "bottom_content_line1": "You can take one sachet a day preferably after breakfast or in the evening.",
-          "bottom_content_line2": "You should take the Solvve supplement continuously for 84 days to reap the benefits to the fullest."
+          "bottom_content_line1": "Take one sachet of SOLVVE everyday 30 minutes after breakfast.",
+          "bottom_content_line2": "Take SOLVVE for 84 days consistently to overcome PCOS symptoms naturally."
         }
       },
       "faq-section": {
@@ -909,42 +890,42 @@
             "type": "faq-block",
             "settings": {
               "question": "Is this Solvve pcos supplement doctor approved?",
-              "faq_answer": "<p>Yes, Solvve is a doctor approved supplement to treat and manage the symptoms of PCOD PCOS.</p>"
+              "faq_answer": "<p>Yes, Solvve is a doctor approved supplement to treat and manage the symptoms of PCOD PCOS.<\/p>"
             }
           },
           "20ced050-7b3c-4857-96d9-1146415cc3d8": {
             "type": "faq-block",
             "settings": {
               "question": "Can Solvve pcos powder help with weight loss?",
-              "faq_answer": "<p>Yes, Solvve is indigenously formulated with the following powerful herbs that are clinically proven to aid weight loss.</p><ul><li><strong>Shatavari:</strong> The high flavonoid content makes it an effective weight loss supplement.</li><li><strong>Turmeric:</strong> Stimulates the production of bile, a digestive juice to aid in the digestion and emulsification of fat.</li><li><strong>Pepper:</strong> Contains fat-busting piperine which helps lose weight naturally.</li><li><strong>Cinnamon:</strong> Has positive effect on blood glucose levels and helps your body lose weight.</li></ul>"
+              "faq_answer": "<p>Yes, Solvve is indigenously formulated with the following powerful herbs that are clinically proven to aid weight loss.<\/p><ul><li><strong>Shatavari:<\/strong> The high flavonoid content makes it an effective weight loss supplement.<\/li><li><strong>Turmeric:<\/strong> Stimulates the production of bile, a digestive juice to aid in the digestion and emulsification of fat.<\/li><li><strong>Pepper:<\/strong> Contains fat-busting piperine which helps lose weight naturally.<\/li><li><strong>Cinnamon:<\/strong> Has positive effect on blood glucose levels and helps your body lose weight.<\/li><\/ul>"
             }
           },
           "bda50bc2-5d5c-4796-bf6e-435075f45767": {
             "type": "faq-block",
             "settings": {
               "question": "How long should I take Solvve pcos weight loss supplement?",
-              "faq_answer": "<p>It is recommended to take Solvve continuously for 84 days to regular your periods, speed up the weight loss journey, balance your hormones and improve your overall reproductive health.</p>"
+              "faq_answer": "<p>It is recommended to take Solvve continuously for 84 days to regular your periods, speed up the weight loss journey, balance your hormones and improve your overall reproductive health.<\/p>"
             }
           },
           "6a6486d4-89aa-44b8-adab-f2a3f9030940": {
             "type": "faq-block",
             "settings": {
               "question": "Is it safe to take PCOS supplements?",
-              "faq_answer": "<p>Yes, it is 100% safe and effective to take Solvve PCOD PCOS supplements to manage various symptoms of PCOD PCOS like irregular periods, heavy flow, abnormal period pain, weight gain, acne, and facial hair. All the ingredients used - both modern formulations and ancient herbs are clinically tested for safety and efficacy and made in certified manufacturing units under hygienic conditions.</p>"
+              "faq_answer": "<p>Yes, it is 100% safe and effective to take Solvve PCOD PCOS supplements to manage various symptoms of PCOD PCOS like irregular periods, heavy flow, abnormal period pain, weight gain, acne, and facial hair. All the ingredients used - both modern formulations and ancient herbs are clinically tested for safety and efficacy and made in certified manufacturing units under hygienic conditions.<\/p>"
             }
           },
           "0544efe4-2cdd-416b-b496-a21d18e17b3a": {
             "type": "faq-block",
             "settings": {
               "question": "Are there any side effects of taking Solvve pcos supplements for weight loss?",
-              "faq_answer": "<p>No, there are no side effects associated with Solvve. All the ingredients used - both modern formulations and ancient herbs are clinically tested for safety and efficacy. In our clinical trials, there was 0% side effects reported.</p>"
+              "faq_answer": "<p>No, there are no side effects associated with Solvve. All the ingredients used - both modern formulations and ancient herbs are clinically tested for safety and efficacy. In our clinical trials, there was 0% side effects reported.<\/p>"
             }
           },
           "1edce10e-7698-4741-a897-e78006c3766c": {
             "type": "faq-block",
             "settings": {
               "question": "Are there age restriction for taking Solvve pcos supplements?",
-              "faq_answer": "<p>Women over 18 years can safely consume Solvve</p>"
+              "faq_answer": "<p>Women over 18 years can safely consume Solvve<\/p>"
             }
           }
         },
@@ -957,15 +938,15 @@
           "1edce10e-7698-4741-a897-e78006c3766c"
         ],
         "settings": {
-          "heading": "Questions that people frequently ask about Solvve"
+          "heading": "Get Your Doubts Cleared"
         }
       },
       "benfits-section": {
         "type": "benfits-section",
         "settings": {
-          "image": "shopify://shop_images/Rectangle_927.png",
+          "image": "shopify:\/\/shop_images\/Rectangle_927_1.png",
           "heading": "Amazing Benefits Of Solvve",
-          "content": "<ul><li>Helps to get menstrual cycles on time every month. </li><li>Balances reproductive hormones. Improves insulin sensitivity & reduces blood sugar level. </li><li>Aids in the loss of PCOS induces weight gain. </li><li>Treats symptoms like acne and excessive facial hair. </li><li>Enhances egg quality; thereby helping in conception.</li></ul>"
+          "content": "<ul><li>Helps to get menstrual cycles on time every month. <\/li><li>Balances reproductive hormones. Improves insulin sensitivity & reduces blood sugar level. <\/li><li>Aids in the loss of PCOS induces weight gain. <\/li><li>Treats symptoms like acne and excessive facial hair. <\/li><li>Enhances egg quality; thereby helping in conception.<\/li><\/ul>"
         }
       },
       "doctors-section": {
@@ -974,22 +955,22 @@
           "292b4ec4-7442-44b3-ba03-455cdc838b17": {
             "type": "doctor-block",
             "settings": {
-              "image": "shopify://shop_images/image_28.png",
-              "content": "<p>Ayurveda reverses PCOD by flushing out sticky toxins in the blood and prevents recurrence. </p><p><strong>Dr. Aarati Patil </strong></p><p>M. D. Gynecology (Ayurveda) Chief Doctor</p>"
+              "image": "shopify:\/\/shop_images\/image_28.png",
+              "content": "<p>Ayurveda reverses PCOD by flushing out sticky toxins in the blood and prevents recurrence. <\/p><p><strong>Dr. Aarati Patil <\/strong><\/p><p>M. D. Gynecology (Ayurveda) Chief Doctor<\/p>"
             }
           },
           "67ca338e-1c75-4f3f-ad08-f12b7937c421": {
             "type": "doctor-block",
             "settings": {
-              "image": "shopify://shop_images/Rectangle_865.png",
-              "content": "<p>PCOS is not a disease but a lifestyle disorder that can be reversed with Ayurveda </p><p><strong>Dr. Gauri More </strong></p><p>M.D.Ayurveda</p>"
+              "image": "shopify:\/\/shop_images\/Rectangle_865.png",
+              "content": "<p>PCOS is not a disease but a lifestyle disorder that can be reversed with Ayurveda <\/p><p><strong>Dr. Gauri More <\/strong><\/p><p>M.D.Ayurveda<\/p>"
             }
           },
           "9088a668-4df0-4bb2-81b8-a3a9b0e72bac": {
             "type": "doctor-block",
             "settings": {
-              "image": "shopify://shop_images/Rectangle_867.png",
-              "content": "<p>Ayurveda helps get a natural cycle on-time every month without harmful hormonal pills. </p><p><strong>Dr. Priyanka Tekale</strong> </p><p>M.D.Ayurveda</p>"
+              "image": "shopify:\/\/shop_images\/Rectangle_867.png",
+              "content": "<p>Ayurveda helps get a natural cycle on-time every month without harmful hormonal pills. <\/p><p><strong>Dr. Priyanka Tekale<\/strong> <\/p><p>M.D.Ayurveda<\/p>"
             }
           }
         },
@@ -1011,7 +992,7 @@
         "type": "promising-results",
         "settings": {
           "heading": "Promising Results From Our Clinical Research",
-          "image": "shopify://shop_images/Group_3105.png"
+          "image": "shopify:\/\/shop_images\/Group_3105.png"
         }
       },
       "promise-section": {
@@ -1020,49 +1001,49 @@
           "6a9ef126-4ed2-4d2c-8418-e29a2e40d6f9": {
             "type": "block",
             "settings": {
-              "image": "shopify://shop_images/Group_3112.png",
+              "image": "shopify:\/\/shop_images\/Group_3112.png",
               "text": "Backed by science"
             }
           },
           "c024f613-2ba1-426d-bbd3-45747ffc62d2": {
             "type": "block",
             "settings": {
-              "image": "shopify://shop_images/Group_3113.png",
+              "image": "shopify:\/\/shop_images\/Group_3113.png",
               "text": "Balances Hormones"
             }
           },
           "bb8aff0a-9262-4307-8e58-3ccd10aa5bd4": {
             "type": "block",
             "settings": {
-              "image": "shopify://shop_images/Group_3114.png",
+              "image": "shopify:\/\/shop_images\/Group_3114.png",
               "text": "Balances Mood swings"
             }
           },
           "70abb517-6870-4c8c-b751-8689b9b3948f": {
             "type": "block",
             "settings": {
-              "image": "shopify://shop_images/Group_3115.png",
+              "image": "shopify:\/\/shop_images\/Group_3115.png",
               "text": "Easy to Consume"
             }
           },
           "49386cdc-a524-42ba-a575-987033d9ac57": {
             "type": "block",
             "settings": {
-              "image": "shopify://shop_images/Group_3116.png",
+              "image": "shopify:\/\/shop_images\/Group_3116.png",
               "text": "100% Vegan"
             }
           },
           "c29ef6f5-3970-4d54-b62c-0b5e831f2419": {
             "type": "block",
             "settings": {
-              "image": "shopify://shop_images/Group_3117.png",
+              "image": "shopify:\/\/shop_images\/Group_3117.png",
               "text": "Enhance Chances of Pregnancy"
             }
           },
           "86855ad7-9278-4a7e-9ea6-43b2a1557dc2": {
             "type": "block",
             "settings": {
-              "image": "shopify://shop_images/Group_3118.png",
+              "image": "shopify:\/\/shop_images\/Group_3118.png",
               "text": "Instant doctor support"
             }
           }
@@ -1078,6 +1059,63 @@
         ],
         "settings": {
         }
+      },
+      "sale-announcment": {
+        "type": "sale-announcment",
+        "settings": {
+          "bg_color": "#972b52",
+          "text1": "Super Sale",
+          "text2": "50% OFF"
+        }
+      },
+      "leading-doctors": {
+        "type": "leading-doctors",
+        "blocks": {
+          "432b1e98-cfe5-439e-8999-61bd8ea58b20": {
+            "type": "doctor-block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle_932.png",
+              "name": "Dr Bhavna Manoj",
+              "subtitle": "<p>BAMS, Ayurvedic Physician.<\/p>",
+              "content": "<p>SOLVVE contains all the herbs in the right proportion as recommended by Ayurveda. It is a blessing for all women with period problems to overcome it.<\/p>",
+              "experience": "5 Years experience",
+              "consults": "1500+ Consults done",
+              "location": "Kerala"
+            }
+          },
+          "e682591c-5947-40ab-a0ae-864119ad9263": {
+            "type": "doctor-block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle_934.png",
+              "name": "Dr.Neha Gupta",
+              "subtitle": "<p>MBBS, DNB in Radiology<\/p>",
+              "content": "<p>The blend of Myo-Inositol and D-Chiro Insoitol in the ratio 40:1 is thoroughly studied and has been proven effective in women with PCOS<\/p>",
+              "experience": "8 Years experience",
+              "consults": "900+ Consults done",
+              "location": "Patiala"
+            }
+          },
+          "206f6011-417e-43d4-879c-1b51d9fe4039": {
+            "type": "doctor-block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Rectangle_934_1.png",
+              "name": "Dr. Vinya Tejashvi",
+              "subtitle": "<p>Clinical nutrition and Dietetics <\/p>",
+              "content": "<p>Diet and supplements play a crucial role in managing PCOS symptoms and SOLVVE is a blessing to give the body all the nutrients it needs.<\/p>",
+              "experience": "2 Years experience",
+              "consults": "650+ Consults done",
+              "location": "Hyderabad"
+            }
+          }
+        },
+        "block_order": [
+          "432b1e98-cfe5-439e-8999-61bd8ea58b20",
+          "e682591c-5947-40ab-a0ae-864119ad9263",
+          "206f6011-417e-43d4-879c-1b51d9fe4039"
+        ],
+        "settings": {
+          "heading": "Recommended By Leading Doctors"
+        }
       }
     },
     "content_for_index": [
@@ -1085,7 +1123,7 @@
     ],
     "blocks": {
       "6279071938380501511": {
-        "type": "shopify://apps/powerful-contact-form-builder/blocks/app-embed/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+        "type": "shopify:\/\/apps\/powerful-contact-form-builder\/blocks\/app-embed\/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
         "disabled": false,
         "settings": {
         }

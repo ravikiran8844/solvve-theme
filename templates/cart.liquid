@@ -34,16 +34,31 @@
         Remove
       </button>-->
     </div>
-    <div class="product-line-price line--{{ item.id }}" data-price="{{ item.price }}">{% if item.original_line_price != item.line_price %}{{ item.original_line_price | money }}{% endif %}
+    <div class="product-line-price line--{{ item.id }}" data-price="{{ item.price }}">{% if item.original_line_price != item.line_price %} <div><s>{{ item.original_line_price | money }}</s></div>{% endif %}
               {{ item.line_price | money }}
+              <br>
               {% for discount in item.discounts %}{{ discount.title }}{% endfor %}</div>
   </div>
    {% endfor %}
   <div class="totals">
-    <div class="totals-item">
+
+  <div class="totals-item">
+    <label>Order Total</label>
+    <div class="totals-value" id="order-total">{{cart.original_total_price | money }}</div>
+  </div>
+  <div class="totals-item">
+    <label>Order Discount</label>
+    <div class="totals-value" id="order-discount">{{cart.total_discount | money}}</div>
+  </div>
+
+    {% comment %} <div class="totals-item">
       <label>Subtotal</label>
       <div class="totals-value" id="cart-subtotal">{{ cart.total_price | money }}</div>
     </div>
+
+ {% endcomment %}
+
+
     <div class="totals-item totals-item-total">
       <label>Grand Total</label>
       <div class="totals-value" id="cart-total">{{ cart.total_price | money }}</div>

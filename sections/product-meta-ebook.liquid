@@ -31,7 +31,7 @@
       <div class="product-description text-center">
         <p>{{ product.description }}</p>
       </div>
-      <div class="product-price-box text-center">Paperback: <span class="selling-price">{{ current_variant.price | money }}</span> <del>{{ current_variant.compare_at_price | money }}</del> <span class="incl-txt">(Incl. of all taxes)</span></div>
+      <div class="product-price-box text-center">ebook: <span class="selling-price">{{ current_variant.price | money }}</span> <del>{{ current_variant.compare_at_price | money }}</del> <span class="incl-txt">(Incl. of all taxes)</span></div>
 <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
  <div class="var-qty">
   <select name="id" id="productSelect">
@@ -63,7 +63,7 @@
  </div>  
   <div class="add-box"><button type="submit" name="add" id="AddToCart">ADD TO CART</button></div>
 </form>
-   <div class="main-icon-box"><img src="{{ 'main-icon.png' | asset_url }}"</div>       
+   <div class="main-icon-box"><img src="{{ 'main-icon.png' | asset_url }}"></div>       
   </div>
   </div>
 </div>

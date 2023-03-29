@@ -1,15 +1,16 @@
 <div class="container">
   <div class="infu-section">
-    <div class="row">
+    <div
+      class="row">
       <div class="solvve-infu">
         {%- for block in section.blocks -%}
           <div>
             <div class="infu">
               <video
-                autoplay=""
-                playsinline=""
-                loop=""
-                muted=""
+                autoplay
+                muted
+                loop
+                playsinline
                 class="w-100">
                 <source src="{{ block.settings.video-url }}" type="video/mp4">
               </video>
@@ -21,26 +22,24 @@
   </div>
 </div>
 {% schema %}
-{
-  "name": "Influencer",
-  "class": "section",
-  "settings": [
-
-  ],
-  "blocks": [
-    {
-      "type": "video",
-      "name": "influencer",
-      "settings": [
-        {
-          "id": "video-url",
-          "type": "text",
-          "label": "Video url"
-        }
-      ]
-    }
-  ]
-}
+  {
+    "name": "Influencer",
+    "class": "section",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "video",
+        "name": "influencer",
+        "settings": [
+          {
+            "id": "video-url",
+            "type": "text",
+            "label": "Video url"
+          }
+        ]
+      }
+    ]
+  }
 {% endschema %}
 
 <script>

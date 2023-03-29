@@ -1,0 +1,198 @@
+
+
+<div class="bg-white py-5">
+    <div class="container">
+        <div class="col-12 text-center">
+            <div class="fs-2 leading-doctors__heading mb-5">{{section.settings.heading}}</div>
+        </div>
+<div class="col-12 mb-5">
+<div class="leading-doctors__wrapper" data-flickity='{ "cellAlign": "left", "contain": true,"groupCells":true ,"prevNextButtons":false, "autoPlay":true}'>
+    {% for block in section.blocks %}
+<div class="col-12 col-md-6 px-2">
+    <div class="leading-doctors--item px-3 py-5">
+<div class="d-flex">
+    <div class="px-1 col-8">
+<div class="leading-doctors--item-title mb-2">{{block.settings.name}}</div>
+<div class="leading-doctors--item-subtitle mb-3">{{block.settings.subtitle}}</div>
+    <div class="leading-doctors--item-content">
+        {{block.settings.content}}
+</div>
+</div>
+<div class="col-4">
+<img class="leading-doctors__img" src="{{block.settings.image |img_url: 'master' }}" alt="{{block.settings.name}}" >
+</div>
+</div>
+<div class="mt-2">
+    <span><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M13.2076 7.1903L14.1176 5.56338C14.2101 5.39589 14.1532 5.18511 13.9889 5.08696L12.3858 4.13414L12.362 2.26901C12.3594 2.07536 12.203 1.91905 12.0095 1.91638L10.1443 1.89256L9.18906 0.282351C9.0909 0.118052 8.88013 0.0611604 8.71265 0.153677L7.08093 1.06365L5.454 0.153677C5.28651 0.0611604 5.07573 0.118052 4.97759 0.282351L4.02477 1.88546L2.15964 1.90928C1.96599 1.91183 1.80968 2.06826 1.80701 2.2618L1.78319 4.12693L0.172976 5.0822C0.00867703 5.18035 -0.0482146 5.39113 0.0443016 5.55861L0.954273 7.19033L0.0443016 8.81726C-0.0482146 8.98475 0.00867703 9.19553 0.172976 9.29367L1.77608 10.2465L1.7999 12.1116C1.80246 12.3053 1.95888 12.4616 2.15242 12.4642L4.01755 12.4881L4.97038 14.0912H4.97048C5.06864 14.2555 5.2793 14.3124 5.44689 14.2197L7.08093 13.317L8.70785 14.227C8.87556 14.3182 9.08536 14.2615 9.18427 14.0983L10.1371 12.4952L12.0022 12.4714C12.1959 12.4688 12.3522 12.3124 12.3548 12.1189L12.3787 10.2537L13.9818 9.30091V9.30081C14.1461 9.20265 14.203 8.99199 14.1103 8.8244L13.2076 7.1903ZM9.78453 5.52287C8.63573 6.67445 7.60549 7.93851 6.70937 9.29604C6.65131 9.39206 6.55177 9.45545 6.44012 9.46746H6.40439C6.30485 9.4681 6.20967 9.42652 6.14236 9.35314L4.37017 7.42847C4.26436 7.28087 4.28616 7.07734 4.42079 6.95536C4.55552 6.83349 4.76024 6.83211 4.89657 6.95206L6.36631 8.53135C7.23428 7.28108 8.20634 6.10655 9.27241 5.02034C9.41247 4.88231 9.63737 4.88231 9.77744 5.02034C9.84518 5.08595 9.88399 5.17581 9.88527 5.27014C9.88665 5.36446 9.85039 5.45538 9.78456 5.52291L9.78453 5.52287Z" fill="#49ADF4"/>
+    </svg>
+    </span><span class="leading-doctors--icon-text">{{block.settings.experience}}</span>
+    <span>
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.7198 0.109375C5.84174 0.109375 4.04062 0.855407 2.71262 2.18333C1.3847 3.51132 0.638672 5.31247 0.638672 7.1905C0.638672 9.06853 1.3847 10.8697 2.71262 12.1977C4.04062 13.5256 5.84177 14.2716 7.7198 14.2716C9.59783 14.2716 11.399 13.5256 12.727 12.1977C14.0549 10.8697 14.8009 9.06853 14.8009 7.1905C14.8009 5.94753 14.4737 4.72646 13.8523 3.64998C13.2308 2.5735 12.3369 1.67961 11.2604 1.05813C10.1839 0.436641 8.96285 0.109456 7.71988 0.109456L7.7198 0.109375ZM6.30359 10.4949C6.17809 10.4956 6.05754 10.4463 5.96839 10.358L3.13597 7.49729C3.01627 7.37758 2.96948 7.20299 3.01332 7.03943C3.05715 6.87588 3.18487 6.74807 3.34852 6.70424C3.51205 6.6604 3.68655 6.70719 3.80637 6.82689L6.30359 9.35246L11.6331 4.02293C11.7529 3.90323 11.9274 3.85644 12.091 3.90028C12.2546 3.94411 12.3823 4.07183 12.4262 4.23547C12.47 4.39901 12.4232 4.5735 12.3035 4.69333L6.63868 10.3582C6.54954 10.4465 6.42899 10.4958 6.30349 10.495L6.30359 10.4949Z" fill="#5EDD60"/>
+        </svg>
+        
+    </span>
+    <span class="leading-doctors--icon-text">{{block.settings.consults}}</span>
+    <span>
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.7126 3.55568V3.81366C13.7126 5.86611 10.9687 9.05445 10.4199 9.66941C10.2737 9.83123 10.0828 9.94589 9.87109 9.99868V13.1487L13.7948 14.6194C13.8598 14.6431 13.9287 14.6543 13.9979 14.6524C14.1434 14.6524 14.2831 14.5946 14.386 14.4917C14.4889 14.3888 14.5467 14.2491 14.5467 14.1036V4.98804C14.5467 4.69686 14.4695 4.41084 14.323 4.15921C14.1765 3.9076 13.9658 3.69935 13.7125 3.55566L13.7126 3.55568Z" fill="#2EA230"/>
+        <path d="M8.78981 9.67455C8.24102 9.05448 5.49707 5.86595 5.49707 3.81348V14.5861L9.3386 13.1482V9.99812C9.12766 9.94679 8.9367 9.83409 8.78981 9.67424V9.67455Z" fill="#2EA230"/>
+        <path d="M9.60769 0.109375C8.64411 0.129587 7.72772 0.530657 7.05911 1.22495C6.39065 1.91916 6.02437 2.85 6.04055 3.81371C6.04055 5.71255 8.87234 8.94473 9.19594 9.30161C9.30006 9.41969 9.45 9.48743 9.60753 9.48743C9.76506 9.48743 9.915 9.41969 10.0191 9.30161C10.3429 8.93937 13.1745 5.70719 13.1745 3.81371C13.1907 2.85003 12.8244 1.91916 12.156 1.22495C11.4874 0.530626 10.571 0.12957 9.60737 0.109375H9.60769ZM9.60769 4.77409C9.31663 4.77409 9.03745 4.65845 8.83154 4.45265C8.62575 4.24674 8.51011 3.96756 8.51011 3.67651C8.51011 3.38546 8.62575 3.10627 8.83154 2.90036C9.03746 2.69457 9.31664 2.57893 9.60769 2.57893C9.89873 2.57893 10.1779 2.69457 10.3838 2.90036C10.5896 3.10628 10.7053 3.38546 10.7053 3.67651C10.7053 3.96756 10.5896 4.24675 10.3838 4.45265C10.1779 4.65845 9.89873 4.77409 9.60769 4.77409Z" fill="#FF0000"/>
+        <path d="M4.94288 3.53375L1.01919 2.06306C0.850389 1.99998 0.661379 2.02374 0.513519 2.12676C0.365666 2.22965 0.277712 2.3987 0.278323 2.5789V11.6945C0.280406 12.0332 0.386978 12.363 0.583344 12.639C0.779707 12.9149 1.05656 13.1236 1.37589 13.2366L4.97031 14.5866L4.94288 3.53375Z" fill="#2EA230"/>
+        </svg>
+        
+    </span>
+    <span class="leading-doctors--icon-text">{{block.settings.location}}</span>
+</div>
+
+    </div>
+    
+
+
+
+
+</div>
+    {% endfor %}
+</div>
+
+</div>
+    </div>
+</div>
+
+
+<style>
+    .leading-doctors__img{
+border-radius: 29px;
+    }
+    .leading-doctors__heading{
+        font-family: 'Inter-Bold';
+        font-style: normal;
+        font-weight: 700;
+        line-height: 137.52%;
+        color: #550863;
+    }
+    .leading-doctors--item{
+        background: #FAF7F7;
+border-radius: 24px;
+    }
+    .leading-doctors--item-title{
+        font-family: 'Inter-Bold';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 26.1457px;
+        line-height: 100%;
+        color: #000000;
+    }
+    .leading-doctors--item-subtitle{
+        font-family: 'Inter-Light';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 132%;
+        
+        color: #6C6C6C;
+    }
+    .leading-doctors--item-content{
+        font-family: 'Inter-Light';
+font-style: normal;
+font-weight: 400;
+font-size: 15.2517px;
+line-height: 132.5%;
+color: #000000;
+
+    }
+    .leading-doctors--icon-text{
+        font-family: 'Inter-Light';
+font-style: normal;
+font-weight: 500;
+font-size: 10.894px;
+line-height: 132%;
+color: #000000;
+    }
+
+    @media (max-width:992px){
+        .leading-doctors__heading{
+            
+        }
+
+        .leading-doctors--item-title{
+            font-size: 16.368px;
+            line-height: 100%;
+        }
+        .leading-doctors--item-subtitle{
+            font-size: 9.54799px;
+                    }
+        .leading-doctors--item-content{
+            font-size: 12px;
+    
+        }
+        .leading-doctors--icon-text{
+            font-size: 9.54799px;
+
+        }
+}
+</style>
+
+
+{% schema %}
+    {
+      "name": "Doctors Section",
+      "class": "section",
+      "tag": "section",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Recommended By Leading Doctors"
+        }
+      ],
+      "blocks": [
+        {
+          "name": "Block",
+          "type": "doctor-block",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image"
+            },{
+                "type": "text",
+                "id": "name",
+                "label": "Name",
+                "default": "Dr. Aarati Patil"
+            },
+            {
+              "type": "richtext",
+              "id": "subtitle",
+              "label": "subtitle",
+              "default": "<p>M. D. Gynecology (Ayurveda) Chief Doctor</p>"
+            },
+            {
+              "type": "richtext",
+              "id": "content",
+              "label": "Content",
+              "default": "<p>Ayurveda reverses PCOD by flushing out sticky toxins in the blood and prevents recurrence.</p>"
+            },
+            {
+                "type": "text",
+                "id": "experience",
+                "label": "experience",
+                "default": "12 Years experience"
+            },{
+                "type": "text",
+                "id": "consults",
+                "label": "consults",
+                "default": "1882 Consults done"
+            },{
+                "type": "text",
+                "id": "location",
+                "label": "location",
+                "default": "Hydrabad"
+            }
+          ]
+        }
+      ]
+    }
+    {% endschema %}
