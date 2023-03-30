@@ -8,7 +8,7 @@
 <div id="product__slider">
       <div class="slider-galeria-thumbs">
         {% for image in product.images %}
-        <div class="slide"><img src="{{ image.src | image_url: width: 100, height: 100 }}" alt="{{ image.alt | escape }}" class="img-responsive rds"></div>
+        <div class="slide"><img loading="lazy" src="{{ image.src | image_url: width: 100, height: 100 }}" alt="{{ image.alt | escape }}" class="img-responsive rds"></div>
         {% endfor %}
       </div>
       <div class="slider-galeria">
@@ -63,7 +63,7 @@
  </div>  
   <div class="add-box"><button type="submit" name="add" id="AddToCart">ADD TO CART</button></div>
 </form>
-   <div class="main-icon-box"><img src="{{ 'main-icon.png' | asset_url }}"></div>       
+   <div class="main-icon-box"><img loading="lazy" src="{{ 'main-icon.png' | asset_url }}"></div>       
   </div>
   </div>
 </div>
@@ -81,71 +81,72 @@
 }
 {% endschema %}
 
-{% stylesheet %}
-{% endstylesheet %}
 
-{% javascript %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
   $('.slider-galeria').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  infinite: false,
-  asNavFor: '.slider-galeria-thumbs',
-});
-$('.slider-galeria-thumbs').slick({
-  slidesToShow: 5,
-  slidesToScroll: 1,
-  arrows: false,
-  asNavFor: '.slider-galeria',
-  vertical: true,
-  verticalSwiping: true,
-  focusOnSelect: true,
-  infinite: false,
-});
-
-  
-   (function () {
-  "use strict";
-  var jQueryPlugin = (window.jQueryPlugin = function (ident, func) {
-    return function (arg) {
-      if (this.length > 1) {
-        this.each(function () {
-          var $this = $(this);
-
-          if (!$this.data(ident)) {
-            $this.data(ident, func($this, arg));
-          }
-        });
-
-        return this;
-      } else if (this.length === 1) {
-        if (!this.data(ident)) {
-          this.data(ident, func(this, arg));
-        }
-
-        return this.data(ident);
-      }
-    };
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    infinite: false,
+    asNavFor: '.slider-galeria-thumbs',
   });
-})();
-
-(function () {
-  "use strict";
-  function Guantity($root) {
-    const element = $root;
-    const quantity = $root.first("data-quantity");
-    const quantity_target = $root.find("[data-quantity-target]");
-    const quantity_minus = $root.find("[data-quantity-minus]");
-    const quantity_plus = $root.find("[data-quantity-plus]");
-    var quantity_ = quantity_target.val();
-    $(quantity_minus).click(function () {
-      quantity_target.val(--quantity_);
+  $('.slider-galeria-thumbs').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    arrows: false,
+    asNavFor: '.slider-galeria',
+    vertical: true,
+    verticalSwiping: true,
+    focusOnSelect: true,
+    infinite: false,
+  });
+  
+    
+     (function () {
+    "use strict";
+    var jQueryPlugin = (window.jQueryPlugin = function (ident, func) {
+      return function (arg) {
+        if (this.length > 1) {
+          this.each(function () {
+            var $this = $(this);
+  
+            if (!$this.data(ident)) {
+              $this.data(ident, func($this, arg));
+            }
+          });
+  
+          return this;
+        } else if (this.length === 1) {
+          if (!this.data(ident)) {
+            this.data(ident, func(this, arg));
+          }
+  
+          return this.data(ident);
+        }
+      };
     });
-    $(quantity_plus).click(function () {
-      quantity_target.val(++quantity_);
-    });
-  }
-  $.fn.Guantity = jQueryPlugin("Guantity", Guantity);
-  $("[data-quantity]").Guantity();
-})();
-{% endjavascript %}
+  })();
+  
+  (function () {
+    "use strict";
+    function Guantity($root) {
+      const element = $root;
+      const quantity = $root.first("data-quantity");
+      const quantity_target = $root.find("[data-quantity-target]");
+      const quantity_minus = $root.find("[data-quantity-minus]");
+      const quantity_plus = $root.find("[data-quantity-plus]");
+      var quantity_ = quantity_target.val();
+      $(quantity_minus).click(function () {
+        quantity_target.val(--quantity_);
+      });
+      $(quantity_plus).click(function () {
+        quantity_target.val(++quantity_);
+      });
+    }
+    $.fn.Guantity = jQueryPlugin("Guantity", Guantity);
+    $("[data-quantity]").Guantity();
+  })();});
+</script>
+ 

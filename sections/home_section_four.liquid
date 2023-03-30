@@ -7,7 +7,7 @@
             {%- for block in section.blocks -%}
               <div class="glide__slide">
                 <div class="icon-box">
-                  <img class="icon" src="{{ block.settings.icon | image_url }}" alt="{{ block.settings.icon.alt | default: shop.name | escape }}">
+                  <img loading="lazy"  class="icon" src="{{ block.settings.icon | image_url }}" alt="{{ block.settings.icon.alt | default: shop.name | escape }}">
                   <h5 class="icon-title">{{ block.settings.icon_title }}</h5>
                   <p class="icon-content">{{ block.settings.icon_content }}</p>
                 </div>
@@ -33,6 +33,8 @@
     </div>
   </div>
   <script>
+    document.addEventListener('DOMContentLoaded', function(){
+
     new Glide('#what_solvee', {
 	type: 'carousel',
 	perView: 3,
@@ -50,6 +52,9 @@
 		},
 	}
 }).mount();
+});
+
+
 </script>
 
 {% schema %}

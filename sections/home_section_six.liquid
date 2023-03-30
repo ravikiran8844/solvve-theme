@@ -3,7 +3,7 @@
     <div class="row">
       <div class="nutri-sec">
         <div class="left">
-          <img src="{{ section.settings.image | image_url }}" alt="{{ block.settings.image.alt | default: shop.name | escape }}">
+          <img loading="lazy"  src="{{ section.settings.image | image_url }}" alt="{{ block.settings.image.alt | default: shop.name | escape }}">
         </div>
         <div class="right">
           <h3>{{ section.settings.title }}</h3>

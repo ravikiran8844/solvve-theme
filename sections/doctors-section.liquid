@@ -8,7 +8,7 @@
     <div class="col-12 ds-items-wrapper">
       {% for block in section.blocks %}
         <div class="col-12 col-sm-6 col-lg-4 card ds-item me-3">
-          <img
+          <img loading="lazy" 
             class="card-img-top"
             src="{{ block.settings.image | image_url }}"
             alt="Card image cap">

@@ -8,7 +8,8 @@
   rel="stylesheet"
   type="text/css"
   media="all" />
-<script src="{{- 'glide.js' | asset_url -}}"></script>
+<script src="{{- 'glide.js' | asset_url -}}" defer></script>
+
 {% section 'sale-announcment' %}
 {%- section 'product-meta' -%}
 {% section 'benfits-section' %}
@@ -22,40 +23,3 @@
 {% section 'collapsible-text-section' %}
 {%- section 'promise-section' -%}
 {%- section 'product_section_nine' -%}
-<script>
-  var formId = 'product-form';
-  var form = document.querySelector(formId);
-
-// functions
-  var cleanUp = function(cartItem) {
-
-// Do whatever you need to do after the item(s) have been added
-// i.e. show message/redirect to cart/etc.
-  };
-
-  var addFreeItemToCart = function(cartItem) {
-    Shopify.addItem(theme.freeProduct.variants[0].id, 1, function(freeCartItem) {
-      theme.freeProductCanBeAdded = false; // don't allow the free product to be added again this page load
-      cleanUp(cartItem);
-    });
-  };
-
-  var addItemToCart = function(e) {
-
-// add the current product to the cart
-    Shopify.addItemFromForm(formId, function(cartItem) {
-
-// if we can add the free product then do it
-      if (theme.freeProduct && theme.currentProductHasFreeProduct && theme.freeProductCanBeAdded) {
-        addFreeItemToCart(cartItem);
-      } else {
-        cleanUp(cartItem);
-      }
-    });
-  };
-
-// event listener for submit, which calls addItemToCart()
-  form.addEventListener('submit', function(e) {
-    addItemToCart(e);
-  });
-</script>

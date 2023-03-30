@@ -5,7 +5,7 @@
     {%- for block in section.blocks -%}
     <div class="col-sm-6 col-md-3">
       <div class="ing-box text-center">
-        <img src="{{ block.settings.ing_img | image_url }}">
+        <img loading="lazy" src="{{ block.settings.ing_img | image_url }}">
         <h6>{{ block.settings.ing_title }}</h6>
         <p>{{ block.settings.ing_cnt }}</p>
       </div>
@@ -20,7 +20,7 @@
     {%- for block in section.blocks -%}
     <div class="glide__slide">
       <div class="ing-box text-center">
-        <img src="{{ block.settings.ing_img | image_url }}">
+        <img loading="lazy"  src="{{ block.settings.ing_img | image_url }}">
         <h6>{{ block.settings.ing_title }}</h6>
         <p>{{ block.settings.ing_cnt }}</p>
       </div>
@@ -95,19 +95,23 @@
     right: 0;
 }
 </style>
+
+
 <script>
-    new Glide('#product-ing', {
-	type: 'slider',
-	perView: 1.3,
-    bound:true,
-    autoplay:5000,
-	breakpoints: {
-		560: {
-			perView: 1.3
-		},
-      460: {
-			perView: 1.3
-		},
-	}
-}).mount();
+document.addEventListener('DOMContentLoaded', function(){
+  new Glide('#product-ing', {
+    type: 'slider',
+    perView: 1.3,
+      bound:true,
+      autoplay:5000,
+    breakpoints: {
+      560: {
+        perView: 1.3
+      },
+        460: {
+        perView: 1.3
+      },
+    }
+  }).mount();
+});
 </script>

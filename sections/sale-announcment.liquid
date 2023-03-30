@@ -3,9 +3,9 @@
     <div class="container">
 <div><span><svg height="24px" width="24px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 280.027 280.027" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:#EFC75E;" d="M249.399,96.583h-83.404L216.382,0H88.419L30.628,166.161h79.712L71.906,280.027L249.399,96.583z"></path> <path style="fill:#F5DD9D;" d="M101.046,17.598h78.364l-70.584,17.537l-43.168,78.758 C65.658,113.892,101.046,17.598,101.046,17.598z"></path> </g> </g></svg>
 </span>
-    <span>{{section.settings.text1}}</span>
+    <span>{{ section.settings.text1 }}</span>
     <span><svg height="24px" width="24px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 280.027 280.027" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:#EFC75E;" d="M249.399,96.583h-83.404L216.382,0H88.419L30.628,166.161h79.712L71.906,280.027L249.399,96.583z"></path> <path style="fill:#F5DD9D;" d="M101.046,17.598h78.364l-70.584,17.537l-43.168,78.758 C65.658,113.892,101.046,17.598,101.046,17.598z"></path> </g> </g></svg>
-</span> <span>{{section.settings.text2}}</span>
+</span> <span>{{ section.settings.text2 }}</span>
 </div>
     </div>
 </div>
@@ -14,7 +14,7 @@
 
 <style>
     .sa-wrapper{
-        background-color: {{section.settings.bg_color}};
+        background-color: {{ section.settings.bg_color }};
         color: #fff;
         font-family: Inter-Bold;
     }
@@ -28,44 +28,49 @@
 
 
 {% schema %}
+{
+  "name": "sticky announcment",
+  "class": "section",
+  "settings": [
     {
-        "name": "sticky announcment",
-        "class": "section",
-        "settings": [{
-            "type": "color",
-            "id": "bg_color",
-            "label": "background color",
-            "default": "#972B52"
-        },{
-            "type": "text",
-            "id": "text1",
-            "label": "Text",
-            "default": "Super Sale"
-        },{
-            "type": "text",
-            "id": "text2",
-            "label": "Text",
-            "default": "50% OFF"
-        }
-        
-        ]
+      "type": "color",
+      "id": "bg_color",
+      "label": "background color",
+      "default": "#972B52"
+    },
+    {
+      "type": "text",
+      "id": "text1",
+      "label": "Text",
+      "default": "Super Sale"
+    },
+    {
+      "type": "text",
+      "id": "text2",
+      "label": "Text",
+      "default": "50% OFF"
     }
+  ]
+}
 {% endschema %}
 
 
-<script>
-    function sticky_relocate() {
-  var window_top = $(window).scrollTop();
-  var div_top = $('#sticky_wrapper').offset().top;
-  if (window_top > div_top) {
-    $('.sa-wrapper').addClass('stick');
-  } else {
-    $('.sa-wrapper').removeClass('stick');
-  }
-}
 
-$(function() {
-  $(window).scroll(sticky_relocate);
-  sticky_relocate();
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  function sticky_relocate() {
+    var window_top = $(window).scrollTop();
+    var div_top = $('#sticky_wrapper').offset().top;
+    if (window_top > div_top) {
+      $('.sa-wrapper').addClass('stick');
+    } else {
+      $('.sa-wrapper').removeClass('stick');
+    }
+  }
+  
+  $(function() {
+    $(window).scroll(sticky_relocate);
+    sticky_relocate();
+  });
 });
 </script>

@@ -8,7 +8,10 @@
         <div>
           <div class="promise_icon_box">
             <div class="promise_icon_img">
-              <img src="{{ block.settings.image | image_url }}" alt="Solvve PCOD and PCOS supplement Promises">
+              <img
+                loading="lazy"
+                src="{{ block.settings.image | image_url }}"
+                alt="Solvve PCOD and PCOS supplement Promises">
             </div>
             <p class="prom-icon-name">{{ block.settings.text }}</p>
           </div>
@@ -59,29 +62,32 @@
 
 
 <script>
-  $(document).ready(function() {
-    $('.solvve-promise').slick({
-      slidesToShow: 7,
-      slidesToScroll: 1,
-      speed: 300,
-      infinite: true,
-      autoplaySpeed: 5000,
-      autoplay: true,
-      responsive: [
-        {
-          breakpoint: 991,
-          settings: {
-            slidesToShow: 5,
-            arrows: false
+  document.addEventListener('DOMContentLoaded', function() {
+
+    $(document).ready(function() {
+      $('.solvve-promise').slick({
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        speed: 300,
+        infinite: true,
+        autoplaySpeed: 5000,
+        autoplay: true,
+        responsive: [
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 5,
+              arrows: false
+            }
+          }, {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 3,
+              arrows: false
+            }
           }
-        }, {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 3,
-            arrows: false
-          }
-        }
-      ]
+        ]
+      });
     });
   });
 </script>

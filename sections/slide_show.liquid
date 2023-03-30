@@ -1,4 +1,3 @@
-
 <div class="fluid-container" id="home-slider">
   <div>
     <div class="col-12" data-flickity='{ "cellAlign": "left", "contain": true,"pageDots": false}'>
@@ -11,7 +10,8 @@
               <img
                 class="slide-image"
                 data-src="{{ block.settings.slider_desktop_image | image_url }}"
-                style="width:100%;max-width:100%">
+                style="width:100%;max-width:100%"
+                alt="home page banner">
             </picture>
           </a>
         </div>
@@ -20,6 +20,13 @@
   </div>
 </div>
 
+
+<style>
+  #home-slider .flickity-prev-next-button {
+    width: 48px;
+    height: 48px;
+  }
+</style>
 
 {% schema %}
   {

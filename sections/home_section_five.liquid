@@ -1,67 +1,68 @@
-  <div class="container">
-    <h3 class="title text-center">{{ section.settings.title }}</h3>
-    <div class="row">
-      <div class="acc-container"> 
-        {%- for block in section.blocks -%}
+<div class="container">
+  <h3 class="title text-center">{{ section.settings.title }}</h3>
+  <div class="row">
+    <div class="acc-container">
+      {%- for block in section.blocks -%}
         <div class="acc">
           <div class="acc-head">
-          <h5>{{ block.settings.faq_title }}</h5>
+            <h5>{{ block.settings.faq_title }}</h5>
           </div>
           <div class="acc-content">
-          <p>{{ block.settings.faq_content }}</p>
+            <p>{{ block.settings.faq_content }}</p>
           </div>
         </div>
-        {%- endfor -%}
-      </div>
+      {%- endfor -%}
     </div>
   </div>
+</div>
 <script>
-  $(document).ready(function() {
-$('.acc-container .acc:nth-child(1) .acc-head').addClass('active');
-$('.acc-container .acc:nth-child(1) .acc-content').slideDown();
-$('.acc-head').on('click', function() {
-    if($(this).hasClass('active')) {
-      $(this).siblings('.acc-content').slideUp();
-      $(this).removeClass('active');
-    }
-    else {
-      $('.acc-content').slideUp();
-      $('.acc-head').removeClass('active');
-      $(this).siblings('.acc-content').slideToggle();
-      $(this).toggleClass('active');
-    }
-});     
-});
+
+  document.addEventListener('DOMContentLoaded', function() {
+
+    $(document).ready(function() {
+      $('.acc-container .acc:nth-child(1) .acc-head').addClass('active');
+      $('.acc-container .acc:nth-child(1) .acc-content').slideDown();
+      $('.acc-head').on('click', function() {
+        if ($(this).hasClass('active')) {
+          $(this).siblings('.acc-content').slideUp();
+          $(this).removeClass('active');
+        } else {
+          $('.acc-content').slideUp();
+          $('.acc-head').removeClass('active');
+          $(this).siblings('.acc-content').slideToggle();
+          $(this).toggleClass('active');
+        }
+      });
+    });
+  });
 </script>
 {% schema %}
-{
-  "name": "How Solvve works?",
-  "class": "how_solvee_works",
-  "settings": [
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Title"
-    }
-  ],
-  "blocks": [
-    {
-      "name": "faq",
-      "type": "faq",
-      "settings": [
-        {
-          "type": "text",
-          "id": "faq_title",
-          "label": "FAQs Title"
-        },
-        {
-          "type": "text",
-          "id": "faq_content",
-          "label": "FAQ Content"
-        }
-      ]
-    }
-  ]
-}
+  {
+    "name": "How Solvve works?",
+    "class": "how_solvee_works",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "faq",
+        "type": "faq",
+        "settings": [
+          {
+            "type": "text",
+            "id": "faq_title",
+            "label": "FAQs Title"
+          }, {
+            "type": "text",
+            "id": "faq_content",
+            "label": "FAQ Content"
+          }
+        ]
+      }
+    ]
+  }
 {% endschema %}
-

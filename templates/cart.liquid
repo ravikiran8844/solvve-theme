@@ -1,4 +1,4 @@
-
+<script src="{{- 'cart.js' | asset_url -}}" defer></script>
 <div class="container">
 {% if cart.item_count > 0 %}
 <h1>Shopping Cart</h1>
@@ -34,8 +34,8 @@
         Remove
       </button>-->
     </div>
-    <div class="product-line-price line--{{ item.id }}" data-price="{{ item.price }}">{% if item.original_line_price != item.line_price %} <div><s>{{ item.original_line_price | money }}</s></div>{% endif %}
-              {{ item.line_price | money }}
+    <div class="product-line-price" data-price="{{ item.price }}">{% if item.original_line_price != item.line_price %} <s><span class="line--{{ item.id }}" >{{ item.original_line_price | money }}</span></s>{% endif %}
+              <div class="discounted-price--{{ item.id }}">{{ item.line_price | money }}</div>
               <br>
               {% for discount in item.discounts %}{{ discount.title }}{% endfor %}</div>
   </div>
@@ -127,7 +127,7 @@
     </div>
 </div>
 {% endif %}
-{% include 'cart-add-on' %}
+{% render 'cart-add-on' %}
 </div>
 
 <style>
@@ -495,41 +495,7 @@
 }
 }
 </style>
+
 <script>
   Shopify.moneyformat = {{ shop.money_format | json }};
-  /* Set rates + misc */ 
-var fadeTime = 300;
-
-
-/* Assign actions */
-$('.product-quantity input').change( function() {
-  updateQuantity(this);
-});
-
-$('.product-removal button').click( function() {
-  removeItem(this);
-});
-/* Update quantity */
-function updateQuantity(quantityInput)
-{
-  /* Calculate line price */
-   var productRow = $(quantityInput).parent().parent(),id = productRow.children('.product-price').attr("data-variant");
-   function updateCart(d,id){
-      for(var i=0;i<d.items.length;i++){
-        if(id==d.items[i].id){}
-           $(".line--"+id).html(Shopify.formatMoney(d.items[i].price * d.items[i].quantity,Shopify.moneyformat));  
-      }
-      $("#cart-subtotal, #cart-total").html(Shopify.formatMoney(d.total_price,Shopify.moneyformat));
-   }
-   fetch(window.Shopify.routes.root + 'cart/change.js',{method:"POST",headers:{"Content-Type":"application/json",Accept:`application/javascript`},body:JSON.stringify({"id": id,"quantity":$(quantityInput).val()})}).then(r => { return r.json();}).then(d => { updateCart(d,id);});
-}
-/* Remove item from cart */
-function removeItem(removeButton)
-{
-  /* Remove row from DOM and recalc cart total */
-  var productRow = $(removeButton).parent().parent();
-  productRow.slideUp(fadeTime, function() {
-    productRow.remove();
-  });
-}
 </script>

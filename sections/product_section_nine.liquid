@@ -1,17 +1,17 @@
 <div class="container">
   <div class="infu-section">
-    <div
-      class="row">
+    <div class="row">
       <div class="solvve-infu">
         {%- for block in section.blocks -%}
           <div>
             <div class="infu">
               <video
-                autoplay
+                preload="metadata"
+                controls
                 muted
                 loop
                 playsinline
-                class="w-100">
+                class="w-100 lazy">
                 <source src="{{ block.settings.video-url }}" type="video/mp4">
               </video>
             </div>
@@ -43,33 +43,35 @@
 {% endschema %}
 
 <script>
-
-  $(document).ready(function() {
-    $('.solvve-infu').slick({
-      slidesToShow: 5,
-      slidesToScroll: 1,
-      speed: 300,
-      infinite: true,
-      autoplaySpeed: 5000,
-      autoplay: true,
-      responsive: [
-        {
-          breakpoint: 991,
-          settings: {
-            slidesToShow: 3,
-            arrows: false
+  document.addEventListener('DOMContentLoaded', function() {
+    $(document).ready(function() {
+      $('.solvve-infu').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        speed: 300,
+        infinite: true,
+        autoplaySpeed: 5000,
+        autoplay: true,
+        responsive: [
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 3,
+              arrows: false
+            }
+          }, {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 1,
+              arrows: false
+            }
           }
-        }, {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 1,
-            arrows: false
-          }
-        }
-      ]
-    });
+        ]
+      });
+    })
   });
 </script>
+
 <style>
   .infu video {
     border-radius: 30px;

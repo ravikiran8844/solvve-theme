@@ -11,7 +11,7 @@
         <div class="col-12 d-flex align-items-center">
           <div class="sticky-product-image_wrapper d-none d-md-block col-md-2">
             <div class="sticky-product-image">
-              <img src="{{product.featured_image | img_url: 'medium'}}">
+              <img loading="lazy"  src="{{ product.featured_image | image_url: width: 240, height: 240 }}">
             </div>
           </div>
           <div class="d-none d-md-block col-md-3 ms-3">
@@ -34,31 +34,21 @@
 
           <div class="d-none d-md-block col-md-3 me-3">
             <div>
-              {% assign percent = current_variant.compare_at_price | minus: current_variant.price | times: 100 | divided_by: current_variant.compare_at_price | round %}
+              {% assign offerprice = current_variant.price | divided_by: 2 %}
+              {% assign percent = current_variant.compare_at_price | minus: offerprice | times: 100 | divided_by: current_variant.compare_at_price | round %}
  <div class="sticky-save" >
   <span>SAVE</span> <span class="save-amount">
-    {{percent}}
+    {{ percent }}
     </span><span>%</span>
  </div>
               <div>
-                <span id="selling-price" class="selling-price">{{ current_variant.price | money }}</span>
+                <span id="selling-price" class="selling-price">{{ offerprice | money }}</span>
                 <del>
                   <span class="offer-price">{{ current_variant.compare_at_price | money }}</span>
                 </del>
               </div>
 
-            </div>
-            <select
-              name="id"
-              id="productSelect"
-              style="display:none;">
-              {% for variant in product.variants %}
-                <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}>
-                  {{ variant.title }} - {{ variant.price | money }}
-                </option>
-              {% endfor %}
-            </select>
-           
+            </div>         
           </div>
           <div class="d-none d-lg-block col-lg-2">
             <div class="quantity-control" data-quantity="">
@@ -77,7 +67,18 @@
           </div>
 
           <div class="col-12 col-md-3 col-lg-3 sticky-btn__wrapper">
-
+<div>
+  <select
+  name="id"
+  id="productSelect"
+  style="display:none;">
+  {% for variant in product.variants %}
+    <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}>
+      {{ variant.title }} - {{ variant.price | money }}
+    </option>
+  {% endfor %}
+</select>
+</div>
             <div>
               <button type="submit" class="sticky-btn btn add-box">
                 <span>
