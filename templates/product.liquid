@@ -1,14 +1,4 @@
-<link
-  href="{{- 'product.css' | asset_url -}}"
-  rel="stylesheet"
-  type="text/css"
-  media="all" />
-<link
-  href="{{- 'glide.css' | asset_url -}}"
-  rel="stylesheet"
-  type="text/css"
-  media="all" />
-<script src="{{- 'glide.js' | asset_url -}}" defer></script>
+{{ 'product.css' | asset_url | stylesheet_tag: preload: true }}
 
 {% section 'sale-announcment' %}
 {%- section 'product-meta' -%}

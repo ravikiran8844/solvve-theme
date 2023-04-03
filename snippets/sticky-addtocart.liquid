@@ -2,16 +2,16 @@
 
 <div
   id="sticky-atc"
-  class="sticky_cart sticky-addtocart col-12"
+  class="sticky_cart sticky-addtocart fluid-container"
   style="display: none;">
-  <div class="container py-3 px-3">
-    <div class="row">
+  <div class="container">
+    <div class="row g-0">
       {% form 'product', product %}
 
-        <div class="col-12 d-flex align-items-center">
+        <div class="col-12 my-3 d-flex align-items-center">
           <div class="sticky-product-image_wrapper d-none d-md-block col-md-2">
             <div class="sticky-product-image">
-              <img loading="lazy"  src="{{ product.featured_image | image_url: width: 240, height: 240 }}">
+              <img loading="lazy" src="{{ product.featured_image | image_url: width: 240, height: 240 }}">
             </div>
           </div>
           <div class="d-none d-md-block col-md-3 ms-3">
@@ -36,11 +36,13 @@
             <div>
               {% assign offerprice = current_variant.price | divided_by: 2 %}
               {% assign percent = current_variant.compare_at_price | minus: offerprice | times: 100 | divided_by: current_variant.compare_at_price | round %}
- <div class="sticky-save" >
-  <span>SAVE</span> <span class="save-amount">
-    {{ percent }}
-    </span><span>%</span>
- </div>
+              <div class="sticky-save">
+                <span>SAVE</span>
+                <span class="save-amount">
+                  {{ percent }}
+                </span>
+                <span>%</span>
+              </div>
               <div>
                 <span id="selling-price" class="selling-price">{{ offerprice | money }}</span>
                 <del>
@@ -48,37 +50,47 @@
                 </del>
               </div>
 
-            </div>         
+            </div>
           </div>
           <div class="d-none d-lg-block col-lg-2">
             <div class="quantity-control" data-quantity="">
-              <span class="quantity-btn" data-quantity-minus=""><svg viewBox="0 0 409.6 409.6">
+              <span class="quantity-btn" data-quantity-minus="">
+                <svg viewBox="0 0 409.6 409.6">
                   <g>
                     <g>
                       <path d="M392.533,187.733H17.067C7.641,187.733,0,195.374,0,204.8s7.641,17.067,17.067,17.067h375.467 c9.426,0,17.067-7.641,17.067-17.067S401.959,187.733,392.533,187.733z" />
                     </g>
                   </g>
-                </svg></span>
-              <input type="number" class="quantity-input" data-quantity-target="" value="1"  min="1" max="" name="quantity">
-              <span class="quantity-btn" data-quantity-plus=""><svg viewBox="0 0 426.66667 426.66667">
+                </svg>
+              </span>
+              <input
+                type="number"
+                class="quantity-input"
+                data-quantity-target=""
+                value="1"
+                min="1"
+                max=""
+                name="quantity">
+              <span class="quantity-btn" data-quantity-plus="">
+                <svg viewBox="0 0 426.66667 426.66667">
                   <path d="m405.332031 192h-170.664062v-170.667969c0-11.773437-9.558594-21.332031-21.335938-21.332031-11.773437 0-21.332031 9.558594-21.332031 21.332031v170.667969h-170.667969c-11.773437 0-21.332031 9.558594-21.332031 21.332031 0 11.777344 9.558594 21.335938 21.332031 21.335938h170.667969v170.664062c0 11.777344 9.558594 21.335938 21.332031 21.335938 11.777344 0 21.335938-9.558594 21.335938-21.335938v-170.664062h170.664062c11.777344 0 21.335938-9.558594 21.335938-21.335938 0-11.773437-9.558594-21.332031-21.335938-21.332031zm0 0" /></svg>
               </span>
-            </div> 
+            </div>
           </div>
 
           <div class="col-12 col-md-3 col-lg-3 sticky-btn__wrapper">
-<div>
-  <select
-  name="id"
-  id="productSelect"
-  style="display:none;">
-  {% for variant in product.variants %}
-    <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}>
-      {{ variant.title }} - {{ variant.price | money }}
-    </option>
-  {% endfor %}
-</select>
-</div>
+            <div>
+              <select
+                name="id"
+                id="productSelect"
+                style="display:none;">
+                {% for variant in product.variants %}
+                  <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}>
+                    {{ variant.title }} - {{ variant.price | money }}
+                  </option>
+                {% endfor %}
+              </select>
+            </div>
             <div>
               <button type="submit" class="sticky-btn btn add-box">
                 <span>
@@ -134,7 +146,7 @@
 </style>
 
 <style>
-  .sticky-save{
+  .sticky-save {
     background: #21C327;
     color: #fff;
     width: fit-content;
@@ -185,7 +197,27 @@
     color: #FFFFFF;
     border: none;
     padding: 10px 20px;
+    animation: glow 1s ease-in-out infinite alternate;
   }
+  @-webkit-keyframes glow {
+    from {
+      box-shadow: 0;
+    }
+    to {
+      box-shadow: 2px 4px 4px 1px #c63636d1;
+    }
+
+    box-shadow: 0 3px 1px #EC6180;
+    border-radius: 7px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+  }
+
   .sticky-btn:hover {
     color: #FFFFFF;
     background: #FE7C99;
@@ -195,34 +227,39 @@
 
 
 <script>
-  $(document).ready(function() {
-    var w = $(window).width();
-    if (w <= 800) {
+  document.addEventListener('DOMContentLoaded', function() {
 
-      $(document).scroll(function() {
-        var y = $(this).scrollTop();
+    $(document).ready(function() {
+      var w = $(window).width();
+      if (w <= 800) {
 
-        if (y > 1200) {
-          $('.sticky_cart ').fadeIn(1200);
-        } else if (y < 1000) {
-          $('.sticky_cart ').fadeOut(1200);
-        } else {
-          $('.sticky_cart ').fadeOut(600);
-        }
-      });
+        $(document).scroll(function() {
+          var y = $(this).scrollTop();
 
-    } else {
+          if (y > 1200) {
+            $('.sticky_cart ').fadeIn(1200);
+          } else if (y < 1000) {
+            $('.sticky_cart ').fadeOut(1200);
+          } else {
+            $('.sticky_cart ').fadeOut(600);
+          }
+        });
 
-      $(document).scroll(function() {
-        var y = $(this).scrollTop();
-        if (y > 1000) {
-          $('.sticky_cart ').fadeIn();
-        } else {
-          $('.sticky_cart ').fadeOut();
-        }
-      });
+      } else {
 
-    }
-
+        $(document).scroll(function() {
+          var y = $(this).scrollTop();
+          if (y > 1000) {
+            $('.sticky_cart ').fadeIn();
+          } else {
+            $('.sticky_cart ').fadeOut();
+          }
+        });
+      }
+    });
+    $('.sticky-btn').click(function() {
+      this.innerHTML = "Adding to cart...";
+      $('.sticky-btn').css({"opacity": "0.4"});
+    });
   });
 </script>

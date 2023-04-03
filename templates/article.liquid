@@ -1,6 +1,6 @@
 <link href="{{ 'blog.css' | asset_url }}" rel="stylesheet" type="text/css" media="all" /> 
 <div class="blgg container">
-  <div class="row">
+  <div class="row g-0">
   <div class="col-sm-12 col-md-12 col-lg-8">
   {% assign number_of_comments = article.comments_count %}
   {% if comment and comment.created_at %}
@@ -78,7 +78,7 @@
  
   <div class="text-center"><a class="btn blocg_act" href="{{ blog.url }}">Back to the Blogs</a></div>
   {% if blog.comments_enabled? %}
-  <div class="row">
+  <div class="row g-0">
   <div class="col-12">
   <h3 class="cmnt-cnt">{{ number_of_comments }} Comments</h3>
   {% paginate article.comments by 5 %}
@@ -102,7 +102,7 @@
   <div class="blg-cmnt">
         <div class="blog-cmnt">
 
-  <div class="row">
+  <div class="row g-0">
     <h3 class="text-center">LEAVE A COMMENT</h3>
     {% form 'new_comment', article %}
     {{ form.errors | default_errors }}

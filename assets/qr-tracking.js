@@ -1,5 +1,4 @@
-<script>
-  (function(Q, R) {
+(function(Q, R) {
     if (Q.qr_t) 
       return;
     
@@ -15,4 +14,3 @@
     };
     h.insertBefore(e, h.lastChild);
   })(window, document);
-</script>

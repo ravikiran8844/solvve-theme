@@ -2,7 +2,8 @@
 
 {% if section.blocks.size > 0 %}
   <div class="testimonials__wrapper-{{ section.id }} container">
-    <div class="row  g-0 px-3 py-5">
+    <div
+      class="row  g-0 px-3 py-5">
       <div class="col-12 d-flex flex-column justify-content-center align-items-center">
         <div class="d-flex justify-content-center align-items-center mb-4">
           <span class="fs-2 testimonials__main-heading">{{ section.settings.heading }}</span>
@@ -16,7 +17,7 @@
                 <div class="me-2">
                   <img
                     loading="lazy"
-                    src="{{ block.settings.image | image_url }}"
+                    src="{{ block.settings.image |img_url}}"
                     alt="{{ block.settings.name }}">
                 </div>
                 <div>
@@ -31,7 +32,9 @@
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_7168_2526)">
-                          <path d="M6.42092 12.3711C3.46605 12.3711 1.0708 9.97589 1.0708 7.02102C1.0708 4.06615 3.46605 1.6709 6.42092 1.6709C9.3758 1.6709 11.771 4.06615 11.771 7.02102C11.771 9.97589 9.3758 12.3711 6.42092 12.3711ZM5.88752 9.16107L9.67005 5.378L8.91355 4.62149L5.88752 7.64806L4.37397 6.13451L3.61746 6.89101L5.88752 9.16107Z" fill="#666868" />
+                          <path
+                            d="M6.42092 12.3711C3.46605 12.3711 1.0708 9.97589 1.0708 7.02102C1.0708 4.06615 3.46605 1.6709 6.42092 1.6709C9.3758 1.6709 11.771 4.06615 11.771 7.02102C11.771 9.97589 9.3758 12.3711 6.42092 12.3711ZM5.88752 9.16107L9.67005 5.378L8.91355 4.62149L5.88752 7.64806L4.37397 6.13451L3.61746 6.89101L5.88752 9.16107Z"
+                            fill="#666868">
                         </g>
                         <defs>
                           <clipPath id="clip0_7168_2526">
@@ -79,6 +82,7 @@
 
 
 {% style %}
+  .testimonial__image {}
   .testimonials__wrapper-{{ section.id }}{
     background-color: {{ section.settings.bg_color }}
     ;

@@ -3,6 +3,7 @@
     <div class="col-12 pb-5 pt-2">
       <div class="ib-main-heading pb-5 fs-2">{{ section.settings.heading }}</div>
       <div class="d-md-none mobile-banner">
+
         <img
           loading="lazy"
           src="{{ section.settings.mobile-image | image_url }}"
@@ -36,39 +37,38 @@
   }
 </style>
 {% schema %}
-{
-  "name": "Image Banner",
-  "class": "section",
-  "tag": "section",
-  "settings": [
-    {
-      "type": "color",
-      "label": "Background Color",
-      "id": "bg_color",
-      "default": "#fff"
-    },
-    {
-      "type": "text",
-      "label": "Heading",
-      "id": "heading",
-      "default": "No More Irregular / Delayed Periods"
-    },
-    {
-      "type": "color",
-      "label": "text-color",
-      "id": "text_color",
-      "default": "#533092"
-    },
-    {
-      "type": "image_picker",
-      "label": "Desktop Image",
-      "id": "image"
-    },
-    {
-      "type": "image_picker",
-      "label": "Mobile Image",
-      "id": "mobile-image"
-    }
-  ]
-}
+  {
+    "name": "Image Banner",
+    "class": "section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "color",
+        "label": "Background Color",
+        "id": "bg_color",
+        "default": "#fff"
+      },
+      {
+        "type": "text",
+        "label": "Heading",
+        "id": "heading",
+        "default": "No More Irregular / Delayed Periods"
+      },
+      {
+        "type": "color",
+        "label": "text-color",
+        "id": "text_color",
+        "default": "#533092"
+      },
+      {
+        "type": "image_picker",
+        "label": "Desktop Image",
+        "id": "image"
+      }, {
+        "type": "image_picker",
+        "label": "Mobile Image",
+        "id": "mobile-image"
+      }
+    ]
+  }
 {% endschema %}

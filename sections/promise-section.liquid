@@ -1,6 +1,7 @@
 <div class="container">
-  <div class="row">
-    <h3 class="title text-center">We Promise You A Healthy Tomorrow!</h3>
+  <div class="row g-0">
+    <h3
+      class="title text-center">We Promise You A Healthy Tomorrow!</h3>
     <p class="sub-ttl  text-center">'Cos menstrual problems should not determine a woman's growth or future
     </p>
     <div class="solvve-promise">
@@ -10,10 +11,12 @@
             <div class="promise_icon_img">
               <img
                 loading="lazy"
+                height="59"
+                width="59"
                 src="{{ block.settings.image | image_url }}"
                 alt="Solvve PCOD and PCOS supplement Promises">
             </div>
-            <p class="prom-icon-name">{{ block.settings.text }}</p>
+            <p class="prom-icon-name mx-2">{{ block.settings.text }}</p>
           </div>
         </div>
       {% endfor %}

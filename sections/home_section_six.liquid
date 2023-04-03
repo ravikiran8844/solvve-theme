@@ -1,9 +1,13 @@
 <section class="section_six">
   <div class="container">
-    <div class="row">
+    <div
+      class="row">
       <div class="nutri-sec">
         <div class="left">
-          <img loading="lazy"  src="{{ section.settings.image | image_url }}" alt="{{ block.settings.image.alt | default: shop.name | escape }}">
+          <img
+            loading="lazy"
+            src="{{ section.settings.image | image_url }}"
+            alt="{{ block.settings.image.alt | default: shop.name | escape }}">
         </div>
         <div class="right">
           <h3>{{ section.settings.title }}</h3>
@@ -18,31 +22,27 @@
 </section>
 
 {% schema %}
-{
-  "name": "Speak to our nutritionist",
-  "class": "nutritionist",
-  "settings": [
-    {
-      "type": "image_picker",
-      "id": "image",
-      "label": "Image"
-    },
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Title"
-    },
-    {
-      "type": "text",
-      "id": "content",
-      "label": "Content"
-    },
-    {
-      "type": "url",
-      "id": "link",
-      "label": "Link"
-    }
-  ]
-}
+  {
+    "name": "Speak to our nutritionist",
+    "class": "nutritionist",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }, {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      }, {
+        "type": "text",
+        "id": "content",
+        "label": "Content"
+      }, {
+        "type": "url",
+        "id": "link",
+        "label": "Link"
+      }
+    ]
+  }
 {% endschema %}
-

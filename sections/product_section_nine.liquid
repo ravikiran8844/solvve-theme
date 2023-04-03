@@ -1,17 +1,17 @@
 <div class="container">
   <div class="infu-section">
-    <div class="row">
+    <div
+      class="row g-0">
       <div class="solvve-infu">
         {%- for block in section.blocks -%}
           <div>
             <div class="infu">
               <video
-                preload="metadata"
-                controls
+                autoplay
                 muted
                 loop
                 playsinline
-                class="w-100 lazy">
+                class="w-100">
                 <source src="{{ block.settings.video-url }}" type="video/mp4">
               </video>
             </div>

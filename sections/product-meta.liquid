@@ -1,37 +1,45 @@
 <div class="container">
-  <div class="row">
-
-
-    <div class="col-md-6 col-sm-12">
+  <div class="row g-0">
+    <div
+      class="col-md-6 col-sm-12">
       <div class="stky">
 
 
         <div id="product__slider">
 
           <div class="col-12">
-            <div class="slider-main">
-              {% for image in product.images %}
-                <div class="slide"><img
-                    src="{{ image.src | image_url: width: 480, height: 480 }}"
-                    alt="{{ image.alt | escape }}"
-                    class="img-responsive"></div>
-              {% endfor %}
-            </div>
-            <div class="slider-galeria-thumbs-mobile mx-4">
-              {% for image in product.images %}
-                <div class="slide"><img
-                    loading="lazy"
-                    src="{{ image.src | image_url: width: 200, height: 200 }}"
-                    alt="{{ image.alt | escape }}"
-                    class="img-responsive rds"></div>
-              {% endfor %}
+            <div class="product-gallery">
+              <div class="slider-for">
+                {% for media in product.media %}
+                  <div class="item-slide">
+                    <img
+                      loading="lazy"
+                      class="slide-main-image"
+                      src="{{ media | img_url: '800x800'}}"
+                      alt="product image"
+                      width="540"
+                      height="540" />
+                  </div>
+                {% endfor %}
+              </div>
+              <div class="slider-nav">
+                {% for media in product.media %}
+                  <div class="thumb-slide"><img
+                      loading="lazy"
+                      class="thumb-slide-img"
+                      src="{{ media | img_url: '150x150'}}"
+                      height="150"
+                      width="150" /></div>
+                {% endfor %}
+              </div>
             </div>
           </div>
 
         </div>
       </div>
     </div>
-    <div class="col-md-6 col-sm-12">
+    <div
+      class="col-md-6 col-sm-12">
       <h1 class="fs-2 product-title pt-4">{{ product.metafields.custom.product_title }}</h1>
       <div class="product-subtitle">{{ product.metafields.custom.product_subtitle }}</div>
       <div class="d-flex my-4">
@@ -245,6 +253,8 @@
 
       <div>
         <img
+          width="511"
+          height="50"
           loading="lazy"
           src="{{ 'payment-methods.png' | file_url }}"
           alt="payment methods">
@@ -317,7 +327,7 @@
       <hr>
       <div>
         <div class="mb-2 available-on">Available On</div>
-        <div class="col-12 d-flex flex-wrap">
+        <div class="col-12 d-flex flex-wrap available-on-images">
           <div class="col-4 text-center my-3 p-2">
             <img
               loading="lazy"
@@ -364,6 +374,28 @@
 
 
 <style>
+  .slick-prev,
+  .slick-next {
+    display: none;
+  }
+  .product-gallery {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .thumb-slide {
+    cursor: pointer;
+  }
+  .thumb-slide-img {
+    padding: 10px;
+    width: auto;
+    height: auto;
+
+  }
+  .slide-main-image {
+    width: auto;
+    height: auto;
+  }
   #product__slider .slick-dots li button:before {
     font-size: 25px;
   }
@@ -436,6 +468,17 @@
   }
   #AddToCart {
     background: #FF7C99;
+    height: 74px !important;
+    /*     box-shadow: 0px 3px 1px #C63636; */
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  @-webkit-keyframes glow {
+    from {
+      box-shadow: 0;
+    }
+    to {
+      box-shadow: 2px 4px 4px 1px #c63636d1;
+    }
 
     box-shadow: 0 3px 1px #EC6180;
     border-radius: 7px;
@@ -447,6 +490,11 @@
     text-transform: uppercase;
 
   }
+
+  #AddToCart:hover {
+    opacity: .9;
+  }
+
   .product-quantity-title {
     font-family: 'Inter-Bold';
     font-style: normal;
@@ -612,22 +660,23 @@
       });
     });
 
-    $('.slider-main').slick({
+    $('.slider-for').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
       fade: true,
-      asNavFor: '.slider-galeria-thumbs-mobile'
+      asNavFor: '.slider-nav'
     });
-    $('.slider-galeria-thumbs-mobile').slick({
+    $('.slider-nav').slick({
       slidesToShow: 4,
       slidesToScroll: 1,
+      asNavFor: '.slider-for',
       dots: false,
       arrows: false,
-      centerMode: true,
-      asNavFor: '.slider-main',
+      centerMode: false,
       focusOnSelect: true
     });
+
     (function() {
       "use strict";
       var jQueryPlugin = (window.jQueryPlugin = function(ident, func) {
@@ -651,6 +700,11 @@
           }
         };
       });
+
+      $('#AddToCart').click(function() {
+        this.innerHTML = "Adding to cart...";
+        $('#AddToCart').css({"opacity": "0.4"});
+      })
     })();
 
     (function() {

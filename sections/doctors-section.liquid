@@ -1,6 +1,7 @@
 <div class="container">
-  <div class="row">
-    <div class="col-12">
+  <div class="row g-0">
+    <div
+      class="col-12">
       <div class="ds-main-heading fs-2 py-5">
         {{ section.settings.heading }}
       </div>
@@ -8,7 +9,8 @@
     <div class="col-12 ds-items-wrapper">
       {% for block in section.blocks %}
         <div class="col-12 col-sm-6 col-lg-4 card ds-item me-3">
-          <img loading="lazy" 
+          <img
+            loading="lazy"
             class="card-img-top"
             src="{{ block.settings.image | image_url }}"
             alt="Card image cap">
@@ -91,36 +93,35 @@
 
 
 {% schema %}
-{
-  "name": "Doctors Section",
-  "class": "section",
-  "tag": "section",
-  "settings": [
-    {
-      "type": "text",
-      "id": "heading",
-      "label": "Heading",
-      "default": "Recommended By Leading Doctors"
-    }
-  ],
-  "blocks": [
-    {
-      "name": "Block",
-      "type": "doctor-block",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
-        },
-        {
-          "type": "richtext",
-          "id": "content",
-          "label": "Content",
-          "default": "<p>Content</p>"
-        }
-      ]
-    }
-  ]
-}
+  {
+    "name": "Doctors Section",
+    "class": "section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Recommended By Leading Doctors"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Block",
+        "type": "doctor-block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }, {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content",
+            "default": "<p>Content</p>"
+          }
+        ]
+      }
+    ]
+  }
 {% endschema %}

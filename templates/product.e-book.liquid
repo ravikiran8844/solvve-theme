@@ -1,4 +1,4 @@
-<link href="{{- 'ebook.css' | asset_url -}}" rel="stylesheet" type="text/css" media="all" />
+{{ 'ebook.css' | asset_url | stylesheet_tag: preload: true }}
 
 {%- section "product-meta-ebook" -%}
 {%- section "ebook-about" -%}

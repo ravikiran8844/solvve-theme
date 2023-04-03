@@ -194,6 +194,8 @@
   .testi-box-top {
     display: flex;
     align-items: center; 
+    min-height: 50px;
+
 }
 
 .testi-slider {
@@ -477,7 +479,7 @@
     text-align: center;
 }
   .promise_icon_img {
-    height: 100px;
+    height: 100%;
 }
   .doctor-approve-1 {
     padding-top: 30px;

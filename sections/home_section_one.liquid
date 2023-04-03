@@ -1,107 +1,68 @@
+{% capture slider_options %}
+  { "cellAlign": "left", "contain": true, "pageDots": false, "autoPlay": true, "prevNextButtons": false }{% endcapture %}
+
 <div class="container">
-  <h1 class="h1-ttl">Solvve PCOD and PCOS supplement</h1>
-<div class="pr-section">
-    <div class="pr-box">
+  <div class="col-12">
+    <div class="h1-ttl">Solvve PCOD and PCOS supplement</div>
+  </div>
+  <div class="pr-section">
+    <div class="col-12 pr-box">
       <h3 class="title">{{ section.settings.title }}</h3>
-      <p class="sub-title">{{ section.settings.sub-title }}</p>
-      <div class="my-slider-2">
+      <p class="sub-title mb-4">{{ section.settings.sub-title }}</p>
+      <div class="my-slider-2 col-12" data-flickity='{{ slider_options }}'>
         {%- for block in section.blocks -%}
-        <div>
-      <div class="pr-box-in {% cycle 'odds': 'sone', 'stwo', 'sthree' %}">
-        <div class="pr-img-box">
-        <img loading="lazy" src="{{ block.settings.pr-image | image_url }}" alt="{{ block.pr-image.alt | default: shop.name | escape }}">
-        </div>
-      </div>
-      </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="pr-box-in">
+              <div class="pr-img-box">
+                {% render 'image', class: '', mobileSrc: block.settings.pr-image, desktopSrc: block.settings.pr-image %}
+              </div>
+            </div>
+          </div>
         {%- endfor -%}
+      </div>
     </div>
-</div>
-</div>
+  </div>
 </div>
 {% schema %}
-{
-  "name": "Home Section One",
-  "settings": [
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Section Title"
-    },
-    {
-      "type": "text",
-      "id": "sub-title",
-      "label": "Section Sub Title"
-    }
-  ],
-  "blocks": [
-    {
-      "name": "PR Section",
-      "type": "pr_section",
-      "settings": [
-        {
-          "type": "text",
-          "id": "pr-content",
-          "label": "PR Content"
-        },
-        {
-          "type": "image_picker",
-          "id": "pr-image",
-          "label": "PR logo"
-        }
-      ]
-    }
-  ]
-}
+  {
+    "name": "Home Section One",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Section Title"
+      }, {
+        "type": "text",
+        "id": "sub-title",
+        "label": "Section Sub Title"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "PR Section",
+        "type": "pr_section",
+        "settings": [
+          {
+            "type": "text",
+            "id": "pr-content",
+            "label": "PR Content"
+          }, {
+            "type": "image_picker",
+            "id": "pr-image",
+            "label": "PR logo"
+          }
+        ]
+      }
+    ]
+  }
 {% endschema %}
 
 <style>
   #shopify-section-home_section_one {
     position: relative;
-}
-.h1-ttl {
+  }
+  .h1-ttl {
     color: transparent;
     position: absolute;
-}
+  }
 </style>
-<script>
-
-
-document.addEventListener('DOMContentLoaded', function(){
-  $('.my-slider-2').slick({  
-    infinite: false,
-    speed: 300,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          autoplay:true,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          autoplay:true,
-          arrows: false,
-          slidesToScroll: 1
-        }
-      }    
-    ]
-  });
-});
-</script>
- 
- 
-</script>

@@ -1,27 +1,126 @@
-<div class="fluid-container" id="home-slider">
-  <div>
-    <div class="col-12" data-flickity='{ "cellAlign": "left", "contain": true,"pageDots": false}'>
-      {%- for block in section.blocks -%}
-        <div class="slider-item">
-          <a href="{{ block.settings.image_link }}">
-            <picture>
-              <source media="(min-width: 601px)" srcset="{{ block.settings.slider_desktop_image | image_url }}">
-              <source media="(max-width: 600px)" srcset="{{ block.settings.slider_mobile_image | image_url }}">
-              <img
-                class="slide-image"
-                data-src="{{ block.settings.slider_desktop_image | image_url }}"
-                style="width:100%;max-width:100%"
-                alt="home page banner">
-            </picture>
-          </a>
+<script src="{{ 'flickity.js' | asset_url }}" defer></script>
+
+{% capture slider_options %}
+  { "cellAlign": "left", "contain": true, "pageDots": false, "autoPlay": false, "prevNextButtons": true }{% endcapture %}
+
+<div class="slideshow mb-3">
+  <div class="slideshow__slider" {% if section.blocks.size > 1 %}data-flickity='{{ slider_options }}'{% endif %}>
+    {% for block in section.blocks %}
+      <div class="slideshow__slideritem">
+        <div class="slideshow__slideritem-wrap">
+          {% if block.settings.slider_desktop_image != blank %}
+            {% assign mobile_image = block.settings.slider_mobile_image | default: block.settings.slider_desktop_image %}
+            <a href="{{ block.settings.image_link }}">{% render 'image-nolazy', class: 'slideshow-img' mobileSrc: mobile_image, desktopSrc: block.settings.slider_desktop_image %}
+            </a>
+          {% endif %}
         </div>
-      {%- endfor -%}
-    </div>
+      </div>
+    {% endfor %}
   </div>
 </div>
 
+<style>
+  .slideshow-img img {
+    min-height: 540px;
+    height: auto;
+    width: 100%;
+  }
+
+  .slideshow__caption {
+    font-family: 'Sharp Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 128%;
+    color: #FFFFFF;
+  }
+  .slideshow__heading {
+    font-family: 'Sharp Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 128%;
+    color: #FFFFFF;
+  }
+  .slideshow__paragraph {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 128%;
+    color: #FFFFFF;
+  }
+
+  .slideshow__btn {
+    background: #FEA500;
+    border-radius: 30px;
+    font-family: 'Sharp Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 33px;
+    letter-spacing: 0.435404px;
+    color: #000000;
+  }
+
+  .slideshow__content {
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+  }
+
+
+
+  .slideshow__slideritem {
+    width: 100%;
+  }
+
+  .slideshow__slideritem-wrap {
+    position: relative;
+  }
+
+  .slideshow__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+  }
+
+
+  .slideshow__content-wrapper {
+    max-width: 500px;
+    padding: 0 30px;
+  }
+
+  .media--slideshow {
+    padding-bottom: 150%;
+  }
+
+  @media(min-width: 750px) {
+
+    .media--slideshow {
+      padding-bottom: 56.25%;
+    }
+    .slideshow__content {
+      justify-content: flex-end;
+      align-items: center;
+      text-align: left;
+    }
+    .slideshow__content-wrapper {
+      max-width: 50%;
+      padding: 0 30px;
+    }
+
+  }
+</style>
+
+
 
 <style>
+
   #home-slider .flickity-prev-next-button {
     width: 48px;
     height: 48px;

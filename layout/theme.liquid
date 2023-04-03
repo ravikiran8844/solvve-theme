@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="{{ request.locale.iso_code }}">
+<html class="no-js" lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,77 +28,35 @@
     {% if template.name == 'collection' %}
       <meta name="robots" content="noindex">
     {% endif %}
-    <script src="{{'jquery.min.js' | asset_url}}" defer></script>
 
-
-    <script src="{{'application.js' | asset_url}}" defer></script>
-    <script src="{{'bootstrap.bundle.min.js' | asset_url}}" defer></script>
-
-
-
-    {%- render 'meta-tags' -%}<!--<meta name="google-site-verification" content="SvXI6tC7YyXY82qZaQonZKPkCV_24yWJXZ2YhF6Ocv8" />-->
-    <!-- Google tag (gtag.js) --><script
-      async
-      rel="dns-prefetch"
-      type="text/lazyload"
-      src="https://www.googletagmanager.com/gtag/js?id=G-9SNQPG90VV"> </script>
-    <script rel="dns-prefetch" type="text/lazyload">
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-                                                                                        gtag('js', new Date());
-                                                                                      
-                                                                                        gtag('config', 'G-9SNQPG90VV');
-    </script>
-
-    <!------------------->
-    <!-- TruConversion for getsolvve.com -->
-    <script type="text/lazyload">
-      var _tip = _tip || [];
-      (function(d,s,id){
-                                                                                          var js, tjs = d.getElementsByTagName(s)[0];
-                                                                                          if(d.getElementById(id)) { return; }
-                                                                                          js = d.createElement(s); js.id = id;
-                                                                                          js.async = true;
-                                                                                          js.src = d.location.protocol + '//app.truconversion.com/ti-js/22931/ad7b7.js';
-                                                                                          tjs.parentNode.insertBefore(js, tjs);
-                                                                                      }(document, 'script', 'ti-js'));
-    </script>
+    {%- render 'meta-tags' -%}
 
 
 
     {{ content_for_header }}
-    <!-- Header hook for plugins -->
+    <script src="{{ 'jquery.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'application.js' | asset_url }}" defer></script>
+    <script src="{{ 'slick.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'flickity.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'bootstrap.min.js' | asset_url }}" defer></script>
+
+    <!--<meta name="google-site-verification" content="SvXI6tC7YyXY82qZaQonZKPkCV_24yWJXZ2YhF6Ocv8" />-->
+    <!-- Google tag (gtag.js) -->
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-9SNQPG90VV" defer></script>
+    <script src="{{ 'scripts.js' | asset_url }}" defer></script>
+
     {{ 'application.css' | asset_url | stylesheet_tag: preload: true }}
     {{ 'slick.min.css' | asset_url | stylesheet_tag: preload: true }}
-    <script src="{{'slick.min.js' |asset_url}}" defer></script>
+    {{ 'flickity.min.css' | asset_url | stylesheet_tag: preload: true }}
 
-
+    {{ 'glide.css' | asset_url | stylesheet_tag: preload: true }}
+    <script src="{{- 'glide.js' | asset_url -}}" defer></script>
 
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
     </script>
     {% render 'structured-data' %}
-    <!-- Google Tag Manager -->
-    <script>
-      (function(w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer'
-            ? '&l=' + l
-            : '';
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-N992ZC9');
-    </script>
-    <!-- End Google Tag Manager -->
 
-
-
-    <script src="{{ 'flickity.min.js' | asset_url }}" defer></script>
-    {{ 'flickity.min.css' | asset_url | stylesheet_tag: preload: true }}
   </head>
   <body>
 
@@ -107,7 +65,7 @@
   section 'header'-%}
     <main role="main">{{ content_for_layout }}</main>
     {%- section 'footer' -%}
-    {% render 'qr-tracking' %}
+    <script src="{{ 'qr-tracking.js' | asset_url }}" async></script>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
       <iframe
