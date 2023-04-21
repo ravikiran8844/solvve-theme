@@ -1,45 +1,29 @@
+<script src="{{ 'product.js' | asset_url }}" defer="defer"></script>
+
 <div class="container">
   <div class="row g-0">
-    <div
-      class="col-md-6 col-sm-12">
+    <div class="col-md-6 col-sm-12">
       <div class="stky">
-
-
-        <div id="product__slider">
-
-          <div class="col-12">
-            <div class="product-gallery">
-              <div class="slider-for">
-                {% for media in product.media %}
-                  <div class="item-slide">
-                    <img
-                      loading="lazy"
-                      class="slide-main-image"
-                      src="{{ media | img_url: '800x800'}}"
-                      alt="product image"
-                      width="540"
-                      height="540" />
-                  </div>
-                {% endfor %}
+        <div class="product-flexitem product-flexitem-images px-3">
+          <div class="product__media-list mb-3">
+            {%- for media in product.media -%}
+              <div class="product__media-item pb-0">
+                {% render 'product-media', media: media, class: 'media media--portrait' %}
               </div>
-              <div class="slider-nav">
-                {% for media in product.media %}
-                  <div class="thumb-slide"><img
-                      loading="lazy"
-                      class="thumb-slide-img"
-                      src="{{ media | img_url: '150x150'}}"
-                      height="150"
-                      width="150" /></div>
-                {% endfor %}
-              </div>
-            </div>
+            {%- endfor -%}
           </div>
-
+          <div class="image__viewer" data-flickity='{ "cellAlign": "left", "contain": true, "pageDots": false,"asNavFor": ".product__media-list", "prevNextButtons": true, "imagesLoaded": true,"groupCells": true }'>
+            {%- for media in product.media -%}
+              <div class="px-2" style="width:100px;height:100px;">
+                {% render 'product-media', media: media, class: 'media media--portrait' %}
+              </div>
+            {%- endfor -%}
+          </div>
         </div>
+
       </div>
     </div>
-    <div
-      class="col-md-6 col-sm-12">
+    <div class="col-md-6 col-sm-12">
       <h1 class="fs-2 product-title pt-4">{{ product.metafields.custom.product_title }}</h1>
       <div class="product-subtitle">{{ product.metafields.custom.product_subtitle }}</div>
       <div class="d-flex my-4">
@@ -374,6 +358,16 @@
 
 
 <style>
+  .image__viewer .flickity-button {
+    background-color: transparent;
+  }
+
+  .image__viewer .flickity-prev-next-button.previous {
+    left: 0;
+  }
+  .image__viewer .flickity-prev-next-button.next {
+    right: 0;
+  }
   .slick-prev,
   .slick-next {
     display: none;
